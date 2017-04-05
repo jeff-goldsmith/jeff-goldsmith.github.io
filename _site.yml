@@ -1,0 +1,23 @@
+name: "Jeff Goldsmith"
+output_dir: "."
+navbar:
+  title: "Jeff Goldsmith"
+  right:
+    - text: "Research"
+      href: research.html
+    - text: "Papers"
+      href: papers.html
+    - text: "Teaching"
+      href: teaching.html
+    - text: "Software"
+      href: software.html
+    - icon: fa-envelope fa-lg
+      href: mailto:jeff.goldsmith@columbia.edu
+    - icon: fa-github fa-lg
+      href: http://github.com/jeff-goldsmith/
+output:
+  html_document:
+    theme: flatly
+    include:
+      after_body: footer.html
+    css: styles.css

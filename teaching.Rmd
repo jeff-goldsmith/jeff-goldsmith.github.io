@@ -1,0 +1,25 @@
+---
+---
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+<br>
+
+## Current courses
+
+Fall 2017: Data Science I
+
+## Past courses
+
+Spring 2016: Linear Regression Models  
+Spring 2015: Linear Regression Models  
+Summer 2015: Applied Regression II  
+Spring 2014: Linear Regression Models  
+Spring 2014: Categorical Data Analysis  
+Spring 2013: Linear Regression Models  
+Spring 2013: Categorical Data Analysis
+
+## Short courses
+
+2017: ["Variable Selection Methods in Functional Regression"](https://jeff-goldsmith.github.io/IWAFDA/) (at the International Workshop on Advances in Functional Data Analysis)  
+2014: "Functional Data Analysis: Techniques and Applications" (at ENAR)

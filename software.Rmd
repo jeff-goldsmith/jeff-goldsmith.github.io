@@ -1,0 +1,37 @@
+---
+---
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+<br>
+
+## refund
+
+I'm lead author of the `refund` package ([CRAN](https://cran.r-project.org/web/packages/refund/index.html); [GitHub](https://github.com/refunders/refund)). I've made contributions to several functions in this package:
+
+* `pfr()` for penalized scalar-on-function regression
+* `fpca.sc()` for functional principal components analysis
+* `ccb.fpc()` for improved inference for functional principal components analysis
+* `bayes_fosr()` for Bayesian function-on-scalar regression
+
+## refund.shiny
+
+I worked with Julia Wrobel on the `refund.shiny` package ([CRAN](https://cran.r-project.org/web/packages/refund.shiny/index.html); [GitHub](https://github.com/refunders/refund.shiny); [paper](http://onlinelibrary.wiley.com/doi/10.1002/sta4.109/abstract)). 
+
+Through the `plot_shiny()` function, this package produces interactive graphics for several of the most common functional data analyses:
+
+* Functional principal components analysis
+* Multilevel and time-varying functional principal components analysis
+* Function-on-scalar regression
+* Functional linear concurrent regression
+
+This package is closely aligned with the `refund` package: analyses are conducted using functions in `refund` and return objects that can be plotted using `refund.shiny::plot_shiny()`.
+
+## GitHub packages
+
+Code for several projects are developed on [GitHub](https://github.com/jeff-goldsmith):
+
+* This website
+* [`vbvs.concurrent`](https://github.com/jeff-goldsmith/vbvs.concurrent), a package for fitting the functional linear concurrent regression model
+* [`gfpca`](https://github.com/jeff-goldsmith/gfpca), a package for generalized functional principal components analysis
+* [Materials](https://github.com/jeff-goldsmith/gfpca) for a short course on variable selection in functional regression models

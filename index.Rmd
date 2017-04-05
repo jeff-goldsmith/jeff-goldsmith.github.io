@@ -1,0 +1,34 @@
+---
+title: "Jeff Goldsmith"
+---
+
+<link rel="stylesheet" href="styles.css" type="text/css">
+
+### Assistant Professor of Biostatistics, Columbia University Mailman School of Public Health
+
+<br><img src="jeff.jpg" alt="jeff" style="width:85%; border:10px solid"><br>
+
+I recieved a BS in mathematics from [Dickinson College](http://www.dickinson.edu) in 2007 and a PhD in Biostatistics from [Johns Hopkins University](http://www.jhsph.edu/departments/biostatistics/) in 2012. My dissertation was advised by [Ciprian Crainiceanu](http://www.biostat.jhsph.edu/~ccrainic/) and [Brian Caffo](https://sites.google.com/view/bcaffo/home), and focused on statistical methods for high-dimensional structured data. I joined Columbia as an assistant professor in 2012.
+
+My statistical research is generally focused on functional data analysis, and draws heavily from ongoing collaborations with researchers in other disciplines. One major emphasis is the use of motion kinematics to understand motor control, skill learning, and recovery following stroke; another is physical activity measurement and quantification using wearable devices. The [research](research.html) page has more information on recent projects. 
+
+In 2013, I founded (with [Todd Ogden](https://www.mailman.columbia.edu/people/our-faculty/to166) and [Phil Reiss](https://works.bepress.com/phil_reiss/)) the Functional Data Analysis Working Group ([FDAWG](https://www.mailman.columbia.edu/research/functional-data-analysis-working-group)) at Columbia Biostat. 
+
+<br>
+
+#### Curriculum Vitae
+
+My full CV is availble [here](Downloads/CV_Goldsmith.pdf).
+
+<br>
+
+#### Contact Information
+
+Jeff Goldsmith  
+[Department of Biostatistics](http://www.mailman.columbia.edu/academic-departments/biostatistics)  
+[Columbia Mailman School of Public Health](http://www.mailman.columbia.edu/)  
+722 West 168th Street, Room 630  
+New York, New York 10032  
+
+Email: [jeff.goldsmith@olumbia.edu](mailto:jeff.goldsmith@columbia.edu)  
+Phone: 212-342-4599 

@@ -1,0 +1,415 @@
+---
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+<br>
+<font size="5">[Google Scholar Page](https://scholar.google.com/citations?user=3wvmkE0AAAAJ)</font> 
+<br>
+
+In the following, <sup>&#8224;</sup> denotes equal contribution and <sup>&#8225;</sup> indicates a student under my supervision.
+
+## 2017
+
+J. C. Cortes<sup>&#8224;</sup>, **J. Goldsmith**<sup>&#8224;</sup>, M. Harran, J. Xu, N. Kim, A. R. Luft, P. Celnik, J. W. Krakauer, and T. Kitago (2017+).
+A short and distinct time window for recovery of arm motor control after stroke revealed with a global measure of trajectory kinematics.
+<i> Neurorehabilitation and Neural Repair, </i>
+accepted.
+	
+M. Kronish, K. M. Diaz, **J. Goldsmith**, N. Moise, and J. E. Schwartz.
+Objectively measured adherence to physical activity guidelines after acute coronary syndrome (2017+).
+<i> Journal of the American College of Cardiology, </i>
+accepted.
+
+P. T. Reiss, **J. Goldsmith**, H. L. Shang, R. T. Ogden.
+Methods for Scalar-on-Function Regression (2017+).
+<i> International Statistical Review, </i>
+accepted.
+
+**J. Goldsmith**, J. E. Schwartz.
+Variable Selection in the Functional Linear Concurrent Model (2017+).
+<i> Statistics in Medicine, </i>
+accepted.
+[[PDF](Downloads/VBVS.pdf)
+| [GitHub](https://github.com/jeff-goldsmith/vbvs.concurrent)]
+
+J. Gertheiss, **J. Goldsmith**, H. L. Shang, A.-M. Staicu (2017).
+A note on modeling sparse exponential-family functional response curves.
+<i> Computational Statistics and Data Analysis, </i>
+<b>105</b> 46-52.
+[[Link](http://www.sciencedirect.com/science/article/pii/S0167947316301748) |
+[GitHub](https://github.com/jeff-goldsmith/vbvs.concurrent)]
+
+
+## 2016
+
+A. Castano, M. Haq, D. Narotsky, **J. Goldsmith**, R. L. Weinberg, R. Morgenstern, T. Pozniakoff, F. L. Ruberg, E. J. Miller, J. L. Berk, A. Dispenzieri, M. Grogan, G.
+Multicenter Experience of Planar Technetium Pyrophosphate Cardiac Imaging: Does Preferential Cardiac Uptake Predict Survival in Patients with ATTR Cardiac Amyloidosis?
+<i> JAMA Cardiology, </i>
+<b>1</b> 880-889.
+
+**J. Goldsmith**.
+vbvs.concurrent: Fitting Methods for the Functional Linear Concurrent Model (2016).
+<i> The Journal of Open Source Software, </i>
+<b>1</b>.
+[[Link](http://joss.theoj.org/papers/a3884174f17dbb9a695f7b8658887eff) |
+[GitHub](https://github.com/jeff-goldsmith/vbvs.concurrent)]
+
+S. T. Sorge, D. C. Hesdorffer, J. C. Phelan, M. R. Winawer, S. Shostak, **J. Goldsmith**, W. K. Chung, R. Ottman (2016).
+Genetic causal attribution and depression in multiplex epilepsy families.
+<i> Epilepsia, </i>
+<b>57</b> 1643-1650.
+[[Link](http://onlinelibrary.wiley.com/doi/10.1111/epi.13500/full)
+| [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/27558297)]
+
+A. L. Wong, **J. Goldsmith**, J Krakauer (2016).
+A motor planning stage represents the shape of upcoming movement trajectories.
+<i> Journal of Neurophysiolog, </i>
+<b>116</b> 296-305.
+[[Link](http://jn.physiology.org/content/116/2/296)
+| [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/27098032)]
+
+**J. Goldsmith**, X. Liu<sup>&#8225;</sup>, J. S. Jacobson, A. Rundle (2016).
+New insights into activity patterns in children, found using functional data analyses.
+<i> Medicine and Science in Sports and Exercise, </i>
+<b>48</b> 1723-1729.
+[[Link](http://journals.lww.com/acsm-msse/Abstract/2016/09000/New_Insights_into_Activity_Patterns_in_Children,.11.aspx)
+| [PDF](Downloads/HeadStart.pdf)
+| [Code](Downloads/HeadStartCode.zip)
+| [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/27183122)]
+
+J. Wrobel<sup>&#8225;</sup>, S.Y. Park, A.M. Staicu, **J. Goldsmith** (2016).
+Interactive graphics for functional data analyses.
+<i> Stat, </i>
+<b>5</b> 108-118.
+[[arXiv](http://arxiv.org/abs/1602.04091)
+| [Link](http://onlinelibrary.wiley.com/doi/10.1002/sta4.109/abstract)
+| [GitHub](https://github.com/refunders/refund.shiny)
+| [CRAN](https://cran.r-project.org/web/packages/refund.shiny/index.html)]
+
+Y. Chen<sup>&#8225;</sup>, **J. Goldsmith**, T. Ogden (2016).
+Variable Selection in Function-on-Scalar Regression.
+<i> Stat, </i>
+<b>5</b> 88-101.
+[[Link](http://onlinelibrary.wiley.com/doi/10.1002/sta4.106/abstract)
+| [PDF](Downloads/FoS_VarSelect.pdf)
+| Implemented in [refund](https://github.com/refunders/refund) as fosr.vs()]
+
+**J. Goldsmith**, T. Kitago (2016).
+Assessing Systematic Effects of Stroke on Motor Control using Hierarchical Function-on-Scalar Regression.
+<i> Journal of the Royal Statistical Society: Series C, </i>
+<b>65</b> 215-236.
+[[PDF](Downloads/BayesPFSR_Paper.pdf)
+| [Link](http://onlinelibrary.wiley.com/doi/10.1111/rssc.12115/abstract)
+| [Code](Downloads/BayesPFSR_Code.zip)
+| [Shiny App](https://jeff-goldsmith.shinyapps.io/MotorControl_Interactive)]
+
+C. B. Caminiti, D. C. Hesdorffer, S. Shostak, **J. Goldsmith**, S. T. Sorge, M. R. Winawer, J. C. Phelan, W. K. Chung, and R. Ottman (2016).
+Parents' interest in genetic testing of their offspring in multiplex epilepsy families.
+<i> Epilepsia, </i>
+<b>57</b> 279-287.
+[[Link](http://onlinelibrary.wiley.com/doi/10.1111/epi.13287/abstract)
+| [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/26693851)]
+
+K. M. Diaz, D. J Krupka, M. J. Chang, J. A. Schaffer, Y. Ma, **J. Goldsmith**, J. E. Schwartz, K. W. Davidson (2016).
+Validation of the Fitbit One for physical activity measurement at an upper torso attachment site.
+<i> BMC Research Notes, </i>
+<b>9</b> 213.
+[[Link](http://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-016-2020-8)
+| [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/27068022)]
+
+
+M. Abdalla, **J. Goldsmith**, P. Muntner, K. M. Diaz, K. Reynolds, J. E. Schwartz, D. Shimbo (2016).
+Is Isolated Nocturnal Hypertension a Reproducible Phenotype?
+<i> American Journal of Hypertension, </i>
+<b>29</b> 33-38.
+[[Link](http://ajh.oxfordjournals.org/content/29/1/33.full.pdf+html)
+| [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/25904648)]
+
+
+
+## 2015
+
+T. Kitago<sup>&#8224;</sup>, **J. Goldsmith**<sup>&#8224;</sup>, M. Harran, L. Kane, J. Berard, S. Huang, S. Ryan, P. Mazzoni, J, Krakauer, and V. Huang (2015).
+Robotic therapy for chronic stroke: general recovery of impairment or improved task-specific skill?
+<i> Journal of Neurophysiology, </i>
+<b>114</b> 1885-1894.
+[[Link](http://jn.physiology.org/content/early/2015/07/10/jn.00336.2015.abstract)
+| [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/26032276)]
+(&#8224; denotes equal contribution)
+
+
+**J. Goldsmith**, V. Zipunnikov, J. Schrack (2015).
+Generalized Multilevel Functional-on-Scalar Regression and Principal Component Analysis.
+<i> Biometrics, </i>
+<b>71</b> 344-353.
+[[Link](http://onlinelibrary.wiley.com/doi/10.1111/biom.12278/abstract)
+| [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/25620473)
+| [Code](Downloads/GenMFPCA_Code.zip)
+| [Shiny App](https://jeff-goldsmith.shinyapps.io/GFPCA_interactive)]
+
+
+U. M. Schambra, **J. Goldsmith**, H. M. Schambra, K. Nunleya, S. Harirforoosh, Y. Liu , and S. S. Moy (2015).
+Low and moderate prenatal ethanol exposure of mice during gastrulation or neurulation delays neurobehavioral development.
+<i> Neurotoxicology and Teratology, </i>
+<b>51</b> 1-11.
+[[Link](http://www.sciencedirect.com/science/article/pii/S089203621530012X)
+| [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/26171567)]
+
+
+K. M. Diaz, D. J Krupka, M. J. Chang, J. Peacock, Y. Ma, **J. Goldsmith**, J. E. Schwartz, K. W. Davidson (2015).
+Fitbit: An accurate and reliable device for wireless physical activity tracking.
+<i> International Journal of Cardiology, </i>
+<b>185</b> 138-140.
+[[Link](http://www.internationaljournalofcardiology.com/article/S0167-5273(15)00276-4/abstract)
+| [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/25795203)]
+
+
+C. Wang, S. Vine, A. Hsiao, A. Rundle, and **J. Goldsmith** (2015).
+Weight-Related Behaviors When Children are in School Versus on Summer Breaks: Does Income Matter?
+<i> Journal of School Health, </i>
+<b>85</b> 458-466.
+[[Link](http://onlinelibrary.wiley.com/doi/10.1111/josh.12274/abstract)
+| [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/26032276)]
+
+
+M. Sabatello, J. Phelan, D. C. Hesdorffer, S. Shostak, **J. Goldsmith**, S. Sorge, M. Winawer, W. Chung, R. Ottman (2015).
+Genetic Causal Attribution of Epilepsy and its Implications for Felt Stigma.
+<i> Epilepsia, </i>
+<b>56</b> 1542-1550.
+[[Link](http://onlinelibrary.wiley.com/doi/10.1111/epi.13113/abstract)
+| [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/26290354)]
+
+
+
+## 2014
+
+**J. Goldsmith**, L. Huang, C. M. Crainiceanu (2014).
+Smooth Scalar-on-Image Regression via Spatial Bayesian Variable Selection.
+<i> Journal of Computational and Graphical Statistics, </i>
+<b>23</b> 46-64.
+[[Link](http://amstat.tandfonline.com/doi/abs/10.1080/10618600.2012.743437#.U2pt-17A7d4) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/24729670)]
+
+
+**J. Goldsmith**, F. Scheipl (2014).
+Estimator Selection and Combination in Scalar-on-Function Regression.
+<i> Computational Statistics and Data Analysis, </i>
+<b>70</b> 362-372.
+[[Link](http://www.sciencedirect.com/science/article/pii/S0167947313003629) |
+[PDF](Downloads/Ensembling_Paper.pdf) |
+[Code](Downloads/Ensembling_Code.zip)]
+
+
+J. A. Schrack, V. Zipunnikov, **J. Goldsmith**, K. Bandeen-Roche, C. M. Crainiceanu, L. Ferrucci (2014).
+Estimating Energy Expenditure from Heart Rate in Older Adults: a Case for Calibration.
+<i> PLoS One, </i>
+<b>9</b> 1-9.
+[[Link](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0093520) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/24787146)]
+
+
+J. A. Schrack, V. Zipunnikov, **J. Goldsmith**, J. Bai, E. M. Simonsick, C. M. Crainiceanu, L. Ferrucci (2014).
+Assessing the "Physical Cliff": Detailed Quantification of Aging and Physical Activity.
+<i> Journal of Gerontology: Medical Sciences. </i>
+<b>69</b> 973-979.
+[[Link](http://biomedgerontology.oxfordjournals.org/content/69/8/973.full.pdf) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/24336819) |
+Article selected as "Editor's Choice"]
+
+
+S. Vullaganti, **J. Goldsmith**, S. Teruya, J. Alvarez, S. Helmke, M. Maurer (2014).
+Cardiovascular effects of hemoglobin response in patients receiving epoetin alfa and oral iron in heart failure with a preserved ejection fraction.
+<i> Journal of Geriatric Cardiology, </i>
+<b>11</b> 100-105.
+[[Link](http://www.jgc301.com/ch/reader/view_abstract.aspx?file_no=20140227001&flag=1)
+| [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/25009558)]
+
+
+B. Swihart, **J. Goldsmith**, C. M. Crainiceanu. (2014).
+Restricted Likelihood Ratio Tests for Functional Effects in the Functional Linear Model.
+<i> Technometrics, </i>
+<b>56</b> 483-493.
+[[Link](http://www.tandfonline.com/doi/full/10.1080/00401706.2013.863163)]
+
+
+A. Hauschild, S. C. Chen, M. Weichenthal, A. Blum, H. C. King, **J. Goldsmith**, D. O. Scharfstein, D. Gutkowicz-Krusin (2014).
+To excise or not: impact of MelaFind on German dermatologists' decisions to biopsy atypical lesions.
+<i>JDDG: Journal der Deutschen Dermatologischen Gesellschaft, </i>
+<b>12</b> 606-614.
+[[Link](http://onlinelibrary.wiley.com/doi/10.1111/ddg.12362/abstract) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/24944011)]
+
+
+J. O. Okeke, V. E. Tangel, S. T. Sorge, D. C. Hesdorffer, M. R. Winawer, **J. Goldsmith**, J. Phelan, W. Chung, S. Shostak, R. Ottman (2014).
+Genetic Testing Preferences in Families Containing Multiple Individuals with Epilepsy.
+<i>Epilepsia, </i>
+<b>55</b> 1705-1713.
+[[Link](http://onlinelibrary.wiley.com/doi/10.1111/epi.12810/full) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/25266816)]
+
+
+G. S. Lovasi, **J. Goldsmith** (2014).
+Invited commentary: Taking advantage of time-varying neighborhood environments.
+<i>American Journal of Epidemiology, </i>
+<b>DOI:</b> 10.1093/aje/kwu170.
+[[Link](http://aje.oxfordjournals.org/content/180/5/462.full) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/25117659)]
+
+
+N. Cyrille, **J. Goldsmith**, J. Alvarez, M. S. Maurer (2014).
+Prevalence and Prognostic Significance of Low QRS Voltage Among the Three Main Types of Cardiac Amyloid.
+<i> American Journal of Cardiology, </i>
+<b>114</b> 1089-1093.
+[[Link](http://www.sciencedirect.com/science/article/pii/S0002914914014544#) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/25212550)]
+
+
+R. T. Shinohara, E. M. Sweeny, **J. Goldsmith**, N. Shiee, F. J. Mateen, P. A. Calabresi, S. Jarso, D. L. Pham, D. S. Reich, C. M. Crainiceanu (2014).
+Statistical Normalization Techniques for Magnetic Resonance Imaging.
+<i> NeuroImage: Clinical, </i>
+<b>6</b> 9-19
+[[Link](http://www.sciencedirect.com/science/article/pii/S221315821400117X#) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/25379412)]
+
+
+
+## 2013
+
+**J. Goldsmith**, S. Greven, C. M. Crainiceanu (2013).
+Corrected Confidence Bands for Functional Data Using Principal Components.
+<i> Biometrics, </i>
+<b>69</b> 41-51.
+[[Link](http://onlinelibrary.wiley.com/doi/10.1111/j.1541-0420.2012.01808.x/abstract) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/23003003)]
+
+
+J. Gertheiss, **J. Goldsmith**, C. M. Crainiceanu, S. Greven. (2013).
+Longitudinal Scalar-on-Functions Regression with Application to Tractography Data.
+	<i> Biostatistics. </i>
+<b>14</b> 447-461.
+[[Link](http://biostatistics.oxfordjournals.org/content/14/3/447.long) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/23292804)]
+
+
+H. Sorensen, **J. Goldsmith**, L. Sangalli. (2013).
+An Introduction with Medical Applications to Functional Data Analysis.
+<i> Statistics in Medicine. </i>
+<b>32</b> 5222-5240.
+[[Link](http://www.tandfonline.com/doi/abs/10.1080/10618600.2012.679241) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/23794794)]
+
+
+L. Huang, **J. Goldsmith**, P. T. Reiss, D. S. Reich, C. M. Crainiceanu. (2013).
+Bayesian Scalar-on-Image Regression with Application to Association Between Intracranial DTI and Cognitive Outcomes.
+<i> NeuroImage. </i>
+<b>83</b> 210-223.
+[[Link](http://www.sciencedirect.com/science/article/pii/S1053811913006575) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/23792220)]
+
+
+F. J. Leyva, R. P. Bakshi, E. J. Fuchs, L. Li, B. S. Caffo, **J. Goldsmith**, Y. Du, J. P. Leal, L. A. Lee, M. S. Torbenson, C. W. Hendrix (2013).
+Iso-osmolar enemas demonstrate preferential gastrointestinal distribution, safety, and acceptability compared with hyper- and hypo-osmolar enemas as a potential delive
+<i> AIDS Research and Human Retroviruses. </i>
+<b>29</b> 1487-1495.
+[[Link](http://online.liebertpub.com/doi/abs/10.1089/aid.2013.0189) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/23885722)]
+
+
+## 2012
+
+**J. Goldsmith**, C. M. Crainiceanu, B. S. Caffo, D. S. Reich (2012).
+Longitudinal Penalized Functional Regression for Cognitive Outcomes on Neuronal Tract Measurements.
+<i> Journal of the Royal Statistical Society: Series C, </i>
+<b>61</b> 453-469.
+[[Link](http://onlinelibrary.wiley.com/doi/10.1111/j.1467-9876.2011.01031.x/abstract) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/22679339) |
+[Simulation Code](Downloads/LPFR_Code.zip)]
+
+
+T. Shinohara, **J. Goldsmith**, F. Mateen, D. S. Reich, C. M. Crainiceanu (2012).
+Predicting Breakdown of the Blood-Brain Barrier in Multiple Sclerosis Without Contrast Agents.
+<i> American Journal of Neuroradiology, </i>
+<b>33</b> 1586-1590.
+[[Link](http://www.ajnr.org/content/33/8/1586.long) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/22442041)]
+
+
+J. Bai, **J. Goldsmith**, B. S. Caffo, T. Glass, C. M. Crainiceanu (2012).
+Movelets: A Dictionary of Movement.
+<i> Electronic Journal of Statistics, </i>
+<b>6</b> 559-578.
+[[Link](https://projecteuclid.org/euclid.ejs/1334065322) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/23293708)]
+
+
+N. Louissant, S. Nimmagadda, R. Bakshi, Y. Du, K. Macura, K. King, R. Wahl, **J. Goldsmith**, B. S. Caffo,
+Y.-J. Cao, J. Anderson, E. Fuchs, C. W. Hendrix (2012).
+Distribution of Cell-free and Cell-associated HIV Surrogates in the Female Genital Tract following Simulated Vaginal Intercourse.
+<i> Journal of Infectious Diseases, </i>
+<b>205</b> 725-732.
+[[Link](http://jid.oxfordjournals.org/content/205/5/725) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/22279121)]
+
+
+N. Louissant, S. Nimmagadda, E. Fuchs, R. Bakshi, Y. Cao, L. Lee, **J. Goldsmith**, B. S. Caffo, Y. Du, K. King,
+F. Menendez, M. Torbenson, C. W. Hendrix (2012).
+Distribution of Cell-free and Cell-associated HIV Surrogates in the Colon following Simulated Receptive Anal Intercourse.
+<i> Journal of Acquired Immune Deficiency Syndromes, Basic and Translational Science, </i>
+<b>59</b> 10-17.
+[[Link](http://ovidsp.tx.ovid.com/sp-3.12.0b/ovidweb.cgi?&S=KOLDFPPIPMDDFJDMNCMKNBLBBJIDAA00&Link+Set=S.sh.27.28.32.42%7c2%7csl_10) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/21937920)]
+
+
+
+## 2011 and before
+	
+**J. Goldsmith**, J. Bobb, C. M. Crainiceanu, B. S. Caffo, D. S. Reich (2011).
+Penalized Functional Regression.
+<i> Journal of Computational and Graphical Statistics, </i>
+<b>20</b> 830-851.
+[[Link](http://www.tandfonline.com/doi/abs/10.1198/jcgs.2010.10007#.U1BzC16ft94) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/22368438) |
+[Simulation Code](Downloads/PFR_Code.zip)]
+
+**J. Goldsmith**, C. M. Crainiceanu, B. S. Caffo, D. S. Reich (2011).
+Penalized Functional Regression Analysis of White-Matter Tract Profiles in Multiple Sclerosis.
+<i> NeuroImage, </i>
+<b>57</b> 431-439.
+[[Link](http://www.sciencedirect.com/science/article/pii/S1053811911004435) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/21554962)]
+
+**J. Goldsmith**, B. S. Caffo, C. M. Crainiceanu, D. Reich, Y. Du, C. W. Hendrix (2011).
+Nonlinear Tube-Fitting for the Analysis of Anatomical and Functional Structures.
+<i> Annals of Applied Statistics, </i>
+<b>5</b> 337-363.
+[[Link](http://projecteuclid.org/euclid.aoas/1300715193) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/21709824)]
+
+**J. Goldsmith**, M. P. Wand, and C. M. Crainiceanu (2011).
+Functional Regression via Variational Bayes.
+<i> Electronic Journal of Statistics, </i>
+<b>5</b> 572-602.
+[[Link](http://projecteuclid.org/euclid.ejs/1308143123) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/22163061) |
+[Simulation Code](Downloads/VB_Code.zip)]
+
+C. M. Crainiceanu, **J. Goldsmith** (2010).
+Bayesian Functional Data Analysis using WinBUGS.
+<i> Journal of Statistical Software, </i>
+<b>32</b> 1-33.
+[[Link](http://www.jstatsoft.org/v32/i11/) |
+[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/21743798)]
+
+**J. Goldsmith**, L. Koss (2009).
+Dynamical Properties of the Derivative of the Weierstrass Elliptic Function.
+<i> Involve, </i>
+<b>2</b> 267-288.
+[[Link](http://msp.org/involve/2009/2-3/p02.xhtml) |
+[pdf](Downloads/Weierstrass.pdf)]
+
