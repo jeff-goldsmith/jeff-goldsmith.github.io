@@ -6,9 +6,9 @@ title: "Jeff Goldsmith"
 
 ### Assistant Professor of Biostatistics, Columbia University Mailman School of Public Health
 
-<br><img src="jeff.jpg" alt="jeff" style="width:85%; border:10px solid"><br>
+<br><img src="images/jeff.jpg" alt="jeff" style="width:85%; border:10px solid"><br>
 
-I recieved a BS in mathematics from [Dickinson College](http://www.dickinson.edu) in 2007 and a PhD in Biostatistics from [Johns Hopkins University](http://www.jhsph.edu/departments/biostatistics/) in 2012. My dissertation was advised by [Ciprian Crainiceanu](http://www.biostat.jhsph.edu/~ccrainic/) and [Brian Caffo](https://sites.google.com/view/bcaffo/home), and focused on statistical methods for high-dimensional structured data. I joined Columbia as an assistant professor in 2012.
+I received a BS in mathematics from [Dickinson College](http://www.dickinson.edu) in 2007 and a PhD in Biostatistics from [Johns Hopkins University](http://www.jhsph.edu/departments/biostatistics/) in 2012. My dissertation was advised by [Ciprian Crainiceanu](http://www.biostat.jhsph.edu/~ccrainic/) and [Brian Caffo](https://sites.google.com/view/bcaffo/home), and focused on statistical methods for high-dimensional structured data. I joined Columbia as an assistant professor in 2012.
 
 My statistical research is generally focused on functional data analysis, and draws heavily from ongoing collaborations with researchers in other disciplines. One major emphasis is the use of motion kinematics to understand motor control, skill learning, and recovery following stroke; another is physical activity measurement and quantification using wearable devices. The [research](research.html) page has more information on recent projects. 
 
