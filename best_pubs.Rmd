@@ -4,4 +4,47 @@
 <link rel="stylesheet" href="styles.css" type="text/css" />
 <br>
 
-This page serves as a placeholder for a "best publications" page, with content to be populated shortly.
+Below is a collection of papers that best represents my work in statistical methods development and transdisciplinary research. For each, there is a brief synopsis and a link to download a PDF of the paper. A comprehensive list of all my publications is [here](papers.html).
+
+
+#### Generalized Multilevel Function-on-Scalar Regression and Principal Component Analysis
+
+In the study that motivates this paper, participants wore an accelerometer to record physical activity data continuously for five days. I treat these data as exponential-family response curves, and develop methods for function-on-scalar regression and functional principal components analysis. 
+
+[[pdf](BestPubs/MotorLearning.pdf)]
+
+
+#### Variable Selection in the Functional Linear Concurrent Model
+
+This paper is also motivated by wearable device data. Participants wore an ambulatory blood pressure monitor that recorded observations roughy every half-hour over the course of one day. Accompanying each measurement are survey responses regarding mood, location, behavior, activity, and other variables. I posed a functional linear concurrent model for these data, and developed variable selection techniques to estimate model parameters.
+
+[[pdf](BestPubs/VBVS.pdf)]
+
+
+#### Assessing Systematic Effects of Stroke on Motor Control using Hierarchical Function-on-Scalar Regression
+
+Stroke patients were asked to make repeated reaches toward eight targets in a two-dimensional planar motion task, and their fingertip position was recorded during the execution of each reach. For these data I developed a Bayesian heirarchical function-on-scalar regression model, implemented a variational approximation for fast model building, and used posterior sampling for inference.
+
+[[pdf](BestPubs/BayesPFSR.pdf)]
+
+
+#### Modeling motor learning using heteroskedastic functional principal components analysis
+
+A related experiment used kinematic data to quantify motor learning in healthy subjects. Working with a student, I proposed a novel extension of functional principal components analysis in which score variances depend on covariates and subject random effects. A second revision of this paper will be submitted to the _Journal of the American Statistical Association_ in the coming weeks.
+
+[[pdf](BestPubs/MotorLearning.pdf)]
+
+
+#### Corrected Confidence Bands for Functional Data Using Principal Components
+
+This paper addresses an issue for inference in functional principal components analysis. Briefly, usual approaches to inference treat estimated principal components as fixed; I demonstrated that the variability in these estimates can substantially affect the coverage of confidence bands derived as if the principal components were known. I also propose a bootstrap-based procedure for obtaining bands with nominal coverage.
+
+[[pdf](BestPubs/FPCA_Bands.pdf)]
+
+
+#### New Insights into Activity Patterns in Children, Found Using Functional Data Analyses
+
+I develop statistical methods in response to challenges in real data, and work to disseminate those methods to a broad community. In this paper, I described function-on-scalar regression for researchers in physical activity measurement and quantification, and apply this approach to a study of activity patterns in childrean. The paper was accompanied by robust, user-friendly software, and was published in the leader subject-area journal. 
+
+[[pdf](BestPubs/HeadStart.pdf)]
+
