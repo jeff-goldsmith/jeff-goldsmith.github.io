@@ -1,0 +1,7 @@
+---
+---
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<br>
+
+This page serves as a placeholder for a "best publications" page, with content to be populated shortly.
