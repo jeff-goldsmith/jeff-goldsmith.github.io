@@ -4,7 +4,9 @@
 <link rel="stylesheet" href="styles.css" type="text/css" />
 <br>
 
-Below is a collection of papers that best represents my work in statistical methods development and transdisciplinary research. For each, there is a brief synopsis and a link to download a PDF of the paper. A comprehensive list of all my publications is [here](papers.html).
+Below is a collection of papers that best represents my work in statistical methods development and transdisciplinary research. For each, there is a brief synopsis, a full citation, and a link to download a PDF of the paper. 
+
+A comprehensive list of all my publications is [here](papers.html).
 <br><br>
 
 #### Generalized Multilevel Function-on-Scalar Regression and Principal Component Analysis
@@ -16,8 +18,8 @@ Generalized Multilevel Functional-on-Scalar Regression and Principal Component A
 <i> Biometrics, </i>
 <b>71</b> 344-353.
 [[pdf](BestPubs/GenMFPCA.pdf)].
-
-
+<br><br>
+<!--
 #### Variable Selection in the Functional Linear Concurrent Model
 
 This paper is also motivated by wearable device data. Participants wore an ambulatory blood pressure monitor that recorded observations roughy every half-hour over the course of one day. Accompanying each measurement are survey responses regarding mood, location, behavior, activity, and other variables. I posed a functional linear concurrent model for these data, and developed variable selection techniques to estimate model parameters.
@@ -27,7 +29,8 @@ Variable Selection in the Functional Linear Concurrent Model (2017+).
 <i> Statistics in Medicine, </i>
 accepted.
 [[pdf](BestPubs/VBVS.pdf)].
-
+<br><br>
+-->
 
 #### Assessing Systematic Effects of Stroke on Motor Control using Hierarchical Function-on-Scalar Regression
 
@@ -38,6 +41,7 @@ Assessing Systematic Effects of Stroke on Motor Control using Hierarchical Funct
 <i> Journal of the Royal Statistical Society: Series C, </i>
 <b>65</b> 215-236.
 [[pdf](BestPubs/BayesPFSR.pdf)].
+<br><br>
 
 
 #### Modeling motor learning using heteroskedastic functional principal components analysis
@@ -48,6 +52,7 @@ D. Backenroth, **J. Goldsmith**, M. D. Harran, J. C. Cortes, J. W. Krakauer, and
 Modeling motor learning using heteroskedastic functional principal components analysis.
 <i> Journal of the American Statistical Association, </i> acceptable after major revisions.
 [[pdf](BestPubs/MotorLearning.pdf)].
+<br><br>
 
 
 #### Corrected Confidence Bands for Functional Data Using Principal Components
@@ -59,6 +64,7 @@ Corrected Confidence Bands for Functional Data Using Principal Components.
 <i> Biometrics, </i>
 <b>69</b> 41-51.
 [[pdf](BestPubs/FPCA_Bands.pdf)].
+<br><br>
 
 
 #### New Insights into Activity Patterns in Children, Found Using Functional Data Analyses
@@ -70,4 +76,5 @@ New insights into activity patterns in children, found using functional data ana
 <i> Medicine and Science in Sports and Exercise, </i>
 <b>48</b> 1723-1729.
 [[pdf](BestPubs/HeadStart.pdf)].
+
 
