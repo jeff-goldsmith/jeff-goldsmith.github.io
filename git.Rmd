@@ -1,0 +1,23 @@
+---
+---
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<br>
+
+This page has some stuff about Git / GitHub / GitHub with R, and is the basis for a computing club meeting. 
+
+People will get the most out of that meeting if they've installed relevant software (git, RStudio, a git client) and created a GitHub account before showing up. Instructions for doing all that can be found in Chapters 4-9 of [this book](http://happygitwithr.com) (note -- all the rest of those chapters are also awesome).
+
+
+## Some slides
+
+
+After going through these slides we'll shift to an interactive demostration.
+
+## Other materials
+
+There's a lot of stuff to help with git in general, and with git for R in particular. This is a non-exhaustive list:
+
+* Jenny Bryan's [book](http://happygitwithr.com) (same as the link above)
+* The [GitHub](https://guides.github.com/activities/hello-world/) guide
+* Version control with [RStudio](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN)
