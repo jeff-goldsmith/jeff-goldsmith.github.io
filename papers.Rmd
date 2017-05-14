@@ -301,8 +301,8 @@ H. Sorensen, **J. Goldsmith**, L. Sangalli. (2013).
 An Introduction with Medical Applications to Functional Data Analysis.
 <i> Statistics in Medicine. </i>
 <b>32</b> 5222-5240.
-[[Link](http://www.tandfonline.com/doi/abs/10.1080/10618600.2012.679241) |
-[PubMed](http://www.ncbi.nlm.nih.gov/pubmed/23794794)]
+[[Link](http://onlinelibrary.wiley.com/doi/10.1002/sim.5989/abstract) |
+[PubMed](https://www.ncbi.nlm.nih.gov/pubmed/24114808)]
 
 
 L. Huang, **J. Goldsmith**, P. T. Reiss, D. S. Reich, C. M. Crainiceanu. (2013).
