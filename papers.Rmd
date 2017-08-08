@@ -16,6 +16,16 @@ In the following, <sup>&#8224;</sup> denotes equal contribution and <sup>&#8225;
 
 ## 2017
 
+A. L. Wong, **J. Goldsmith**, A. D. Forrence, A. M. Haith, and J. W. Krakauer (2017+).
+Habitual selection of reaction times.
+<i> eLife, </i> 
+accepted.
+
+K. M. Diaz, D. J. Krupka, M. J. Chang, I. M. Kronish, N. Moise, **J. Goldsmith**, and J. E. Schwartz (2017+).
+	Wrist-based cut-points for moderate- and vigorous-intensity physical activity for the Actical accelerometer in adults.
+<i> Journal of Sports Sciences, </i>
+accepted.
+
 J. C. Cortes<sup>&#8224;</sup>, **J. Goldsmith**<sup>&#8224;</sup>, M. Harran, J. Xu, N. Kim, A. R. Luft, P. Celnik, J. W. Krakauer, and T. Kitago (2017+).
 A short and distinct time window for recovery of arm motor control after stroke revealed with a global measure of trajectory kinematics.
 <i> Neurorehabilitation and Neural Repair, </i>
@@ -26,19 +36,19 @@ Objectively measured adherence to physical activity guidelines after acute coron
 <i> Journal of the American College of Cardiology, </i>
 accepted.
 
-P. T. Reiss, **J. Goldsmith**, H. L. Shang, R. T. Ogden.
-Methods for Scalar-on-Function Regression (2017+).
-<i> International Statistical Review, </i>
-accepted.
-
-**J. Goldsmith**, J. E. Schwartz.
+**J. Goldsmith** and J. E. Schwartz.
 Variable Selection in the Functional Linear Concurrent Model (2017+).
 <i> Statistics in Medicine, </i>
 accepted.
 [[PDF](Downloads/VBVS.pdf)
 | [GitHub](https://github.com/jeff-goldsmith/vbvs.concurrent)]
 
-J. Gertheiss, **J. Goldsmith**, H. L. Shang, A.-M. Staicu (2017).
+P. T. Reiss, **J. Goldsmith**, H. L. Shang, and R. T. Ogden.
+Methods for Scalar-on-Function Regression (2017+).
+<i> International Statistical Review, </i>
+<b>85</b> 228-249.
+
+J. Gertheiss, **J. Goldsmith**, and A.-M. Staicu (2017).
 A note on modeling sparse exponential-family functional response curves.
 <i> Computational Statistics and Data Analysis, </i>
 <b>105</b> 46-52.
@@ -48,7 +58,7 @@ A note on modeling sparse exponential-family functional response curves.
 
 ## 2016
 
-A. Castano, M. Haq, D. Narotsky, **J. Goldsmith**, R. L. Weinberg, R. Morgenstern, T. Pozniakoff, F. L. Ruberg, E. J. Miller, J. L. Berk, A. Dispenzieri, M. Grogan, G.
+A. Castano, M. Haq, D. Narotsky, **J. Goldsmith**, R. L. Weinberg, R. Morgenstern, T. Pozniakoff, F. L. Ruberg, E. J. Miller, J. L. Berk, A. Dispenzieri, M. Grogan, G. Johnson, S. Bokhari, and M. S. Maurer (2016).
 Multicenter Experience of Planar Technetium Pyrophosphate Cardiac Imaging: Does Preferential Cardiac Uptake Predict Survival in Patients with ATTR Cardiac Amyloidosis?
 <i> JAMA Cardiology, </i>
 <b>1</b> 880-889.
