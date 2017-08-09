@@ -7,7 +7,7 @@
 
 ## Current courses
 
-Fall 2017: Data Science I (all content will be public when it is ready ...)
+Fall 2017: [Data Science I](http://jeffgoldsmith.com/DSI/)  
 
 ## Past courses
 
@@ -21,5 +21,6 @@ Spring 2013: Categorical Data Analysis
 
 ## Short courses
 
+2017: ["Functional Data Analysis for Wearables: Methods and Applications"](http://jeffgoldsmith.com/ICAMPAM/) (at the International Conference on Ambulatory Monitoring of Physical Activity)  
 2017: ["Variable Selection Methods in Functional Regression"](http://jeffgoldsmith.com/IWAFDA/) (at the International Workshop on Advances in Functional Data Analysis)  
 2014: "Functional Data Analysis: Techniques and Applications" (at ENAR)
