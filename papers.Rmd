@@ -15,14 +15,18 @@ output:
 In the following, <sup>&#8224;</sup> denotes equal contribution and <sup>&#8225;</sup> indicates a student under my supervision.
 
 ## 2017
-
-A. L. Wong, **J. Goldsmith**, A. D. Forrence, A. M. Haith, and J. W. Krakauer (2017+).
-Habitual selection of reaction times.
-<i> eLife, </i> 
+D. Backenroth<sup>&#8225;</sup>, **J. Goldsmith**, M. D. Harran, J. C. Cortes, J. W. Krakauer, and T. Kitago (2017+).
+Modeling motor learning using heteroskedastic functional principal components analysis.
+<i> Journal of the American Statistical Association, </i> 
 accepted.
+[[PDF](Downloads/HetFCPA.pdf)]
+
+M. S. Maurer, E. Horn, A. Reyentovich, V. V. Dickson, S. Pinney, D. Goldwater, N. E. Goldstein, O. Jimenez, S. Teruya, **J. Goldsmith**, S. Helmke, M. Yuzefpolskaya, and G. R Reeves (2017+).
+Can a Left Ventricular Assist Devices in Advanced Systolic Heart Failure Improve or Reverse the Frailty Phenotype?
+<i> Journal of the American Geriatrics Society, </i> accepted.
 
 K. M. Diaz, D. J. Krupka, M. J. Chang, I. M. Kronish, N. Moise, **J. Goldsmith**, and J. E. Schwartz (2017+).
-	Wrist-based cut-points for moderate- and vigorous-intensity physical activity for the Actical accelerometer in adults.
+Wrist-based cut-points for moderate- and vigorous-intensity physical activity for the Actical accelerometer in adults.
 <i> Journal of Sports Sciences, </i>
 accepted.
 
@@ -43,8 +47,14 @@ accepted.
 [[PDF](Downloads/VBVS.pdf)
 | [GitHub](https://github.com/jeff-goldsmith/vbvs.concurrent)]
 
+A. L. Wong, **J. Goldsmith**, A. D. Forrence, A. M. Haith, and J. W. Krakauer (2017+).
+Habitual selection of reaction times.
+<i> eLife, </i> 
+<b>6</b> e28075.
+[[Link](https://elifesciences.org/articles/28075)]
+
 P. T. Reiss, **J. Goldsmith**, H. L. Shang, and R. T. Ogden.
-Methods for Scalar-on-Function Regression (2017+).
+Methods for Scalar-on-Function Regression (2017).
 <i> International Statistical Review, </i>
 <b>85</b> 228-249.
 
