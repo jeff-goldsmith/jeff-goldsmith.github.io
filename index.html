@@ -20,8 +20,8 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -31,10 +31,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -219,8 +221,8 @@ $(document).ready(function () {
 
 
 <p><link rel="stylesheet" href="styles.css" type="text/css"></p>
-<div id="assistant-professor-of-biostatistics-columbia-university-mailman-school-of-public-health" class="section level3">
-<h3>Assistant Professor of Biostatistics, Columbia University Mailman School of Public Health</h3>
+<div id="associate-professor-of-biostatistics-columbia-university-mailman-school-of-public-health" class="section level3">
+<h3>Associate Professor of Biostatistics, Columbia University Mailman School of Public Health</h3>
 <p><br><img src="images/jeff.jpg" alt="jeff" style="width:85%; border:10px solid"><br></p>
 <p>I received a BS in mathematics from <a href="http://www.dickinson.edu">Dickinson College</a> in 2007 and a PhD in Biostatistics from <a href="http://www.jhsph.edu/departments/biostatistics/">Johns Hopkins University</a> in 2012. My dissertation was advised by <a href="http://www.biostat.jhsph.edu/~ccrainic/">Ciprian Crainiceanu</a> and <a href="https://sites.google.com/view/bcaffo/home">Brian Caffo</a>, and focused on statistical methods for high-dimensional structured data. I joined Columbia as an assistant professor in 2012.</p>
 <p>My statistical research is generally focused on functional data analysis, and draws heavily from ongoing collaborations with researchers in other disciplines. One major emphasis is the use of motion kinematics to understand motor control, skill learning, and recovery following stroke; another is physical activity measurement and quantification using wearable devices. The <a href="research.html">research</a> page has more information on recent projects.</p>

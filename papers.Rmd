@@ -43,8 +43,9 @@ accepted.
 **J. Goldsmith** and J. E. Schwartz.
 Variable Selection in the Functional Linear Concurrent Model (2017+).
 <i> Statistics in Medicine, </i>
-accepted.
-[[PDF](Downloads/VBVS.pdf)
+<b>36</b> 2237-2250.
+[[Link](http://onlinelibrary.wiley.com/doi/10.1002/sim.7254/full)
+| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/28211085)
 | [GitHub](https://github.com/jeff-goldsmith/vbvs.concurrent)]
 
 A. L. Wong, **J. Goldsmith**, A. D. Forrence, A. M. Haith, and J. W. Krakauer (2017+).
