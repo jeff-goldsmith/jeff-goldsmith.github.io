@@ -23,8 +23,8 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -34,10 +34,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -319,23 +321,28 @@ div.tocify {
 <p><br> <font size="5"><a href="https://scholar.google.com/citations?user=3wvmkE0AAAAJ">Google Scholar Page</a></font> <br></p>
 <p>In the following, <sup>†</sup> denotes equal contribution and <sup>‡</sup> indicates a student under my supervision.</p>
 <div id="section" class="section level2">
+<h2>2018</h2>
+<p>D. Backenroth<sup>‡</sup>, <strong>J. Goldsmith</strong>, M. D. Harran, J. C. Cortes, J. W. Krakauer, and T. Kitago (2018+). Modeling motor learning using heteroskedastic functional principal components analysis. <i> Journal of the American Statistical Association, </i> accepted. [<a href="Downloads/HetFCPA.pdf">PDF</a>]</p>
+<p>H. Rosenblum, A. Castano, J. Alvarez, <strong>J. Goldsmith</strong>, S. Helmke, M.S. Maurer (2018). TTR (Transthyretin) Stabilizers Are Associated With Improved Survival in Patients With TTR Cardiac Amyloidosis. <i> Circulation: Heart Failure, </i> <b>11</b> e004769. [<a href="http://circheartfailure.ahajournals.org/content/11/4/e004769">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/29615436">PubMed</a>]</p>
+<p>K. M. Diaz, D. J. Krupka, M. J. Chang, I. M. Kronish, N. Moise, <strong>J. Goldsmith</strong>, and J. E. Schwartz (2018). Wrist-based cut-points for moderate- and vigorous-intensity physical activity for the Actical accelerometer in adults. <i> Journal of Sports Sciences, </i> <b>36</b> 206-212. [<a href="https://shapeamerica.tandfonline.com/doi/abs/10.1080/02640414.2017.1293279">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/28282744">PubMed</a>]</p>
+</div>
+<div id="section-1" class="section level2">
 <h2>2017</h2>
-<p>D. Backenroth<sup>‡</sup>, <strong>J. Goldsmith</strong>, M. D. Harran, J. C. Cortes, J. W. Krakauer, and T. Kitago (2017+). Modeling motor learning using heteroskedastic functional principal components analysis. <i> Journal of the American Statistical Association, </i> accepted. [<a href="Downloads/HetFCPA.pdf">PDF</a>]</p>
-<p>M. S. Maurer, E. Horn, A. Reyentovich, V. V. Dickson, S. Pinney, D. Goldwater, N. E. Goldstein, O. Jimenez, S. Teruya, <strong>J. Goldsmith</strong>, S. Helmke, M. Yuzefpolskaya, and G. R Reeves (2017+). Can a Left Ventricular Assist Devices in Advanced Systolic Heart Failure Improve or Reverse the Frailty Phenotype? <i> Journal of the American Geriatrics Society, </i> accepted.</p>
-<p>K. M. Diaz, D. J. Krupka, M. J. Chang, I. M. Kronish, N. Moise, <strong>J. Goldsmith</strong>, and J. E. Schwartz (2017+). Wrist-based cut-points for moderate- and vigorous-intensity physical activity for the Actical accelerometer in adults. <i> Journal of Sports Sciences, </i> accepted.</p>
-<p>J. C. Cortes<sup>†</sup>, <strong>J. Goldsmith</strong><sup>†</sup>, M. Harran, J. Xu, N. Kim, A. R. Luft, P. Celnik, J. W. Krakauer, and T. Kitago (2017+). A short and distinct time window for recovery of arm motor control after stroke revealed with a global measure of trajectory kinematics. <i> Neurorehabilitation and Neural Repair, </i> accepted.</p>
-<p>M. Kronish, K. M. Diaz, <strong>J. Goldsmith</strong>, N. Moise, and J. E. Schwartz. Objectively measured adherence to physical activity guidelines after acute coronary syndrome (2017+). <i> Journal of the American College of Cardiology, </i> accepted.</p>
-<p><strong>J. Goldsmith</strong> and J. E. Schwartz. Variable Selection in the Functional Linear Concurrent Model (2017+). <i> Statistics in Medicine, </i> <b>36</b> 2237-2250. [<a href="http://onlinelibrary.wiley.com/doi/10.1002/sim.7254/full">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/28211085">PubMed</a> | <a href="https://github.com/jeff-goldsmith/vbvs.concurrent">GitHub</a>]</p>
-<p>A. L. Wong, <strong>J. Goldsmith</strong>, A. D. Forrence, A. M. Haith, and J. W. Krakauer (2017+). Habitual selection of reaction times. <i> eLife, </i> <b>6</b> e28075. [<a href="https://elifesciences.org/articles/28075">Link</a>]</p>
+<p>K. M. Diaz, <strong>J. Goldsmith</strong>, H. Greenlee, G. Strizich, Q. Qi, Y. Mossavar-Rahmani, D. C. Vidot, C. Buelna, C. E. Brintz, T. Elfassy, L. C. Gallo, M. L. Daviglus, D. Sotres-Alvarez, R. C. Kaplan (2017). Prolonged, Uninterrupted Sedentary Behavior and Glycemic Biomarkers Among US Hispanic/Latino Adults <i> Circulation, </i> <b>136</b> 1362-1373. [<a href="http://circ.ahajournals.org/content/136/15/1362">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/28835368">PubMed</a>]</p>
+<p>M. S. Maurer, E. Horn, A. Reyentovich, V. V. Dickson, S. Pinney, D. Goldwater, N. E. Goldstein, O. Jimenez, S. Teruya, <strong>J. Goldsmith</strong>, S. Helmke, M. Yuzefpolskaya, and G. R Reeves (2017). Can a Left Ventricular Assist Devices in Advanced Systolic Heart Failure Improve or Reverse the Frailty Phenotype? <i> Journal of the American Geriatrics Society, </i> <b>65</b> 2383-2390. [<a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jgs.15124">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/28940248">PubMed</a>]</p>
+<p>J. C. Cortes<sup>†</sup>, <strong>J. Goldsmith</strong><sup>†</sup>, M. Harran, J. Xu, N. Kim, A. R. Luft, P. Celnik, J. W. Krakauer, and T. Kitago (2017). A short and distinct time window for recovery of arm motor control after stroke revealed with a global measure of trajectory kinematics. <i> Neurorehabilitation and Neural Repair, </i> <b>31</b> 552-560. [<a href="http://journals.sagepub.com/doi/abs/10.1177/1545968317697034">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/28506149">PubMed</a>]</p>
+<p>M. Kronish, K. M. Diaz, <strong>J. Goldsmith</strong>, N. Moise, and J. E. Schwartz. Objectively measured adherence to physical activity guidelines after acute coronary syndrome (2017). <i> Journal of the American College of Cardiology, </i> <b>69</b> 1205. [<a href="https://www.sciencedirect.com/science/article/pii/S0735109717300372?via%3Dihub">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/28254185">PubMed</a>]</p>
+<p><strong>J. Goldsmith</strong> and J. E. Schwartz. Variable Selection in the Functional Linear Concurrent Model (2017). <i> Statistics in Medicine, </i> <b>36</b> 2237-2250. [<a href="http://onlinelibrary.wiley.com/doi/10.1002/sim.7254/full">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/28211085">PubMed</a> | <a href="https://github.com/jeff-goldsmith/vbvs.concurrent">GitHub</a>]</p>
+<p>A. L. Wong, <strong>J. Goldsmith</strong>, A. D. Forrence, A. M. Haith, and J. W. Krakauer (2017). Habitual selection of reaction times. <i> eLife, </i> <b>6</b> e28075. [<a href="https://elifesciences.org/articles/28075">Link</a>]</p>
 <p>P. T. Reiss, <strong>J. Goldsmith</strong>, H. L. Shang, and R. T. Ogden. Methods for Scalar-on-Function Regression (2017). <i> International Statistical Review, </i> <b>85</b> 228-249.</p>
 <p>J. Gertheiss, <strong>J. Goldsmith</strong>, and A.-M. Staicu (2017). A note on modeling sparse exponential-family functional response curves. <i> Computational Statistics and Data Analysis, </i> <b>105</b> 46-52. [<a href="http://www.sciencedirect.com/science/article/pii/S0167947316301748">Link</a> | <a href="https://github.com/jeff-goldsmith/vbvs.concurrent">GitHub</a>]</p>
 </div>
-<div id="section-1" class="section level2">
+<div id="section-2" class="section level2">
 <h2>2016</h2>
 <p>A. Castano, M. Haq, D. Narotsky, <strong>J. Goldsmith</strong>, R. L. Weinberg, R. Morgenstern, T. Pozniakoff, F. L. Ruberg, E. J. Miller, J. L. Berk, A. Dispenzieri, M. Grogan, G. Johnson, S. Bokhari, and M. S. Maurer (2016). Multicenter Experience of Planar Technetium Pyrophosphate Cardiac Imaging: Does Preferential Cardiac Uptake Predict Survival in Patients with ATTR Cardiac Amyloidosis? <i> JAMA Cardiology, </i> <b>1</b> 880-889.</p>
 <p><strong>J. Goldsmith</strong>. vbvs.concurrent: Fitting Methods for the Functional Linear Concurrent Model (2016). <i> The Journal of Open Source Software, </i> <b>1</b>. [<a href="http://joss.theoj.org/papers/a3884174f17dbb9a695f7b8658887eff">Link</a> | <a href="https://github.com/jeff-goldsmith/vbvs.concurrent">GitHub</a>]</p>
 <p>S. T. Sorge, D. C. Hesdorffer, J. C. Phelan, M. R. Winawer, S. Shostak, <strong>J. Goldsmith</strong>, W. K. Chung, R. Ottman (2016). Genetic causal attribution and depression in multiplex epilepsy families. <i> Epilepsia, </i> <b>57</b> 1643-1650. [<a href="http://onlinelibrary.wiley.com/doi/10.1111/epi.13500/full">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/27558297">PubMed</a>]</p>
-<p>A. L. Wong, <strong>J. Goldsmith</strong>, J Krakauer (2016). A motor planning stage represents the shape of upcoming movement trajectories. <i> Journal of Neurophysiolog, </i> <b>116</b> 296-305. [<a href="http://jn.physiology.org/content/116/2/296">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/27098032">PubMed</a>]</p>
+<p>A. L. Wong, <strong>J. Goldsmith</strong>, J Krakauer (2016). A motor planning stage represents the shape of upcoming movement trajectories. <i> Journal of Neurophysiology, </i> <b>116</b> 296-305. [<a href="http://jn.physiology.org/content/116/2/296">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/27098032">PubMed</a>]</p>
 <p><strong>J. Goldsmith</strong>, X. Liu<sup>‡</sup>, J. S. Jacobson, A. Rundle (2016). New insights into activity patterns in children, found using functional data analyses. <i> Medicine and Science in Sports and Exercise, </i> <b>48</b> 1723-1729. [<a href="http://journals.lww.com/acsm-msse/Abstract/2016/09000/New_Insights_into_Activity_Patterns_in_Children,.11.aspx">Link</a> | <a href="Downloads/HeadStart.pdf">PDF</a> | <a href="Downloads/HeadStartCode.zip">Code</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/27183122">PubMed</a>]</p>
 <p>J. Wrobel<sup>‡</sup>, S.Y. Park, A.M. Staicu, <strong>J. Goldsmith</strong> (2016). Interactive graphics for functional data analyses. <i> Stat, </i> <b>5</b> 108-118. [<a href="http://arxiv.org/abs/1602.04091">arXiv</a> | <a href="http://onlinelibrary.wiley.com/doi/10.1002/sta4.109/abstract">Link</a> | <a href="https://github.com/refunders/refund.shiny">GitHub</a> | <a href="https://cran.r-project.org/web/packages/refund.shiny/index.html">CRAN</a>]</p>
 <p>Y. Chen<sup>‡</sup>, <strong>J. Goldsmith</strong>, T. Ogden (2016). Variable Selection in Function-on-Scalar Regression. <i> Stat, </i> <b>5</b> 88-101. [<a href="http://onlinelibrary.wiley.com/doi/10.1002/sta4.106/abstract">Link</a> | <a href="Downloads/FoS_VarSelect.pdf">PDF</a> | Implemented in <a href="https://github.com/refunders/refund">refund</a> as fosr.vs()]</p>
@@ -344,7 +351,7 @@ div.tocify {
 <p>K. M. Diaz, D. J Krupka, M. J. Chang, J. A. Schaffer, Y. Ma, <strong>J. Goldsmith</strong>, J. E. Schwartz, K. W. Davidson (2016). Validation of the Fitbit One for physical activity measurement at an upper torso attachment site. <i> BMC Research Notes, </i> <b>9</b> 213. [<a href="http://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-016-2020-8">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/27068022">PubMed</a>]</p>
 <p>M. Abdalla, <strong>J. Goldsmith</strong>, P. Muntner, K. M. Diaz, K. Reynolds, J. E. Schwartz, D. Shimbo (2016). Is Isolated Nocturnal Hypertension a Reproducible Phenotype? <i> American Journal of Hypertension, </i> <b>29</b> 33-38. [<a href="http://ajh.oxfordjournals.org/content/29/1/33.full.pdf+html">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/25904648">PubMed</a>]</p>
 </div>
-<div id="section-2" class="section level2">
+<div id="section-3" class="section level2">
 <h2>2015</h2>
 <p>T. Kitago<sup>†</sup>, <strong>J. Goldsmith</strong><sup>†</sup>, M. Harran, L. Kane, J. Berard, S. Huang, S. Ryan, P. Mazzoni, J, Krakauer, and V. Huang (2015). Robotic therapy for chronic stroke: general recovery of impairment or improved task-specific skill? <i> Journal of Neurophysiology, </i> <b>114</b> 1885-1894. [<a href="http://jn.physiology.org/content/early/2015/07/10/jn.00336.2015.abstract">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/26032276">PubMed</a>] († denotes equal contribution)</p>
 <p><strong>J. Goldsmith</strong>, V. Zipunnikov, J. Schrack (2015). Generalized Multilevel Functional-on-Scalar Regression and Principal Component Analysis. <i> Biometrics, </i> <b>71</b> 344-353. [<a href="http://onlinelibrary.wiley.com/doi/10.1111/biom.12278/abstract">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/25620473">PubMed</a> | <a href="Downloads/GenMFPCA_Code.zip">Code</a> | <a href="https://jeff-goldsmith.shinyapps.io/GFPCA_interactive">Shiny App</a>]</p>
@@ -353,7 +360,7 @@ div.tocify {
 <p>C. Wang, S. Vine, A. Hsiao, A. Rundle, and <strong>J. Goldsmith</strong> (2015). Weight-Related Behaviors When Children are in School Versus on Summer Breaks: Does Income Matter? <i> Journal of School Health, </i> <b>85</b> 458-466. [<a href="http://onlinelibrary.wiley.com/doi/10.1111/josh.12274/abstract">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/26032276">PubMed</a>]</p>
 <p>M. Sabatello, J. Phelan, D. C. Hesdorffer, S. Shostak, <strong>J. Goldsmith</strong>, S. Sorge, M. Winawer, W. Chung, R. Ottman (2015). Genetic Causal Attribution of Epilepsy and its Implications for Felt Stigma. <i> Epilepsia, </i> <b>56</b> 1542-1550. [<a href="http://onlinelibrary.wiley.com/doi/10.1111/epi.13113/abstract">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/26290354">PubMed</a>]</p>
 </div>
-<div id="section-3" class="section level2">
+<div id="section-4" class="section level2">
 <h2>2014</h2>
 <p><strong>J. Goldsmith</strong>, L. Huang, C. M. Crainiceanu (2014). Smooth Scalar-on-Image Regression via Spatial Bayesian Variable Selection. <i> Journal of Computational and Graphical Statistics, </i> <b>23</b> 46-64. [<a href="http://amstat.tandfonline.com/doi/abs/10.1080/10618600.2012.743437#.U2pt-17A7d4">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/24729670">PubMed</a>]</p>
 <p><strong>J. Goldsmith</strong>, F. Scheipl (2014). Estimator Selection and Combination in Scalar-on-Function Regression. <i> Computational Statistics and Data Analysis, </i> <b>70</b> 362-372. [<a href="http://www.sciencedirect.com/science/article/pii/S0167947313003629">Link</a> | <a href="Downloads/Ensembling_Paper.pdf">PDF</a> | <a href="Downloads/Ensembling_Code.zip">Code</a>]</p>
@@ -367,7 +374,7 @@ div.tocify {
 <p>N. Cyrille, <strong>J. Goldsmith</strong>, J. Alvarez, M. S. Maurer (2014). Prevalence and Prognostic Significance of Low QRS Voltage Among the Three Main Types of Cardiac Amyloid. <i> American Journal of Cardiology, </i> <b>114</b> 1089-1093. [<a href="http://www.sciencedirect.com/science/article/pii/S0002914914014544#">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/25212550">PubMed</a>]</p>
 <p>R. T. Shinohara, E. M. Sweeny, <strong>J. Goldsmith</strong>, N. Shiee, F. J. Mateen, P. A. Calabresi, S. Jarso, D. L. Pham, D. S. Reich, C. M. Crainiceanu (2014). Statistical Normalization Techniques for Magnetic Resonance Imaging. <i> NeuroImage: Clinical, </i> <b>6</b> 9-19 [<a href="http://www.sciencedirect.com/science/article/pii/S221315821400117X#">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/25379412">PubMed</a>]</p>
 </div>
-<div id="section-4" class="section level2">
+<div id="section-5" class="section level2">
 <h2>2013</h2>
 <p><strong>J. Goldsmith</strong>, S. Greven, C. M. Crainiceanu (2013). Corrected Confidence Bands for Functional Data Using Principal Components. <i> Biometrics, </i> <b>69</b> 41-51. [<a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1541-0420.2012.01808.x/abstract">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/23003003">PubMed</a>]</p>
 <p>J. Gertheiss, <strong>J. Goldsmith</strong>, C. M. Crainiceanu, S. Greven. (2013). Longitudinal Scalar-on-Functions Regression with Application to Tractography Data. <i> Biostatistics. </i> <b>14</b> 447-461. [<a href="http://biostatistics.oxfordjournals.org/content/14/3/447.long">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/23292804">PubMed</a>]</p>
@@ -375,7 +382,7 @@ div.tocify {
 <p>L. Huang, <strong>J. Goldsmith</strong>, P. T. Reiss, D. S. Reich, C. M. Crainiceanu. (2013). Bayesian Scalar-on-Image Regression with Application to Association Between Intracranial DTI and Cognitive Outcomes. <i> NeuroImage. </i> <b>83</b> 210-223. [<a href="http://www.sciencedirect.com/science/article/pii/S1053811913006575">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/23792220">PubMed</a>]</p>
 <p>F. J. Leyva, R. P. Bakshi, E. J. Fuchs, L. Li, B. S. Caffo, <strong>J. Goldsmith</strong>, Y. Du, J. P. Leal, L. A. Lee, M. S. Torbenson, C. W. Hendrix (2013). Iso-osmolar enemas demonstrate preferential gastrointestinal distribution, safety, and acceptability compared with hyper- and hypo-osmolar enemas as a potential delive <i> AIDS Research and Human Retroviruses. </i> <b>29</b> 1487-1495. [<a href="http://online.liebertpub.com/doi/abs/10.1089/aid.2013.0189">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/23885722">PubMed</a>]</p>
 </div>
-<div id="section-5" class="section level2">
+<div id="section-6" class="section level2">
 <h2>2012</h2>
 <p><strong>J. Goldsmith</strong>, C. M. Crainiceanu, B. S. Caffo, D. S. Reich (2012). Longitudinal Penalized Functional Regression for Cognitive Outcomes on Neuronal Tract Measurements. <i> Journal of the Royal Statistical Society: Series C, </i> <b>61</b> 453-469. [<a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1467-9876.2011.01031.x/abstract">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/22679339">PubMed</a> | <a href="Downloads/LPFR_Code.zip">Simulation Code</a>]</p>
 <p>T. Shinohara, <strong>J. Goldsmith</strong>, F. Mateen, D. S. Reich, C. M. Crainiceanu (2012). Predicting Breakdown of the Blood-Brain Barrier in Multiple Sclerosis Without Contrast Agents. <i> American Journal of Neuroradiology, </i> <b>33</b> 1586-1590. [<a href="http://www.ajnr.org/content/33/8/1586.long">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/22442041">PubMed</a>]</p>

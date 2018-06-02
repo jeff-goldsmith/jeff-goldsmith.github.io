@@ -14,41 +14,68 @@ output:
 
 In the following, <sup>&#8224;</sup> denotes equal contribution and <sup>&#8225;</sup> indicates a student under my supervision.
 
-## 2017
-D. Backenroth<sup>&#8225;</sup>, **J. Goldsmith**, M. D. Harran, J. C. Cortes, J. W. Krakauer, and T. Kitago (2017+).
+## 2018
+
+D. Backenroth<sup>&#8225;</sup>, **J. Goldsmith**, M. D. Harran, J. C. Cortes, J. W. Krakauer, and T. Kitago (2018+).
 Modeling motor learning using heteroskedastic functional principal components analysis.
 <i> Journal of the American Statistical Association, </i> 
 accepted.
 [[PDF](Downloads/HetFCPA.pdf)]
 
-M. S. Maurer, E. Horn, A. Reyentovich, V. V. Dickson, S. Pinney, D. Goldwater, N. E. Goldstein, O. Jimenez, S. Teruya, **J. Goldsmith**, S. Helmke, M. Yuzefpolskaya, and G. R Reeves (2017+).
-Can a Left Ventricular Assist Devices in Advanced Systolic Heart Failure Improve or Reverse the Frailty Phenotype?
-<i> Journal of the American Geriatrics Society, </i> accepted.
+H. Rosenblum, A. Castano, J. Alvarez, **J. Goldsmith**, S. Helmke, M.S. Maurer (2018).
+TTR (Transthyretin) Stabilizers Are Associated With Improved Survival in Patients With TTR Cardiac Amyloidosis.
+<i> Circulation: Heart Failure, </i>
+<b>11</b> e004769.
+[[Link](http://circheartfailure.ahajournals.org/content/11/4/e004769)
+| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/29615436)]
 
-K. M. Diaz, D. J. Krupka, M. J. Chang, I. M. Kronish, N. Moise, **J. Goldsmith**, and J. E. Schwartz (2017+).
+K. M. Diaz, D. J. Krupka, M. J. Chang, I. M. Kronish, N. Moise, **J. Goldsmith**, and J. E. Schwartz (2018).
 Wrist-based cut-points for moderate- and vigorous-intensity physical activity for the Actical accelerometer in adults.
 <i> Journal of Sports Sciences, </i>
-accepted.
+<b>36</b> 206-212.
+[[Link](https://shapeamerica.tandfonline.com/doi/abs/10.1080/02640414.2017.1293279)
+| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/28282744)]
 
-J. C. Cortes<sup>&#8224;</sup>, **J. Goldsmith**<sup>&#8224;</sup>, M. Harran, J. Xu, N. Kim, A. R. Luft, P. Celnik, J. W. Krakauer, and T. Kitago (2017+).
+
+## 2017
+
+K. M. Diaz, **J. Goldsmith**, H. Greenlee, G. Strizich, Q. Qi, Y. Mossavar-Rahmani, D. C. Vidot, C. Buelna, C. E. Brintz, T. Elfassy, L. C. Gallo, M. L. Daviglus, D. Sotres-Alvarez, R. C. Kaplan (2017).
+Prolonged, Uninterrupted Sedentary Behavior and Glycemic Biomarkers Among US Hispanic/Latino Adults
+<i> Circulation, </i> 
+<b>136</b> 1362-1373.
+[[Link](http://circ.ahajournals.org/content/136/15/1362)
+| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/28835368)]
+
+M. S. Maurer, E. Horn, A. Reyentovich, V. V. Dickson, S. Pinney, D. Goldwater, N. E. Goldstein, O. Jimenez, S. Teruya, **J. Goldsmith**, S. Helmke, M. Yuzefpolskaya, and G. R Reeves (2017).
+Can a Left Ventricular Assist Devices in Advanced Systolic Heart Failure Improve or Reverse the Frailty Phenotype?
+<i> Journal of the American Geriatrics Society, </i> 
+<b>65</b> 2383-2390.
+[[Link](https://onlinelibrary.wiley.com/doi/full/10.1111/jgs.15124)
+| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/28940248)]
+
+J. C. Cortes<sup>&#8224;</sup>, **J. Goldsmith**<sup>&#8224;</sup>, M. Harran, J. Xu, N. Kim, A. R. Luft, P. Celnik, J. W. Krakauer, and T. Kitago (2017).
 A short and distinct time window for recovery of arm motor control after stroke revealed with a global measure of trajectory kinematics.
 <i> Neurorehabilitation and Neural Repair, </i>
-accepted.
+<b>31</b> 552-560.
+[[Link](http://journals.sagepub.com/doi/abs/10.1177/1545968317697034)
+| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/28506149)]
 	
 M. Kronish, K. M. Diaz, **J. Goldsmith**, N. Moise, and J. E. Schwartz.
-Objectively measured adherence to physical activity guidelines after acute coronary syndrome (2017+).
+Objectively measured adherence to physical activity guidelines after acute coronary syndrome (2017).
 <i> Journal of the American College of Cardiology, </i>
-accepted.
+<b>69</b> 1205.
+[[Link](https://www.sciencedirect.com/science/article/pii/S0735109717300372?via%3Dihub)
+| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/28254185)]
 
 **J. Goldsmith** and J. E. Schwartz.
-Variable Selection in the Functional Linear Concurrent Model (2017+).
+Variable Selection in the Functional Linear Concurrent Model (2017).
 <i> Statistics in Medicine, </i>
 <b>36</b> 2237-2250.
 [[Link](http://onlinelibrary.wiley.com/doi/10.1002/sim.7254/full)
 | [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/28211085)
 | [GitHub](https://github.com/jeff-goldsmith/vbvs.concurrent)]
 
-A. L. Wong, **J. Goldsmith**, A. D. Forrence, A. M. Haith, and J. W. Krakauer (2017+).
+A. L. Wong, **J. Goldsmith**, A. D. Forrence, A. M. Haith, and J. W. Krakauer (2017).
 Habitual selection of reaction times.
 <i> eLife, </i> 
 <b>6</b> e28075.
@@ -90,7 +117,7 @@ Genetic causal attribution and depression in multiplex epilepsy families.
 
 A. L. Wong, **J. Goldsmith**, J Krakauer (2016).
 A motor planning stage represents the shape of upcoming movement trajectories.
-<i> Journal of Neurophysiolog, </i>
+<i> Journal of Neurophysiology, </i>
 <b>116</b> 296-305.
 [[Link](http://jn.physiology.org/content/116/2/296)
 | [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/27098032)]
