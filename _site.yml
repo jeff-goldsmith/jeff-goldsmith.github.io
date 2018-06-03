@@ -1,8 +1,8 @@
 name: "Jeff Goldsmith"
 output_dir: "."
 navbar:
-  title: "Jeff Goldsmith"
-  right:
+  title: "Home"
+  left:
     - text: "Research"
       href: research.html
     - text: "Papers"
@@ -11,8 +11,13 @@ navbar:
       href: teaching.html
     - text: "Software"
       href: software.html
-    - icon: fa-envelope fa-lg
+  right:
+    - icon: fa-paper-plane fa-lg
       href: mailto:jeff.goldsmith@columbia.edu
+    - icon: ai-google-scholar ai-lg
+      href: https://scholar.google.com/citations?user=3wvmkE0AAAAJ
+    - icon: ai-cv ai-lg
+      href: ./Downloads/CV_Goldsmith.pdf
     - icon: fa-github fa-lg
       href: http://github.com/jeff-goldsmith/
 output:

@@ -20,8 +20,8 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -31,10 +31,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -173,13 +175,10 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Jeff Goldsmith</a>
+      <a class="navbar-brand" href="index.html">Home</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="research.html">Research</a>
 </li>
@@ -192,9 +191,23 @@ $(document).ready(function () {
 <li>
   <a href="software.html">Software</a>
 </li>
-<li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
   <a href="mailto:jeff.goldsmith@columbia.edu">
-    <span class="fa fa-envelope fa-lg"></span>
+    <span class="fa fa-paper-plane fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://scholar.google.com/citations?user=3wvmkE0AAAAJ">
+    <span class="ai ai-google-scholar ai-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="./Downloads/CV_Goldsmith.pdf">
+    <span class="ai ai-cv ai-lg"></span>
      
   </a>
 </li>
@@ -230,7 +243,7 @@ $(document).ready(function () {
 <h2>Wearable devices</h2>
 <p>Accelerometry is used to collect continuous information on physical activity using unobtrusive monitors worn at all times. Below is data gathered for 420 children in northern Manhattan and the Bronx, collected as part of a study to understand the effects of environmental exposures on health. In several papers we’ve tried to understand the effects of subject characteristics, such as age, gender, or BMI, on activity profile, as well as to assess associations between physical activity and long-term health outcomes.</p>
 <p>This graphic shows observed accelerometer data for children in this study, separated into groups based on covariates. Below each data plot is the coefficient function for the covariate effect estimated in a function-on-scalar regression model. An <a href="https://jeff-goldsmith.shinyapps.io/HS_interactive/">interactive version</a> of this graphic is also available.</p>
-<p><img src="images/Accel_Covariate.jpg" alt="kinematics" style="width:80%; border:5px solid"></p>
+<p><img src="images/accel_covariate.jpg" alt="kinematics" style="width:80%; border:5px solid"></p>
 </div>
 
 <br><br>
