@@ -2,6 +2,8 @@
 ---
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="stylesheet" href="academicons/css/academicons.min.css"/>
+
 <br>
 
 I am inspired by current scientific questions to develop general, principled methods for the analysis of challenging data sets. The methodological developments motivated by these studies are modern functional data analysis tools required by emerging structures and scientific problems.

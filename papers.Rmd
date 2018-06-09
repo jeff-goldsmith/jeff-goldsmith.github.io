@@ -7,6 +7,7 @@ output:
 
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="stylesheet" href="academicons/css/academicons.min.css"/>
 
 <br>
 <font size="5">[Google Scholar Page](https://scholar.google.com/citations?user=3wvmkE0AAAAJ)</font> 
