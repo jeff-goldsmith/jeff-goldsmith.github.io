@@ -17,6 +17,16 @@ In the following, <sup>&#8224;</sup> denotes equal contribution and <sup>&#8225;
 
 ## 2018
 
+Y. Chen<sup>&#8225;</sup>, **J. Goldsmith**, and R. T. Ogden (2018+).
+Functional data analysis of dynamic PET data.
+<i> Journal of the American Statistical Association, </i> 
+accepted.
+
+Y. Chen<sup>&#8225;</sup>, **J. Goldsmith**, and R. T. Ogden (2018+).
+Nonlinear mixed-effects models for PET data.
+<i> Transactions on Biomedical Engineering, </i> 
+accepted.
+
 D. Backenroth<sup>&#8225;</sup>, **J. Goldsmith**, M. D. Harran, J. C. Cortes, J. W. Krakauer, and T. Kitago (2018+).
 Modeling motor learning using heteroskedastic functional principal components analysis.
 <i> Journal of the American Statistical Association, </i> 
