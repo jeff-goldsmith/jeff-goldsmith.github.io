@@ -4,6 +4,7 @@ title: "Jeff Goldsmith"
 
 <link rel="stylesheet" href="styles.css" type="text/css">
 <link rel="stylesheet" href="academicons/css/academicons.min.css"/>
+<link rel="apple-touch-icon" href="/images/JG_transparent.png" >
 
 Associate Professor of Biostatistics <br>
 Columbia University Mailman School of Public Health
