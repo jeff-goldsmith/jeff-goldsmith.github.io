@@ -17,6 +17,16 @@ In the following, <sup>&#8224;</sup> denotes equal contribution and <sup>&#8225;
 
 ## 2018
 
+J. A. Woo Baidal, K. Morel, K. Nichols, E. Elbel, N. Charles, **J. Goldsmith**, L. Chen, and E. M. Taveras (2018+). 
+Sugar-sweetened beverage attitudes and consumption during the first 1,000 days of life. 
+<i> American Journal of Public Health, </i> 
+accepted.
+
+J. Wrobel<sup>&#8225;</sup>, V. Zipunnikov, J. Schrack, and **J. Goldsmith** (2018+).
+Registration for exponential family functional data.
+<i> Biometrics, </i> 
+accepted.
+
 Y. Chen<sup>&#8225;</sup>, **J. Goldsmith**, and R. T. Ogden (2018+).
 Functional data analysis of dynamic PET data.
 <i> Journal of the American Statistical Association, </i> 
