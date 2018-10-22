@@ -36,6 +36,7 @@ Y. Chen<sup>&#8225;</sup>, **J. Goldsmith**, and R. T. Ogden (2018+).
 Nonlinear mixed-effects models for PET data.
 <i> Transactions on Biomedical Engineering, </i> 
 accepted.
+[[Link](https://ieeexplore.ieee.org/document/8424003/)]
 
 D. Backenroth<sup>&#8225;</sup>, **J. Goldsmith**, M. D. Harran, J. C. Cortes, J. W. Krakauer, and T. Kitago (2018+).
 Modeling motor learning using heteroskedastic functional principal components analysis.
@@ -106,6 +107,8 @@ P. T. Reiss, **J. Goldsmith**, H. L. Shang, and R. T. Ogden.
 Methods for Scalar-on-Function Regression (2017).
 <i> International Statistical Review, </i>
 <b>85</b> 228-249.
+[[Link](https://onlinelibrary.wiley.com/doi/abs/10.1111/insr.12163)
+| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/28919663)]
 
 J. Gertheiss, **J. Goldsmith**, and A.-M. Staicu (2017).
 A note on modeling sparse exponential-family functional response curves.
@@ -209,7 +212,7 @@ Robotic therapy for chronic stroke: general recovery of impairment or improved t
 <i> Journal of Neurophysiology, </i>
 <b>114</b> 1885-1894.
 [[Link](http://jn.physiology.org/content/early/2015/07/10/jn.00336.2015.abstract)
-| [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/26032276)]
+| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/26180120)]
 (&#8224; denotes equal contribution)
 
 
