@@ -26,3 +26,7 @@ Spring 2013: Categorical Data Analysis
 2017: ["Functional Data Analysis for Wearables: Methods and Applications"](http://jeffgoldsmith.com/ICAMPAM/) (at the International Conference on Ambulatory Monitoring of Physical Activity)  
 2017: ["Variable Selection Methods in Functional Regression"](http://jeffgoldsmith.com/IWAFDA/) (at the International Workshop on Advances in Functional Data Analysis)  
 2014: "Functional Data Analysis: Techniques and Applications" (at ENAR)
+
+## Other materials
+
+2018: Webinar: ["Data Science and Predictive Models in Public Health"]() and accompanying [reproducible lasso example](Downloads/lasso_example.zip) (webinar requires registration of free account)
