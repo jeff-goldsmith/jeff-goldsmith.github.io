@@ -29,4 +29,4 @@ Spring 2013: Categorical Data Analysis
 
 ## Other materials
 
-2018: Webinar: ["Data Science and Predictive Models in Public Health"]() and accompanying [reproducible lasso example](Downloads/lasso_example.zip) (webinar requires registration of free account)
+2018: Webinar: ["Data Science and Predictive Models in Public Health"]() and accompanying [reproducible lasso example](resources/lasso_example.zip) (webinar requires registration of free account)

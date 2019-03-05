@@ -47,7 +47,7 @@ D. Backenroth<sup>&#8225;</sup>, **J. Goldsmith**, M. D. Harran, J. C. Cortes, J
 Modeling motor learning using heteroskedastic functional principal components analysis.
 <i> Journal of the American Statistical Association, </i> 
 accepted.
-[[PDF](Downloads/HetFCPA.pdf)]
+[[PDF](resources/HetFCPA.pdf)]
 
 H. Rosenblum, A. Castano, J. Alvarez, **J. Goldsmith**, S. Helmke, M.S. Maurer (2018).
 TTR (Transthyretin) Stabilizers Are Associated With Improved Survival in Patients With TTR Cardiac Amyloidosis.
@@ -156,8 +156,8 @@ New insights into activity patterns in children, found using functional data ana
 <i> Medicine and Science in Sports and Exercise, </i>
 <b>48</b> 1723-1729.
 [[Link](http://journals.lww.com/acsm-msse/Abstract/2016/09000/New_Insights_into_Activity_Patterns_in_Children,.11.aspx)
-| [PDF](Downloads/HeadStart.pdf)
-| [Code](Downloads/HeadStartCode.zip)
+| [PDF](resources/HeadStart.pdf)
+| [Code](resources/HeadStartCode.zip)
 | [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/27183122)]
 
 J. Wrobel<sup>&#8225;</sup>, S.Y. Park, A.M. Staicu, **J. Goldsmith** (2016).
@@ -174,16 +174,16 @@ Variable Selection in Function-on-Scalar Regression.
 <i> Stat, </i>
 <b>5</b> 88-101.
 [[Link](http://onlinelibrary.wiley.com/doi/10.1002/sta4.106/abstract)
-| [PDF](Downloads/FoS_VarSelect.pdf)
+| [PDF](resources/FoS_VarSelect.pdf)
 | Implemented in [refund](https://github.com/refunders/refund) as fosr.vs()]
 
 **J. Goldsmith**, T. Kitago (2016).
 Assessing Systematic Effects of Stroke on Motor Control using Hierarchical Function-on-Scalar Regression.
 <i> Journal of the Royal Statistical Society: Series C, </i>
 <b>65</b> 215-236.
-[[PDF](Downloads/BayesPFSR_Paper.pdf)
+[[PDF](resources/BayesPFSR_Paper.pdf)
 | [Link](http://onlinelibrary.wiley.com/doi/10.1111/rssc.12115/abstract)
-| [Code](Downloads/BayesPFSR_Code.zip)
+| [Code](resources/BayesPFSR_Code.zip)
 | [Shiny App](https://jeff-goldsmith.shinyapps.io/MotorControl_Interactive)]
 
 C. B. Caminiti, D. C. Hesdorffer, S. Shostak, **J. Goldsmith**, S. T. Sorge, M. R. Winawer, J. C. Phelan, W. K. Chung, and R. Ottman (2016).
@@ -227,7 +227,7 @@ Generalized Multilevel Functional-on-Scalar Regression and Principal Component A
 <b>71</b> 344-353.
 [[Link](http://onlinelibrary.wiley.com/doi/10.1111/biom.12278/abstract)
 | [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/25620473)
-| [Code](Downloads/GenMFPCA_Code.zip)
+| [Code](resources/GenMFPCA_Code.zip)
 | [Shiny App](https://jeff-goldsmith.shinyapps.io/GFPCA_interactive)]
 
 
@@ -279,8 +279,8 @@ Estimator Selection and Combination in Scalar-on-Function Regression.
 <i> Computational Statistics and Data Analysis, </i>
 <b>70</b> 362-372.
 [[Link](http://www.sciencedirect.com/science/article/pii/S0167947313003629) |
-[PDF](Downloads/Ensembling_Paper.pdf) |
-[Code](Downloads/Ensembling_Code.zip)]
+[PDF](resources/Ensembling_Paper.pdf) |
+[Code](resources/Ensembling_Code.zip)]
 
 
 J. A. Schrack, V. Zipunnikov, **J. Goldsmith**, K. Bandeen-Roche, C. M. Crainiceanu, L. Ferrucci (2014).
@@ -406,7 +406,7 @@ Longitudinal Penalized Functional Regression for Cognitive Outcomes on Neuronal 
 <b>61</b> 453-469.
 [[Link](http://onlinelibrary.wiley.com/doi/10.1111/j.1467-9876.2011.01031.x/abstract) |
 [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/22679339) |
-[Simulation Code](Downloads/LPFR_Code.zip)]
+[Simulation Code](resources/LPFR_Code.zip)]
 
 
 T. Shinohara, **J. Goldsmith**, F. Mateen, D. S. Reich, C. M. Crainiceanu (2012).
@@ -452,7 +452,7 @@ Penalized Functional Regression.
 <b>20</b> 830-851.
 [[Link](http://www.tandfonline.com/doi/abs/10.1198/jcgs.2010.10007#.U1BzC16ft94) |
 [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/22368438) |
-[Simulation Code](Downloads/PFR_Code.zip)]
+[Simulation Code](resources/PFR_Code.zip)]
 
 **J. Goldsmith**, C. M. Crainiceanu, B. S. Caffo, D. S. Reich (2011).
 Penalized Functional Regression Analysis of White-Matter Tract Profiles in Multiple Sclerosis.
@@ -474,7 +474,7 @@ Functional Regression via Variational Bayes.
 <b>5</b> 572-602.
 [[Link](http://projecteuclid.org/euclid.ejs/1308143123) |
 [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/22163061) |
-[Simulation Code](Downloads/VB_Code.zip)]
+[Simulation Code](resources/VB_Code.zip)]
 
 C. M. Crainiceanu, **J. Goldsmith** (2010).
 Bayesian Functional Data Analysis using WinBUGS.
@@ -488,5 +488,5 @@ Dynamical Properties of the Derivative of the Weierstrass Elliptic Function.
 <i> Involve, </i>
 <b>2</b> 267-288.
 [[Link](http://msp.org/involve/2009/2-3/p02.xhtml) |
-[pdf](Downloads/Weierstrass.pdf)]
+[pdf](resources/Weierstrass.pdf)]
 
