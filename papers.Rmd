@@ -15,9 +15,39 @@ output:
 
 In the following, <sup>&#8224;</sup> denotes equal contribution and <sup>&#8225;</sup> indicates a student under my supervision.
 
+## 2019
+
+E. A. Gibson, **J. Goldsmith**, and M.-A. Kioumourtzoglou (2019+).
+Complex Mixtures, Complex Analyses: an Emphasis on Interpretable Results.
+<i> Current Environmental Health Reports, </i> 
+accepted.
+[[Link](https://link.springer.com/article/10.1007%2Fs40572-019-00229-5)]
+
+J. Xu, M. Branscheidt, H. Schambra, L. Steiner, M. Widmer, J. Diedrichsen, **J. Goldsmith**, M. Lindquist, T. Kitago, A. R. Luft, J. W. Krakauer, P. A. Celnik, SMARTS Study Group (2019)
+Rethinking interhemispheric imbalance as a target for stroke neurorehabilitation.
+<i> Annals of neurology, </i> 
+<b>85</b> 502-513.
+[[Link](https://onlinelibrary.wiley.com/doi/abs/10.1002/ana.25452)
+| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/30805956)]
+
+Y. Chen<sup>&#8225;</sup>, **J. Goldsmith**, and R. T. Ogden (2019).
+Nonlinear mixed-effects models for PET data.
+<i> Transactions on Biomedical Engineering, </i> 
+<b>66</b> 881-891.
+[[Link](https://ieeexplore.ieee.org/document/8424003/)]
+
+R. Liu, R. C. Shelton, N. Eldred-Skemp, **J. Goldsmith**, and S. F. Suglia (2019)
+Early Exposure to Cumulative Social Risk and Trajectories of Body Mass Index in Childhood.
+<i> Childhood Obesity, </i> 
+<b>15</b> 48-55.
+[[Link](https://www.liebertpub.com/doi/pdf/10.1089/chi.2018.0116)
+| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/30362818)]
+
+	
+	
 ## 2018
 
-J. Lee<sup>&#8225;</sup>, G. Li, W. F. Christensen, G. Collins, M. Seeley, A. E. Bowden, D. T. Fullwood, and **J. Goldsmith** (2018+). 
+J. Lee<sup>&#8225;</sup>, G. Li, W. F. Christensen, G. Collins, M. Seeley, A. E. Bowden, D. T. Fullwood, and **J. Goldsmith** (2018). 
 Functional Data Analyses of Gait Data Measured Using In-Shoe Sensors. 
 <i> Statistics in Biosciences, </i> 
 accepted.
@@ -36,12 +66,6 @@ Y. Chen<sup>&#8225;</sup>, **J. Goldsmith**, and R. T. Ogden (2018+).
 Functional data analysis of dynamic PET data.
 <i> Journal of the American Statistical Association, </i> 
 accepted.
-
-Y. Chen<sup>&#8225;</sup>, **J. Goldsmith**, and R. T. Ogden (2018+).
-Nonlinear mixed-effects models for PET data.
-<i> Transactions on Biomedical Engineering, </i> 
-accepted.
-[[Link](https://ieeexplore.ieee.org/document/8424003/)]
 
 D. Backenroth<sup>&#8225;</sup>, **J. Goldsmith**, M. D. Harran, J. C. Cortes, J. W. Krakauer, and T. Kitago (2018+).
 Modeling motor learning using heteroskedastic functional principal components analysis.
