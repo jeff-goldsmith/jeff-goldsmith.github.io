@@ -1,0 +1,361 @@
+---
+title: "`tidyfun`"
+output:
+  html_document: 
+    toc: true
+    toc_float: true
+---
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  fig.width = 6,
+  fig.asp = .6,
+  out.width = "90%"
+)
+
+library(tidyverse)
+
+theme_set(theme_bw() + theme(legend.position = "bottom"))
+```
+
+This page hosts a presentation / quick intro to `tidyfun` -- enjoy!
+
+## Some slides
+
+<script async class="speakerdeck-embed" data-id="f0d309fcbf2c4d5d9d121eee4a6144ee" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+<div style="margin-bottom:5px"> <strong> <a href="https://speakerdeck.com/jeffgoldsmith/tidyfun" title="tidyfun" target="_blank">tidyfun</a> </strong> from <strong><a href="https://speakerdeck.com/jeffgoldsmith" target="_blank">Jeff Goldsmith</a></strong>. </div><br>
+
+
+## Example usage
+
+The code in this page is drawn from [`tidyfun`](https://fabian-s.github.io/tidyfun/) vignettes, and is intended as a quick introduction; for more details, please read the complete documentation!
+
+If you haven't installed `tidyfun` the code below will do so.
+
+```{r, eval = FALSE}
+devtools::install_github("fabian-s/tidyfun")
+```
+
+Next I'll load the package, as well as the `tidyverse`. 
+
+```{r}
+library(tidyfun)
+library(tidyverse)
+```
+
+### Illustrative datasets
+
+The datasets used in this vignette are the `tidyfun::chf_df` and `tidyfun::dti_df` dataset. The first contains minute-by-minute observations of log activity counts (stored as a `tfd` vector called `activity`) over seven days for each of 47 subjects with congestive heart failure. In addition to `id` and `activity`, we observe several covariates. 
+
+```{r view_chf}
+data(chf_df)
+```
+
+A quick plot of these data is below.
+
+```{r plot_chf}
+chf_df %>% 
+  ggplot(aes(y = activity)) + 
+    geom_spaghetti(alpha = .05)
+```
+
+The `tidyfun::dti_df` contains ractional anisotropy (FA) tract profiles for the corpus callosum (cca) and the right corticospinal tract (rcst), along with several covariates. 
+
+```{r view_dti}
+data(dti_df)
+```
+
+A quick plot of the `cca` tract profiles is below.
+
+```{r plot_dti}
+dti_df %>% 
+  ggplot(aes(y = cca)) + 
+    geom_spaghetti(alpha = .05)
+```
+
+
+### `tf` vectors
+
+**`tf`** is a new data type for (vectors of) functional data: 
+
+- an abstract superclass for functional data in 2 forms:
+    - as (argument, value)-tuples: subclass **`tfd`**, also irregular or sparse
+    - or in basis representation: subclass **`tfb`**
+    
+- Includes additional attributes that define *function-like* behavior:
+    - how to **evaluate** the given "functions" for new arguments
+    - their **domain** 
+    - the **resolution** of the argument values
+
+First I'll pull a `tf` vector from the `tidyfun::dti_df` dataset, and then I'll extract a simple 5-element vector of functions interpolated to be on a regular grid. The resulting vector contain fractional anisotropy tract profiles for the corpus callosum (`cca`). When printed, `tf` vectors show the first few `arg` and `value` pairs for each subject.  
+
+```{r load-dti}
+data("dti_df")
+
+cca_five = dti_df$cca[1:5]
+cca_five = tfd(cca_five, arg = seq(0, 1, l = 93), interpolate = TRUE)
+
+cca_five
+```
+
+For illustration, we plot the vector `cca_five` below. 
+
+```{r, ex-fig}
+plot(cca_five)
+```
+
+Functional data in basis representation: 
+
+- represented as a list of **`coefficients`** and a common **`basis_matrix`** of basis function evaluations on a vector of `arg`-values.
+- contains a **`basis`** function that defines how to compute the basis for new **`arg`**s and how to differentiate or integrate it.
+- (internal) flavors: 
+    - `tfb_spline`: uses `mgcv`-spline bases 
+    - `tfb_fpc`: uses functional principal components 
+
+It's possible to convert between types.
+
+```{r}
+cca_five_b = 
+  cca_five %>% 
+  tfb()
+```
+
+A quick plot illustrates the difference visually; lots of things are different in the background!
+
+```{r}
+plot(cca_five)
+lines(cca_five_b, col = "red")
+```
+
+### Operations on `tf` vectors
+
+The following is a brief overview of the kinds of operations available for `tf` vectors. 
+
+You can perform basic arithmetic and logical comparisons:
+
+```{r}
+cca_five[1] + cca_five[1] == 2 * cca_five[1]
+log(exp(cca_five[2])) == cca_five[2]
+cca_five - (2:-2) != cca_five 
+```
+
+You can summarize using `mean`, `sd`, and other functions:
+
+```{r}
+c(mean = mean(cca_five), sd = sd(cca_five))
+```
+
+You can smooth data using `tf_smooth`; this differs from converting to subclass `tfb`:
+
+```{r}
+cca_five_smooth = 
+  cca_five %>% 
+  tf_smooth("lowess")
+
+plot(cca_five)
+lines(cca_five_smooth, col = "blue")
+```
+
+You can determine whether a function satisfies a logical condition anywhere:
+
+```{r}
+cca_five %>% 
+  tf_anywhere(value > .65)
+```
+
+And you can zoom in on regions of interest:
+
+```{r}
+cca_five_zoom = 
+  cca_five %>% 
+  tf_zoom(.5, 1)
+
+plot(cca_five_zoom)
+```
+
+
+### `tf` vectors in dataframes
+
+The main goal of `tidyfun` is to ease exploratory analysis by putting functional data in data frames. Since `tf` vectors are treated the same way as vectors of class `numeric` or `factor`, they can enter dataframes the same way.
+
+The DTI data, for example, include scalar covariates and two functional variables:
+
+```{r}
+dti_df
+```
+
+And the CHF data is an example of a multilevel dataset with a functional observation:
+
+```{r}
+chf_df 
+```
+
+Now our functional data are tidy! That is, we have data rectangles, and each functional observation exists in a single "cell". 
+
+### Data wrangling
+
+Dataframes using `tidyfun` to store functional observations can be manipulated using tools from `dplyr`, including `select` and `filter`:
+
+```{r}
+chf_df %>% 
+  select(id, day, activity) %>% 
+  filter(day == "Monday") %>% 
+  ggplot(aes(y = activity)) + 
+  geom_spaghetti(alpha = .05)
+```
+
+Operations using `group_by` and `summarize` are allowed:
+
+```{r}
+chf_df %>% 
+  group_by(day) %>% 
+  summarize(mean_act = mean(activity)) %>% 
+  ggplot(aes(y = mean_act, color = day)) + 
+  geom_spaghetti()
+```
+
+One can `mutate` functional observations -- here we exponentiate the log activity counts to obtain original recordings:
+
+```{r}
+chf_df %>% 
+  mutate(exp_act = exp(activity)) %>% 
+  ggplot(aes(y = exp_act)) + 
+  geom_spaghetti(alpha = .05)
+```
+
+Some `dplyr` functions are most useful in conjunction with new functions in `tidyfun`. For example, one might use `filter` with `tf_anywhere` to filter based on the values of observed functions:
+
+```{r}
+chf_df %>% 
+  filter(tf_anywhere(activity, value > 9)) %>% 
+  ggplot(aes(y = activity)) + 
+  geom_spaghetti()
+```
+
+One can add smoothed versions of existing observations using `mutate` and `tf_smooth`:
+
+```{r}
+chf_df %>% 
+  filter(id == 1) %>% 
+  mutate(smooth_act = tf_smooth(activity)) %>% 
+  ggplot(aes(y = smooth_act)) + 
+  geom_spaghetti()
+```
+
+One can also extract observations over a subset of the full domain using `mutate` and `tf_zoom`:
+
+```{r}
+chf_df %>% 
+  filter(id == 1) %>% 
+  mutate(daytime_act = tf_zoom(activity, 360, 1200)) %>% 
+  ggplot(aes(y = daytime_act)) + 
+  geom_spaghetti()
+```
+
+In general, EDA for functional data using `tidyverse` tools is now possible, and is often most powerful when paired with new functions in `tidyfun`.
+
+
+### Visualization
+
+We've seen both `plot` and `geom_spaghetti` to aid in understanding some content to this point -- base R for `tf` vectors, `ggplot` for tidy data. You can use more advanced options and combine with data wrangling steps.
+
+You can use facetting:
+
+```{r}
+chf_df %>% 
+  filter(day %in% c("Monday", "Sunday")) %>% 
+  ggplot(aes(y = activity, color = gender)) + 
+  geom_spaghetti(alpha = .1) + 
+  facet_grid(~ day)
+```
+
+Together with data manipulation tools, the integration with `ggplot` can produce useful exploratory analyses. Note that this plot also introduces `geom_meatballs()`:
+
+```{r}
+chf_df %>% 
+  group_by(gender, day) %>% 
+  summarize(mean_act = mean(activity)) %>% 
+  mutate(smooth_mean = tfb(mean_act)) %>% 
+  filter(day %in% c("Monday", "Sunday")) %>% 
+  ggplot(aes(y = smooth_mean, color = gender)) + 
+  geom_spaghetti(size = 1.25, alpha = 1) + 
+  geom_meatballs(aes(y = mean_act), alpha = .1) + 
+  facet_grid(~ day)
+```
+
+Lasagna plots are a variant on a heatmaps which show functional observations in rows and use color to illustrate values taken at different arguments. In `tidyfun`, lasagna plots are implemented through `gglasagna`. A first example, using the CHF data, is below. 
+
+```{r}
+chf_df %>% 
+  filter(day %in% c("Monday", "Sunday")) %>% 
+  gglasagna(activity)
+```
+
+A somewhat more involved example, demonstrating the `order` argument and taking advantage of facetting, is next. 
+
+```{r, dti-fig2}  
+dti_df %>% 
+  gglasagna(
+    y = cca, 
+    order = tf_integrate(cca, definite = TRUE), 
+    arg = seq(0,1, l = 101)) + 
+  theme(axis.text.y = element_text(size = 6)) + 
+  facet_wrap(~ case, ncol = 2, scales = "free")
+```
+
+
+
+### Conversion
+
+The `DTI` data in the `refund` package has been a popular example in functional data analysis. In the code below, we create a data frame (or `tibble`) containing scalar covariates, and then add columns for the `cca` and `rcst` track profiles. This code was used to create the `tidyfun::dti_df` dataset included in the package.
+
+```{r}
+dti_df = tibble(
+  id = refund::DTI$ID, 
+  sex = refund::DTI$sex, 
+  case = factor(ifelse(refund::DTI$case, "MS", "control")))
+
+dti_df$cca = tfd(refund::DTI$cca, arg = seq(0,1, l = 93))
+dti_df$rcst = tfd(refund::DTI$rcst, arg = seq(0, 1, l = 55))
+```
+
+"Long" format data frames containing functional data include columns containing a subject identifier, the functional argument, and the value each subject's function takes at each argument. There are also often (but not always) non-functional covariates that are repeated within a subject. For data in this form, we use `tf_nest` to produce a data frame containing a single row for each subject.
+
+An example is the pig weight data from the `SemiPar` package, which is a nice example from longitudinal data analysis. This includes columns for `id.num`, `num.weeks`, and `weight` -- which correspond to the subject, argument, and value. 
+
+```{r}
+data("pig.weights", package = "SemiPar")
+
+pig.weights = as_tibble(pig.weights)
+
+pig.weights
+```
+
+We create `pig_df` by nesting weight within subject. The result is a data frame containing a single row for each pig, and columns for `id.num` and the `weight` function.
+
+```{r}
+pig_df = 
+  pig.weights %>% 
+  tf_nest(weight, .id = id.num, .arg = num.weeks)
+
+pig_df
+```
+
+Additional functions allow conversion from other data structures to `tf` vectors, and also implement conversions back to these data structures.
+
+
+## Next steps
+
+`tidyfun` itself is a work in progress:
+
+* There are several open issues / to dos / bug fixes
+* We have some ideas for new features
+* User feedback will help!
+
+Integration with analysis is longer-term goal
+
+* Some `refund` functions have been unofficially updated to work with dataframe / `tf` intpus
+* More robust / complete integration is needed
+
