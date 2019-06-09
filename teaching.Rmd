@@ -8,11 +8,12 @@
 
 ## Current courses
 
-Fall 2018: [Data Science I](http://p8105.com)  
+Fall 2019: [Data Science I](http://p8105.com)  
 
 ## Past courses
 
-Fall 2017: Data Science I
+Fall 2018: [Data Science I](http://p8105.com)  
+Fall 2017: [Data Science I](http://p8105.com)  
 Spring 2016: [Linear Regression Models](http://jeffgoldsmith.com/P8111/)  
 Spring 2015: Linear Regression Models  
 Summer 2015: Applied Regression II  
