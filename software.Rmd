@@ -15,6 +15,13 @@ I'm lead author of the `refund` package ([CRAN](https://cran.r-project.org/web/p
 * `ccb.fpc()` for improved inference for functional principal components analysis
 * `bayes_fosr()` for Bayesian function-on-scalar regression
 
+## `tidyfun`
+
+Together with Fabian Schiepl, I am an author of the [`tidyfun`](https://fabian-s.github.io/tidyfun/) package. This package seeks to provide accessible and well-documented software that **makes functional data analysis in `R` easy** – specifically data wrangling and exploratory analysis. 
+
+The `tidyfun` webpage includes several illustrative vignettes, and [this short overview](tidyfun.html) is a quick place to get started. 
+
+
 ## `refund.shiny`
 
 I worked with Julia Wrobel on the `refund.shiny` package ([CRAN](https://cran.r-project.org/web/packages/refund.shiny/index.html); [GitHub](https://github.com/refunders/refund.shiny); [paper](http://onlinelibrary.wiley.com/doi/10.1002/sta4.109/abstract)). 
