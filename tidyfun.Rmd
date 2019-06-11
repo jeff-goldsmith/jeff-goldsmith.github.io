@@ -20,7 +20,7 @@ library(tidyverse)
 theme_set(theme_bw() + theme(legend.position = "bottom"))
 ```
 
-This page hosts a presentation / quick intro to `tidyfun` -- enjoy!
+This page hosts a presentation / quick intro to [`tidyfun`](https://fabian-s.github.io/tidyfun/) -- enjoy!
 
 ## Some slides
 
@@ -61,7 +61,7 @@ chf_df %>%
     geom_spaghetti(alpha = .05)
 ```
 
-The `tidyfun::dti_df` contains ractional anisotropy (FA) tract profiles for the corpus callosum (cca) and the right corticospinal tract (rcst), along with several covariates. 
+The `tidyfun::dti_df` contains fractional anisotropy (FA) tract profiles for the corpus callosum (cca) and the right corticospinal tract (rcst), along with several covariates. 
 
 ```{r view_dti}
 data(dti_df)
@@ -78,25 +78,14 @@ dti_df %>%
 
 ### `tf` vectors
 
-**`tf`** is a new data type for (vectors of) functional data: 
+**`tf`** is a new data type for (vectors of) functional data. It contains subclasses for "raw" functional data (`tfd`) that can be dense / sparse and regular / irregular, and for "basis representation" functional data (`tfb`). Internally, there are attributes that define *function-like* behavior, including evaluation for new arguments, resolution, and the functional domain.
 
-- an abstract superclass for functional data in 2 forms:
-    - as (argument, value)-tuples: subclass **`tfd`**, also irregular or sparse
-    - or in basis representation: subclass **`tfb`**
-    
-- Includes additional attributes that define *function-like* behavior:
-    - how to **evaluate** the given "functions" for new arguments
-    - their **domain** 
-    - the **resolution** of the argument values
-
-First I'll pull a `tf` vector from the `tidyfun::dti_df` dataset, and then I'll extract a simple 5-element vector of functions interpolated to be on a regular grid. The resulting vector contain fractional anisotropy tract profiles for the corpus callosum (`cca`). When printed, `tf` vectors show the first few `arg` and `value` pairs for each subject.  
+First I'll pull a `tf` vector from the `tidyfun::dti_df` dataset. The resulting vector contain fractional anisotropy tract profiles for the corpus callosum (`cca`). When printed, `tf` vectors show the first few `arg` and `value` pairs for each subject.  
 
 ```{r load-dti}
 data("dti_df")
 
 cca_five = dti_df$cca[1:5]
-cca_five = tfd(cca_five, arg = seq(0, 1, l = 93), interpolate = TRUE)
-
 cca_five
 ```
 
@@ -106,15 +95,7 @@ For illustration, we plot the vector `cca_five` below.
 plot(cca_five)
 ```
 
-Functional data in basis representation: 
-
-- represented as a list of **`coefficients`** and a common **`basis_matrix`** of basis function evaluations on a vector of `arg`-values.
-- contains a **`basis`** function that defines how to compute the basis for new **`arg`**s and how to differentiate or integrate it.
-- (internal) flavors: 
-    - `tfb_spline`: uses `mgcv`-spline bases 
-    - `tfb_fpc`: uses functional principal components 
-
-It's possible to convert between types.
+Converting "raw" to "basis" representation is possible, and introduces some smoothing by default.
 
 ```{r}
 cca_five_b = 
@@ -145,17 +126,6 @@ You can summarize using `mean`, `sd`, and other functions:
 
 ```{r}
 c(mean = mean(cca_five), sd = sd(cca_five))
-```
-
-You can smooth data using `tf_smooth`; this differs from converting to subclass `tfb`:
-
-```{r}
-cca_five_smooth = 
-  cca_five %>% 
-  tf_smooth("lowess")
-
-plot(cca_five)
-lines(cca_five_smooth, col = "blue")
 ```
 
 You can determine whether a function satisfies a logical condition anywhere:
@@ -305,8 +275,6 @@ dti_df %>%
   facet_wrap(~ case, ncol = 2, scales = "free")
 ```
 
-
-
 ### Conversion
 
 The `DTI` data in the `refund` package has been a popular example in functional data analysis. In the code below, we create a data frame (or `tibble`) containing scalar covariates, and then add columns for the `cca` and `rcst` track profiles. This code was used to create the `tidyfun::dti_df` dataset included in the package.
@@ -354,7 +322,7 @@ Additional functions allow conversion from other data structures to `tf` vectors
 * We have some ideas for new features
 * User feedback will help!
 
-Integration with analysis is longer-term goal
+Integration with analysis is longer-term goal:
 
 * Some `refund` functions have been unofficially updated to work with dataframe / `tf` intpus
 * More robust / complete integration is needed

@@ -437,7 +437,7 @@ div.tocify {
 </div>
 
 
-<p>This page hosts a presentation / quick intro to <code>tidyfun</code> – enjoy!</p>
+<p>This page hosts a presentation / quick intro to <a href="https://fabian-s.github.io/tidyfun/"><code>tidyfun</code></a> – enjoy!</p>
 <div id="some-slides" class="section level2">
 <h2>Some slides</h2>
 <script async class="speakerdeck-embed" data-id="1a71e0ecac2e4d7dbe07ad6d23fb6d76" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
@@ -471,7 +471,7 @@ library(tidyverse)</code></pre>
   ggplot(aes(y = activity)) + 
     geom_spaghetti(alpha = .05)</code></pre>
 <p><img src="tidyfun_files/figure-html/plot_chf-1.png" width="90%" /></p>
-<p>The <code>tidyfun::dti_df</code> contains ractional anisotropy (FA) tract profiles for the corpus callosum (cca) and the right corticospinal tract (rcst), along with several covariates.</p>
+<p>The <code>tidyfun::dti_df</code> contains fractional anisotropy (FA) tract profiles for the corpus callosum (cca) and the right corticospinal tract (rcst), along with several covariates.</p>
 <pre class="r"><code>data(dti_df)</code></pre>
 <p>A quick plot of the <code>cca</code> tract profiles is below.</p>
 <pre class="r"><code>dti_df %&gt;% 
@@ -481,29 +481,14 @@ library(tidyverse)</code></pre>
 </div>
 <div id="tf-vectors" class="section level3">
 <h3><code>tf</code> vectors</h3>
-<p><strong><code>tf</code></strong> is a new data type for (vectors of) functional data:</p>
-<ul>
-<li>an abstract superclass for functional data in 2 forms:
-<ul>
-<li>as (argument, value)-tuples: subclass <strong><code>tfd</code></strong>, also irregular or sparse</li>
-<li>or in basis representation: subclass <strong><code>tfb</code></strong></li>
-</ul></li>
-<li>Includes additional attributes that define <em>function-like</em> behavior:
-<ul>
-<li>how to <strong>evaluate</strong> the given “functions” for new arguments</li>
-<li>their <strong>domain</strong></li>
-<li>the <strong>resolution</strong> of the argument values</li>
-</ul></li>
-</ul>
-<p>First I’ll pull a <code>tf</code> vector from the <code>tidyfun::dti_df</code> dataset, and then I’ll extract a simple 5-element vector of functions interpolated to be on a regular grid. The resulting vector contain fractional anisotropy tract profiles for the corpus callosum (<code>cca</code>). When printed, <code>tf</code> vectors show the first few <code>arg</code> and <code>value</code> pairs for each subject.</p>
+<p><strong><code>tf</code></strong> is a new data type for (vectors of) functional data. It contains subclasses for “raw” functional data (<code>tfd</code>) that can be dense / sparse and regular / irregular, and for “basis representation” functional data (<code>tfb</code>). Internally, there are attributes that define <em>function-like</em> behavior, including evaluation for new arguments, resolution, and the functional domain.</p>
+<p>First I’ll pull a <code>tf</code> vector from the <code>tidyfun::dti_df</code> dataset. The resulting vector contain fractional anisotropy tract profiles for the corpus callosum (<code>cca</code>). When printed, <code>tf</code> vectors show the first few <code>arg</code> and <code>value</code> pairs for each subject.</p>
 <pre class="r"><code>data(&quot;dti_df&quot;)
 
 cca_five = dti_df$cca[1:5]
-cca_five = tfd(cca_five, arg = seq(0, 1, l = 93), interpolate = TRUE)
-
 cca_five
-## tfd[5] on (0,1) based on 93 evaluations each
-## interpolation by tf_approx_linear 
+## tfd[5] on (0,1) based on 93 to 93 (mean: 93) evaluations each
+## inter-/extrapolation by tf_approx_linear 
 ## 1001_1: (0.000,0.49);(0.011,0.52);(0.022,0.54); ...
 ## 1002_1: (0.000,0.47);(0.011,0.49);(0.022,0.50); ...
 ## 1003_1: (0.000,0.50);(0.011,0.51);(0.022,0.54); ...
@@ -512,17 +497,7 @@ cca_five
 <p>For illustration, we plot the vector <code>cca_five</code> below.</p>
 <pre class="r"><code>plot(cca_five)</code></pre>
 <p><img src="tidyfun_files/figure-html/ex-fig-1.png" width="90%" /></p>
-<p>Functional data in basis representation:</p>
-<ul>
-<li>represented as a list of <strong><code>coefficients</code></strong> and a common <strong><code>basis_matrix</code></strong> of basis function evaluations on a vector of <code>arg</code>-values.</li>
-<li>contains a <strong><code>basis</code></strong> function that defines how to compute the basis for new <strong><code>arg</code></strong>s and how to differentiate or integrate it.</li>
-<li>(internal) flavors:
-<ul>
-<li><code>tfb_spline</code>: uses <code>mgcv</code>-spline bases</li>
-<li><code>tfb_fpc</code>: uses functional principal components</li>
-</ul></li>
-</ul>
-<p>It’s possible to convert between types.</p>
+<p>Converting “raw” to “basis” representation is possible, and introduces some smoothing by default.</p>
 <pre class="r"><code>cca_five_b = 
   cca_five %&gt;% 
   tfb()
@@ -550,19 +525,10 @@ cca_five - (2:-2) != cca_five
 ##   TRUE   TRUE  FALSE   TRUE   TRUE</code></pre>
 <p>You can summarize using <code>mean</code>, <code>sd</code>, and other functions:</p>
 <pre class="r"><code>c(mean = mean(cca_five), sd = sd(cca_five))
-## tfd[2] on (0,1) based on 93 evaluations each
-## interpolation by tf_approx_linear 
+## tfd[2] on (0,1) based on 93 to 93 (mean: 93) evaluations each
+## inter-/extrapolation by tf_approx_linear 
 ## mean: (0.000, 0.45);(0.011, 0.47);(0.022, 0.48); ...
 ## sd: (0.000,0.049);(0.011,0.052);(0.022,0.062); ...</code></pre>
-<p>You can smooth data using <code>tf_smooth</code>; this differs from converting to subclass <code>tfb</code>:</p>
-<pre class="r"><code>cca_five_smooth = 
-  cca_five %&gt;% 
-  tf_smooth(&quot;lowess&quot;)
-## using f = 0.15 as smoother span for lowess
-
-plot(cca_five)
-lines(cca_five_smooth, col = &quot;blue&quot;)</code></pre>
-<p><img src="tidyfun_files/figure-html/unnamed-chunk-8-1.png" width="90%" /></p>
 <p>You can determine whether a function satisfies a logical condition anywhere:</p>
 <pre class="r"><code>cca_five %&gt;% 
   tf_anywhere(value &gt; .65)
@@ -574,7 +540,7 @@ lines(cca_five_smooth, col = &quot;blue&quot;)</code></pre>
   tf_zoom(.5, 1)
 
 plot(cca_five_zoom)</code></pre>
-<p><img src="tidyfun_files/figure-html/unnamed-chunk-10-1.png" width="90%" /></p>
+<p><img src="tidyfun_files/figure-html/unnamed-chunk-9-1.png" width="90%" /></p>
 </div>
 <div id="tf-vectors-in-dataframes" class="section level3">
 <h3><code>tf</code> vectors in dataframes</h3>
@@ -621,26 +587,26 @@ plot(cca_five_zoom)</code></pre>
   filter(day == &quot;Monday&quot;) %&gt;% 
   ggplot(aes(y = activity)) + 
   geom_spaghetti(alpha = .05)</code></pre>
-<p><img src="tidyfun_files/figure-html/unnamed-chunk-13-1.png" width="90%" /></p>
+<p><img src="tidyfun_files/figure-html/unnamed-chunk-12-1.png" width="90%" /></p>
 <p>Operations using <code>group_by</code> and <code>summarize</code> are allowed:</p>
 <pre class="r"><code>chf_df %&gt;% 
   group_by(day) %&gt;% 
   summarize(mean_act = mean(activity)) %&gt;% 
   ggplot(aes(y = mean_act, color = day)) + 
   geom_spaghetti()</code></pre>
-<p><img src="tidyfun_files/figure-html/unnamed-chunk-14-1.png" width="90%" /></p>
+<p><img src="tidyfun_files/figure-html/unnamed-chunk-13-1.png" width="90%" /></p>
 <p>One can <code>mutate</code> functional observations – here we exponentiate the log activity counts to obtain original recordings:</p>
 <pre class="r"><code>chf_df %&gt;% 
   mutate(exp_act = exp(activity)) %&gt;% 
   ggplot(aes(y = exp_act)) + 
   geom_spaghetti(alpha = .05)</code></pre>
-<p><img src="tidyfun_files/figure-html/unnamed-chunk-15-1.png" width="90%" /></p>
+<p><img src="tidyfun_files/figure-html/unnamed-chunk-14-1.png" width="90%" /></p>
 <p>Some <code>dplyr</code> functions are most useful in conjunction with new functions in <code>tidyfun</code>. For example, one might use <code>filter</code> with <code>tf_anywhere</code> to filter based on the values of observed functions:</p>
 <pre class="r"><code>chf_df %&gt;% 
   filter(tf_anywhere(activity, value &gt; 9)) %&gt;% 
   ggplot(aes(y = activity)) + 
   geom_spaghetti()</code></pre>
-<p><img src="tidyfun_files/figure-html/unnamed-chunk-16-1.png" width="90%" /></p>
+<p><img src="tidyfun_files/figure-html/unnamed-chunk-15-1.png" width="90%" /></p>
 <p>One can add smoothed versions of existing observations using <code>mutate</code> and <code>tf_smooth</code>:</p>
 <pre class="r"><code>chf_df %&gt;% 
   filter(id == 1) %&gt;% 
@@ -648,14 +614,14 @@ plot(cca_five_zoom)</code></pre>
   ggplot(aes(y = smooth_act)) + 
   geom_spaghetti()
 ## using f = 0.15 as smoother span for lowess</code></pre>
-<p><img src="tidyfun_files/figure-html/unnamed-chunk-17-1.png" width="90%" /></p>
+<p><img src="tidyfun_files/figure-html/unnamed-chunk-16-1.png" width="90%" /></p>
 <p>One can also extract observations over a subset of the full domain using <code>mutate</code> and <code>tf_zoom</code>:</p>
 <pre class="r"><code>chf_df %&gt;% 
   filter(id == 1) %&gt;% 
   mutate(daytime_act = tf_zoom(activity, 360, 1200)) %&gt;% 
   ggplot(aes(y = daytime_act)) + 
   geom_spaghetti()</code></pre>
-<p><img src="tidyfun_files/figure-html/unnamed-chunk-18-1.png" width="90%" /></p>
+<p><img src="tidyfun_files/figure-html/unnamed-chunk-17-1.png" width="90%" /></p>
 <p>In general, EDA for functional data using <code>tidyverse</code> tools is now possible, and is often most powerful when paired with new functions in <code>tidyfun</code>.</p>
 </div>
 <div id="visualization" class="section level3">
@@ -667,7 +633,7 @@ plot(cca_five_zoom)</code></pre>
   ggplot(aes(y = activity, color = gender)) + 
   geom_spaghetti(alpha = .1) + 
   facet_grid(~ day)</code></pre>
-<p><img src="tidyfun_files/figure-html/unnamed-chunk-19-1.png" width="90%" /></p>
+<p><img src="tidyfun_files/figure-html/unnamed-chunk-18-1.png" width="90%" /></p>
 <p>Together with data manipulation tools, the integration with <code>ggplot</code> can produce useful exploratory analyses. Note that this plot also introduces <code>geom_meatballs()</code>:</p>
 <pre class="r"><code>chf_df %&gt;% 
   group_by(gender, day) %&gt;% 
@@ -686,12 +652,12 @@ plot(cca_five_zoom)</code></pre>
 ## (per functional observation, approximate):
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ##   89.00   91.80   93.00   92.14   93.05   93.30</code></pre>
-<p><img src="tidyfun_files/figure-html/unnamed-chunk-20-1.png" width="90%" /></p>
+<p><img src="tidyfun_files/figure-html/unnamed-chunk-19-1.png" width="90%" /></p>
 <p>Lasagna plots are a variant on a heatmaps which show functional observations in rows and use color to illustrate values taken at different arguments. In <code>tidyfun</code>, lasagna plots are implemented through <code>gglasagna</code>. A first example, using the CHF data, is below.</p>
 <pre class="r"><code>chf_df %&gt;% 
   filter(day %in% c(&quot;Monday&quot;, &quot;Sunday&quot;)) %&gt;% 
   gglasagna(activity)</code></pre>
-<p><img src="tidyfun_files/figure-html/unnamed-chunk-21-1.png" width="90%" /></p>
+<p><img src="tidyfun_files/figure-html/unnamed-chunk-20-1.png" width="90%" /></p>
 <p>A somewhat more involved example, demonstrating the <code>order</code> argument and taking advantage of facetting, is next.</p>
 <pre class="r"><code>dti_df %&gt;% 
   gglasagna(
@@ -764,7 +730,7 @@ pig_df
 <li>We have some ideas for new features</li>
 <li>User feedback will help!</li>
 </ul>
-<p>Integration with analysis is longer-term goal</p>
+<p>Integration with analysis is longer-term goal:</p>
 <ul>
 <li>Some <code>refund</code> functions have been unofficially updated to work with dataframe / <code>tf</code> intpus</li>
 <li>More robust / complete integration is needed</li>
