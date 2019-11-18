@@ -12,11 +12,19 @@ Columbia University Mailman School of Public Health
 <br><img src="images/jeff.jpg" alt="jeff" style="width:65%; border:10px solid"><br>
 
 
+#### Research
+
+For several years, I have worked to advance the state-of-the-art in functional data analysis by developing methods for understanding patterns in large, complex datasets in neuroscience, physical activity monitoring, and other areas. 
+
+Working closely with clinicians and neuroscientists around the world, my collaborators and I have focused on improving the understanding skilled movements. This work involves reaching movements made by stroke patients: in these experiments, a patient's fingertip position is recorded hundreds of time per second for the duration of the reach. I have developed new statistical methods to understand the impact of stroke on movement quality, and applied these to large, longitudinal datasets. In parallel, I have proposed methods for wearable device research, especially focusing on accelerometers. These devices can produce minute-by-minute (or even finer) resolution observations of activity for hundreds of participants over several days, weeks, or months. The methods developed include approaches for regression with activity trajectories as outcomes; for interpretable dimension reduction; and for aligning major patterns (like wake from sleep, mid-day dips in activity, and sleep onset) across subjects. 
+
+#### Data science
+
+Data science is a newly-formed and, as yet, loosely-defined discipline that has nonetheless emerged as a critical component of successful research in biostatistics and public health. For several years, I have worked to incorporate data science techniques for transparency and reproducibiity into  biostatistical analyses. Research projects are accompanied by robust, publicly available software and analytical pipelines that ensure the reproducibility of the results. This is informed by my work in developing a graduate course in [data science](https://p8105.com).
+
 #### About
 
 I received a BS in mathematics from [Dickinson College](http://www.dickinson.edu) in 2007 and a PhD in Biostatistics from [Johns Hopkins University](http://www.jhsph.edu/departments/biostatistics/) in 2012. My dissertation was advised by [Ciprian Crainiceanu](http://www.biostat.jhsph.edu/~ccrainic/) and [Brian Caffo](https://sites.google.com/view/bcaffo/home), and focused on statistical methods for high-dimensional structured data. I joined Columbia as an assistant professor in 2012.
-
-My statistical research is generally focused on functional data analysis, and draws heavily from ongoing collaborations with researchers in other disciplines. One major emphasis is the use of motion kinematics to understand motor control, skill learning, and recovery following stroke; another is physical activity measurement and quantification using wearable devices. The [research](research.html) page has more information on recent projects. 
 
 In 2013, I founded (with [Todd Ogden](https://www.mailman.columbia.edu/people/our-faculty/to166) and [Phil Reiss](https://works.bepress.com/phil_reiss/)) the Functional Data Analysis Working Group ([FDAWG](https://www.mailman.columbia.edu/research/functional-data-analysis-working-group)) at Columbia Biostat. 
 
