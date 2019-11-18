@@ -20,7 +20,7 @@ Working closely with clinicians and neuroscientists around the world, my collabo
 
 #### Data science
 
-Data science is a newly-formed and, as yet, loosely-defined discipline that has nonetheless emerged as a critical component of successful research in biostatistics and public health. For several years, I have worked to incorporate data science techniques for transparency and reproducibiity into  biostatistical analyses. Research projects are accompanied by robust, publicly available software and analytical pipelines that ensure the reproducibility of the results. This is informed by my work in developing a graduate course in [data science](https://p8105.com).
+Data science is a newly-formed and, as yet, loosely-defined discipline that has nonetheless emerged as a critical component of successful research in biostatistics and public health. I work to incorporate data science techniques for transparency and reproducibiity into biostatistical analyses. Research projects are accompanied by robust, publicly available software and analytical pipelines that ensure the reproducibility of the results. This approach is informed by my work in developing a graduate course in [data science](https://p8105.com).
 
 #### About
 
