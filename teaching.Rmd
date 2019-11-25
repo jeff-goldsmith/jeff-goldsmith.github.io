@@ -30,5 +30,5 @@ Spring 2013: Categorical Data Analysis
 
 ## Other materials
 
-2019: [Workshop on website development](http://jeffgoldsmith.com/ehs_workshop/index.html)
+2019: [Workshop on website development](http://jeffgoldsmith.com/ehs_workshop/index.html)  
 2018: Webinar: ["Data Science and Predictive Models in Public Health"]() and accompanying [reproducible lasso example](resources/lasso_example.zip) (webinar requires registration of free account)
