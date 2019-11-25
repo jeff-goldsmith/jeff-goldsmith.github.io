@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -86,7 +87,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -247,18 +247,6 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
@@ -363,7 +351,7 @@ Spring 2013: Categorical Data Analysis</p>
 </div>
 <div id="other-materials" class="section level2">
 <h2>Other materials</h2>
-<p>2018: Webinar: <a href="">“Data Science and Predictive Models in Public Health”</a> and accompanying <a href="resources/lasso_example.zip">reproducible lasso example</a> (webinar requires registration of free account)</p>
+<p>2019: <a href="http://jeffgoldsmith.com/ehs_workshop/index.html">Workshop on website development</a> 2018: Webinar: <a href="">“Data Science and Predictive Models in Public Health”</a> and accompanying <a href="resources/lasso_example.zip">reproducible lasso example</a> (webinar requires registration of free account)</p>
 </div>
 
 <br><br>
@@ -387,6 +375,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
