@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -250,48 +251,9 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
-
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <style type="text/css">
 
@@ -340,8 +302,6 @@ div.tocify {
 
 .tocify-subheader .tocify-item {
   font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
 }
 
 .tocify .list-group-item {
@@ -412,7 +372,7 @@ div.tocify {
   </a>
 </li>
 <li>
-  <a href="./Downloads/CV_Goldsmith.pdf">
+  <a href="./resources/CV_Goldsmith.pdf">
     <span class="ai ai-cv ai-lg"></span>
      
   </a>
@@ -448,9 +408,9 @@ div.tocify {
 </div>
 <div id="example-usage" class="section level2">
 <h2>Example usage</h2>
-<p>The code in this page is drawn from <a href="https://fabian-s.github.io/tidyfun/"><code>tidyfun</code></a> vignettes, and is intended as a quick introduction; for more details, please read the complete documentation!</p>
+<p>The code in this page is drawn from <a href="https://tidyfun.github.io/tidyfun/"><code>tidyfun</code></a> vignettes, and is intended as a quick introduction; for more details, please read the complete documentation!</p>
 <p>If you haven’t installed <code>tidyfun</code> the code below will do so.</p>
-<pre class="r"><code>devtools::install_github(&quot;fabian-s/tidyfun&quot;)</code></pre>
+<pre class="r"><code>devtools::install_github(&quot;tidyfun/tidyfun&quot;)</code></pre>
 <p>Next I’ll load the package, as well as the <code>tidyverse</code>.</p>
 <pre class="r"><code>library(tidyfun)
 ## Registered S3 method overwritten by &#39;GGally&#39;:
@@ -547,19 +507,19 @@ plot(cca_five_zoom)</code></pre>
 <p>The main goal of <code>tidyfun</code> is to ease exploratory analysis by putting functional data in data frames. Since <code>tf</code> vectors are treated the same way as vectors of class <code>numeric</code> or <code>factor</code>, they can enter dataframes the same way.</p>
 <p>The DTI data, for example, include scalar covariates and two functional variables:</p>
 <pre class="r"><code>dti_df
-## # A tibble: 382 x 5
-##       id sex    case   cca                        rcst                     
-##    &lt;dbl&gt; &lt;fct&gt;  &lt;fct&gt;  &lt;tfd_irrg&gt;                 &lt;tfd_irrg&gt;               
-##  1  1001 female contr… 1001_1: (0.000,0.49);(0.0… 1001_1: (0.000,0.26);(0.…
-##  2  1002 female contr… 1002_1: (0.000,0.47);(0.0… 1002_1: ( 0.22,0.44);( 0…
-##  3  1003 male   contr… 1003_1: (0.000,0.50);(0.0… 1003_1: ( 0.22,0.42);( 0…
-##  4  1004 male   contr… 1004_1: (0.000,0.40);(0.0… 1004_1: (0.000,0.51);(0.…
-##  5  1005 male   contr… 1005_1: (0.000,0.40);(0.0… 1005_1: ( 0.22,0.40);( 0…
-##  6  1006 male   contr… 1006_1: (0.000,0.45);(0.0… 1006_1: (0.056,0.47);(0.…
-##  7  1007 male   contr… 1007_1: (0.000,0.55);(0.0… 1007_1: (0.000,0.52);(0.…
-##  8  1008 male   contr… 1008_1: (0.000,0.45);(0.0… 1008_1: (0.000,0.33);(0.…
-##  9  1009 male   contr… 1009_1: (0.000,0.50);(0.0… 1009_1: (0.000,0.57);(0.…
-## 10  1010 male   contr… 1010_1: (0.000,0.46);(0.0… 1010_1: ( 0.22,0.44);( 0…
+## # A tibble: 382 x 6
+##       id visit sex    case   cca                     rcst                  
+##    &lt;dbl&gt; &lt;int&gt; &lt;fct&gt;  &lt;fct&gt;  &lt;tfd_irrg&gt;              &lt;tfd_irrg&gt;            
+##  1  1001     1 female contr… 1001_1: (0.000,0.49);(… 1001_1: (0.000,0.26);…
+##  2  1002     1 female contr… 1002_1: (0.000,0.47);(… 1002_1: ( 0.22,0.44);…
+##  3  1003     1 male   contr… 1003_1: (0.000,0.50);(… 1003_1: ( 0.22,0.42);…
+##  4  1004     1 male   contr… 1004_1: (0.000,0.40);(… 1004_1: (0.000,0.51);…
+##  5  1005     1 male   contr… 1005_1: (0.000,0.40);(… 1005_1: ( 0.22,0.40);…
+##  6  1006     1 male   contr… 1006_1: (0.000,0.45);(… 1006_1: (0.056,0.47);…
+##  7  1007     1 male   contr… 1007_1: (0.000,0.55);(… 1007_1: (0.000,0.52);…
+##  8  1008     1 male   contr… 1008_1: (0.000,0.45);(… 1008_1: (0.000,0.33);…
+##  9  1009     1 male   contr… 1009_1: (0.000,0.50);(… 1009_1: (0.000,0.57);…
+## 10  1010     1 male   contr… 1010_1: (0.000,0.46);(… 1010_1: ( 0.22,0.44);…
 ## # … with 372 more rows</code></pre>
 <p>And the CHF data is an example of a multilevel dataset with a functional observation:</p>
 <pre class="r"><code>chf_df 
@@ -759,6 +719,49 @@ $(document).ready(function () {
 });
 
 
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

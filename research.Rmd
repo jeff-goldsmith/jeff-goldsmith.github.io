@@ -25,4 +25,4 @@ Accelerometry is used to collect continuous information on physical activity usi
 
 This graphic shows observed accelerometer data for children in this study, separated into groups based on covariates. Below each data plot is the coefficient function for the covariate effect estimated in a function-on-scalar regression model. An [interactive version](https://jeff-goldsmith.shinyapps.io/HS_interactive/) of this graphic is also available.
 
-<img src="images/accel_covariate.jpg" alt="kinematics" style="width:80%; border:5px solid">
+<img src="images/accel_covariate.jpg" alt="accel" style="width:80%; border:5px solid">

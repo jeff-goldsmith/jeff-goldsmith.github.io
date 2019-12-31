@@ -23,6 +23,14 @@ Complex Mixtures, Complex Analyses: an Emphasis on Interpretable Results.
 accepted.
 [[Link](https://link.springer.com/article/10.1007%2Fs40572-019-00229-5)]
 
+E. A. Gibson, Y. Nunez, A. Abuawad, A. R. Zota, S. Renzetti, K. L. Devick, C. Gennings, **J. Goldsmith**, B. A. Coull, and M.-A. Kioumourtzoglou. (2019)
+An overview of methods to address distinct research questions on environmental mixtures: an application to persistent organic pollutants and leukocyte telomere length.
+<i> Environmental Health, </i> 
+<b>18</b> ???.
+[[Link](https://ehjournal.biomedcentral.com/articles/10.1186/s12940-019-0515-1)
+| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/31462251)
+| Article selected as NIEHS [Extramural Paper of the Month](https://factor.niehs.nih.gov/2019/11/papers/dert/index.htm)]
+
 J. Xu, M. Branscheidt, H. Schambra, L. Steiner, M. Widmer, J. Diedrichsen, **J. Goldsmith**, M. Lindquist, T. Kitago, A. R. Luft, J. W. Krakauer, P. A. Celnik, SMARTS Study Group (2019)
 Rethinking interhemispheric imbalance as a target for stroke neurorehabilitation.
 <i> Annals of neurology, </i> 

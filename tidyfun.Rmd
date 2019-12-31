@@ -30,12 +30,12 @@ This page hosts a presentation / quick intro to [`tidyfun`](https://fabian-s.git
 
 ## Example usage
 
-The code in this page is drawn from [`tidyfun`](https://fabian-s.github.io/tidyfun/) vignettes, and is intended as a quick introduction; for more details, please read the complete documentation!
+The code in this page is drawn from [`tidyfun`](https://tidyfun.github.io/tidyfun/) vignettes, and is intended as a quick introduction; for more details, please read the complete documentation!
 
 If you haven't installed `tidyfun` the code below will do so.
 
 ```{r, eval = FALSE}
-devtools::install_github("fabian-s/tidyfun")
+devtools::install_github("tidyfun/tidyfun")
 ```
 
 Next I'll load the package, as well as the `tidyverse`. 
