@@ -15,21 +15,63 @@ output:
 
 In the following, <sup>&#8224;</sup> denotes equal contribution and <sup>&#8225;</sup> indicates a student under my supervision.
 
+## 2020
+
+D. Backenroth<sup>&#8224;</sup>, R. T. Shinohara, J. A. Schrack, and **J. Goldsmith** (2020+).
+Non-negative decomposition of functional count data. 
+<i> Biometrics, </i>  accepted.
+	
+A. E. Margolis, J. Broitman, J. M. Davis, L. Alexander, A. Hamilton, Z. Liao, S. Banker, L. Thomas, G. A. Salum, K. Merikangis, **J. Goldsmith**, T. Paus, K. Keyes, M. P. Milham (2020+).
+Prevalence Of Nonverbal Learning Disability In Three Community Samples
+<i> JAMA Network Open, </i> accepted.
+
+D. Pagliaccio et al (2020+).
+Prenatal Exposure to Polycyclic Aromatic Hydrocarbons Modifies the Effects of Early Life Stress on Attention & Thought Problems in Late Childhood.
+<i> The Journal of Child Psychology and Psychiatry,, </i> accepted.
+
 ## 2019
+
+E. A. Gibson, Y. Nunez, A. Abuawad, A. R. Zota, S. Renzetti, K. L. Devick, C. Gennings, **J. Goldsmith**, B. A. Coull, and M.-A. Kioumourtzoglou. (2019)
+An overview of methods to address distinct research questions on environmental mixtures: an application to persistent organic pollutants and leukocyte telomere length.
+<i> Environmental Health, </i> 
+<b>18</b> 76.
+[[Link](https://ehjournal.biomedcentral.com/articles/10.1186/s12940-019-0515-1)
+| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/31462251)
+| Article selected as NIEHS [Extramural Paper of the Month](https://factor.niehs.nih.gov/2019/11/papers/dert/index.htm)]
+
+R. Kundert, **J. Goldsmith**, J. Veerbeek, J. W. Krakauer, and A. R. Luft (2019). 
+What the proportional recovery rule is (and is not): methodological and statistical considerations.
+<i>Neurorehabilitation and Neural Repair, </i> 
+<b>33</b> 876-887.
+[[Link](https://journals.sagepub.com/doi/full/10.1177/1545968319872996)
+| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/31524062)]
+
+A.G. Rundle, D. Gallagher, J. B. Herbstman, **J. Goldsmith**, D. Holmes, A. Hassoun, S. Oberfield, R. L. Miller, H. Andrews, E. M. Widen, L. A. Hoepner, and F. Perera (2019). 
+Prenatal Exposure to Airborne Polycyclic Aromatic Hydrocarbons and Childhood Growth Trajectories from Age 5 to 14 Years.
+<i>Environmental Research, </i> 
+<b>177</b> 108595.
+[[Link](https://www.sciencedirect.com/science/article/abs/pii/S0013935119303925)
+| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/31352299)]
+
+J. Lee<sup>&#8225;</sup>, G. Li, W. F. Christensen, G. Collins, M. Seeley, A. E. Bowden, D. T. Fullwood, and **J. Goldsmith** (2019). 
+Functional Data Analyses of Gait Data Measured Using In-Shoe Sensors. 
+<i> Statistics in Biosciences, </i> 
+<b>11</b> 288-313.
+[[Link](https://link.springer.com/article/10.1007/s12561-018-9226-3)]
 
 E. A. Gibson, **J. Goldsmith**, and M.-A. Kioumourtzoglou (2019+).
 Complex Mixtures, Complex Analyses: an Emphasis on Interpretable Results.
 <i> Current Environmental Health Reports, </i> 
 accepted.
 [[Link](https://link.springer.com/article/10.1007%2Fs40572-019-00229-5)]
+| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/31069725)]
 
-E. A. Gibson, Y. Nunez, A. Abuawad, A. R. Zota, S. Renzetti, K. L. Devick, C. Gennings, **J. Goldsmith**, B. A. Coull, and M.-A. Kioumourtzoglou. (2019)
-An overview of methods to address distinct research questions on environmental mixtures: an application to persistent organic pollutants and leukocyte telomere length.
-<i> Environmental Health, </i> 
-<b>18</b> ???.
-[[Link](https://ehjournal.biomedcentral.com/articles/10.1186/s12940-019-0515-1)
-| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/31462251)
-| Article selected as NIEHS [Extramural Paper of the Month](https://factor.niehs.nih.gov/2019/11/papers/dert/index.htm)]
+Y. Chen<sup>&#8225;</sup>, **J. Goldsmith**, and R. T. Ogden (2019).
+Functional data analysis of dynamic PET data.
+<i> Journal of the American Statistical Association, </i> 
+<b>114</b> 595-609.
+[[Link](https://www.tandfonline.com/doi/abs/10.1080/01621459.2018.1497495)
+| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/31447493)]
 
 J. Xu, M. Branscheidt, H. Schambra, L. Steiner, M. Widmer, J. Diedrichsen, **J. Goldsmith**, M. Lindquist, T. Kitago, A. R. Luft, J. W. Krakauer, P. A. Celnik, SMARTS Study Group (2019)
 Rethinking interhemispheric imbalance as a target for stroke neurorehabilitation.
@@ -38,11 +80,11 @@ Rethinking interhemispheric imbalance as a target for stroke neurorehabilitation
 [[Link](https://onlinelibrary.wiley.com/doi/abs/10.1002/ana.25452)
 | [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/30805956)]
 
-Y. Chen<sup>&#8225;</sup>, **J. Goldsmith**, and R. T. Ogden (2019).
-Nonlinear mixed-effects models for PET data.
-<i> Transactions on Biomedical Engineering, </i> 
-<b>66</b> 881-891.
-[[Link](https://ieeexplore.ieee.org/document/8424003/)]
+J. Wrobel<sup>&#8225;</sup>, V. Zipunnikov, J. Schrack, and **J. Goldsmith** (2019).
+Registration for exponential family functional data.
+<i> Biometrics, </i> 
+<b>75</b> 48-57.
+[[Link](https://onlinelibrary.wiley.com/doi/full/10.1111/biom.12963)]
 
 R. Liu, R. C. Shelton, N. Eldred-Skemp, **J. Goldsmith**, and S. F. Suglia (2019)
 Early Exposure to Cumulative Social Risk and Trajectories of Body Mass Index in Childhood.
@@ -51,35 +93,29 @@ Early Exposure to Cumulative Social Risk and Trajectories of Body Mass Index in 
 [[Link](https://www.liebertpub.com/doi/pdf/10.1089/chi.2018.0116)
 | [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/30362818)]
 
-	
-	
+Y. Chen<sup>&#8225;</sup>, **J. Goldsmith**, and R. T. Ogden (2019).
+Nonlinear mixed-effects models for PET data.
+<i> Transactions on Biomedical Engineering, </i> 
+<b>66</b> 881-891.
+[[Link](https://ieeexplore.ieee.org/document/8424003/) 
+| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/30072311)]
+
+
 ## 2018
 
-J. Lee<sup>&#8225;</sup>, G. Li, W. F. Christensen, G. Collins, M. Seeley, A. E. Bowden, D. T. Fullwood, and **J. Goldsmith** (2018). 
-Functional Data Analyses of Gait Data Measured Using In-Shoe Sensors. 
-<i> Statistics in Biosciences, </i> 
-accepted.
+D. Backenroth<sup>&#8225;</sup>, **J. Goldsmith**, M. D. Harran, J. C. Cortes, J. W. Krakauer, and T. Kitago (2018).
+Modeling motor learning using heteroskedastic functional principal components analysis.
+<i> Journal of the American Statistical Association, </i> 
+<b>113</b> 1003-1015.
+[[Link](https://www.tandfonline.com/doi/abs/10.1080/01621459.2017.1379403) 
+| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/30416231)]
 
 J. A. Woo Baidal, K. Morel, K. Nichols, E. Elbel, N. Charles, **J. Goldsmith**, L. Chen, and E. M. Taveras (2018+). 
 Sugar-sweetened beverage attitudes and consumption during the first 1,000 days of life. 
 <i> American Journal of Public Health, </i> 
-accepted.
-
-J. Wrobel<sup>&#8225;</sup>, V. Zipunnikov, J. Schrack, and **J. Goldsmith** (2018+).
-Registration for exponential family functional data.
-<i> Biometrics, </i> 
-accepted.
-
-Y. Chen<sup>&#8225;</sup>, **J. Goldsmith**, and R. T. Ogden (2018+).
-Functional data analysis of dynamic PET data.
-<i> Journal of the American Statistical Association, </i> 
-accepted.
-
-D. Backenroth<sup>&#8225;</sup>, **J. Goldsmith**, M. D. Harran, J. C. Cortes, J. W. Krakauer, and T. Kitago (2018+).
-Modeling motor learning using heteroskedastic functional principal components analysis.
-<i> Journal of the American Statistical Association, </i> 
-accepted.
-[[PDF](resources/HetFCPA.pdf)]
+<b>108</b> 1659-1665.
+[[Link](https://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2018.304691) 
+| [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/30359102)]
 
 H. Rosenblum, A. Castano, J. Alvarez, **J. Goldsmith**, S. Helmke, M.S. Maurer (2018).
 TTR (Transthyretin) Stabilizers Are Associated With Improved Survival in Patients With TTR Cardiac Amyloidosis.
