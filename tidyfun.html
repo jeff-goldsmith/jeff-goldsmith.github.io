@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -90,7 +89,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -239,6 +237,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -267,6 +266,12 @@ $(document).ready(function () {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -413,6 +418,8 @@ div.tocify {
 <pre class="r"><code>devtools::install_github(&quot;tidyfun/tidyfun&quot;)</code></pre>
 <p>Next I’ll load the package, as well as the <code>tidyverse</code>.</p>
 <pre class="r"><code>library(tidyfun)
+## Warning: replacing previous import &#39;dplyr::data_frame&#39; by &#39;vctrs::data_frame&#39;
+## when loading &#39;tidyfun&#39;
 ## Registered S3 method overwritten by &#39;GGally&#39;:
 ##   method from   
 ##   +.gg   ggplot2
@@ -421,6 +428,12 @@ div.tocify {
 ## The following objects are masked from &#39;package:stats&#39;:
 ## 
 ##     sd, var
+library(refundr)
+## 
+## Attaching package: &#39;refundr&#39;
+## The following objects are masked from &#39;package:tidyfun&#39;:
+## 
+##     chf_df, dti_df
 library(tidyverse)</code></pre>
 <div id="illustrative-datasets" class="section level3">
 <h3>Illustrative datasets</h3>
@@ -429,14 +442,20 @@ library(tidyverse)</code></pre>
 <p>A quick plot of these data is below.</p>
 <pre class="r"><code>chf_df %&gt;% 
   ggplot(aes(y = activity)) + 
-    geom_spaghetti(alpha = .05)</code></pre>
+    geom_spaghetti(alpha = .05)
+## Warning: Unknown or uninitialised column: `flipped_aes`.
+
+## Warning: Unknown or uninitialised column: `flipped_aes`.</code></pre>
 <p><img src="tidyfun_files/figure-html/plot_chf-1.png" width="90%" /></p>
 <p>The <code>tidyfun::dti_df</code> contains fractional anisotropy (FA) tract profiles for the corpus callosum (cca) and the right corticospinal tract (rcst), along with several covariates.</p>
 <pre class="r"><code>data(dti_df)</code></pre>
 <p>A quick plot of the <code>cca</code> tract profiles is below.</p>
 <pre class="r"><code>dti_df %&gt;% 
   ggplot(aes(y = cca)) + 
-    geom_spaghetti(alpha = .05)</code></pre>
+    geom_spaghetti(alpha = .05)
+## Warning: Unknown or uninitialised column: `flipped_aes`.
+
+## Warning: Unknown or uninitialised column: `flipped_aes`.</code></pre>
 <p><img src="tidyfun_files/figure-html/plot_dti-1.png" width="90%" /></p>
 </div>
 <div id="tf-vectors" class="section level3">
@@ -508,35 +527,35 @@ plot(cca_five_zoom)</code></pre>
 <p>The DTI data, for example, include scalar covariates and two functional variables:</p>
 <pre class="r"><code>dti_df
 ## # A tibble: 382 x 6
-##       id visit sex    case   cca                     rcst                  
-##    &lt;dbl&gt; &lt;int&gt; &lt;fct&gt;  &lt;fct&gt;  &lt;tfd_irrg&gt;              &lt;tfd_irrg&gt;            
-##  1  1001     1 female contr… 1001_1: (0.000,0.49);(… 1001_1: (0.000,0.26);…
-##  2  1002     1 female contr… 1002_1: (0.000,0.47);(… 1002_1: ( 0.22,0.44);…
-##  3  1003     1 male   contr… 1003_1: (0.000,0.50);(… 1003_1: ( 0.22,0.42);…
-##  4  1004     1 male   contr… 1004_1: (0.000,0.40);(… 1004_1: (0.000,0.51);…
-##  5  1005     1 male   contr… 1005_1: (0.000,0.40);(… 1005_1: ( 0.22,0.40);…
-##  6  1006     1 male   contr… 1006_1: (0.000,0.45);(… 1006_1: (0.056,0.47);…
-##  7  1007     1 male   contr… 1007_1: (0.000,0.55);(… 1007_1: (0.000,0.52);…
-##  8  1008     1 male   contr… 1008_1: (0.000,0.45);(… 1008_1: (0.000,0.33);…
-##  9  1009     1 male   contr… 1009_1: (0.000,0.50);(… 1009_1: (0.000,0.57);…
-## 10  1010     1 male   contr… 1010_1: (0.000,0.46);(… 1010_1: ( 0.22,0.44);…
-## # … with 372 more rows</code></pre>
+##       id visit sex   case                                                  cca
+##    &lt;dbl&gt; &lt;int&gt; &lt;fct&gt; &lt;fct&gt;                                          &lt;tfd_irrg&gt;
+##  1  1001     1 fema… cont… 1001_1: (0.000,0.49);(0.011,0.52);(0.022,0.54); ...
+##  2  1002     1 fema… cont… 1002_1: (0.000,0.47);(0.011,0.49);(0.022,0.50); ...
+##  3  1003     1 male  cont… 1003_1: (0.000,0.50);(0.011,0.51);(0.022,0.54); ...
+##  4  1004     1 male  cont… 1004_1: (0.000,0.40);(0.011,0.42);(0.022,0.44); ...
+##  5  1005     1 male  cont… 1005_1: (0.000,0.40);(0.011,0.41);(0.022,0.40); ...
+##  6  1006     1 male  cont… 1006_1: (0.000,0.45);(0.011,0.45);(0.022,0.46); ...
+##  7  1007     1 male  cont… 1007_1: (0.000,0.55);(0.011,0.56);(0.022,0.56); ...
+##  8  1008     1 male  cont… 1008_1: (0.000,0.45);(0.011,0.48);(0.022,0.50); ...
+##  9  1009     1 male  cont… 1009_1: (0.000,0.50);(0.011,0.51);(0.022,0.52); ...
+## 10  1010     1 male  cont… 1010_1: (0.000,0.46);(0.011,0.47);(0.022,0.48); ...
+## # … with 372 more rows, and 1 more variable: rcst &lt;tfd_irrg&gt;</code></pre>
 <p>And the CHF data is an example of a multilevel dataset with a functional observation:</p>
 <pre class="r"><code>chf_df 
-## # A tibble: 329 x 9
-##       id gender   age   bmi event_week event_type  week day    activity    
-##    &lt;int&gt; &lt;chr&gt;  &lt;int&gt; &lt;int&gt;      &lt;int&gt; &lt;chr&gt;      &lt;int&gt; &lt;chr&gt;  &lt;tfd_reg&gt;   
-##  1     1 Male      41    26         41 .              1 Monday [1]: (1,0);…
-##  2     1 Male      41    26         41 .              1 Tuesd… [2]: (1,0);…
-##  3     1 Male      41    26         41 .              1 Wedne… [3]: (1,0);…
-##  4     1 Male      41    26         41 .              1 Thurs… [4]: (1,4);…
-##  5     1 Male      41    26         41 .              1 Friday [5]: (1,6);…
-##  6     1 Male      41    26         41 .              1 Satur… [6]: (1,0);…
-##  7     1 Male      41    26         41 .              1 Sunday [7]: (1,5);…
-##  8     3 Female    81    21         32 .              1 Monday [8]: (1,3);…
-##  9     3 Female    81    21         32 .              1 Tuesd… [9]: (1,0);…
-## 10     3 Female    81    21         32 .              1 Wedne… [10]: (1,0)…
-## # … with 319 more rows</code></pre>
+## # A tibble: 329 x 8
+##       id gender   age   bmi event_week event_type day  
+##    &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;      &lt;ord&gt;
+##  1     1 Male      41    26         41 .          Mon  
+##  2     1 Male      41    26         41 .          Tue  
+##  3     1 Male      41    26         41 .          Wed  
+##  4     1 Male      41    26         41 .          Thu  
+##  5     1 Male      41    26         41 .          Fri  
+##  6     1 Male      41    26         41 .          Sat  
+##  7     1 Male      41    26         41 .          Sun  
+##  8     3 Female    81    21         32 .          Mon  
+##  9     3 Female    81    21         32 .          Tue  
+## 10     3 Female    81    21         32 .          Wed  
+## # … with 319 more rows, and 1 more variable: activity &lt;tfd_reg&gt;</code></pre>
 <p>Now our functional data are tidy! That is, we have data rectangles, and each functional observation exists in a single “cell”.</p>
 </div>
 <div id="data-wrangling" class="section level3">
@@ -544,28 +563,41 @@ plot(cca_five_zoom)</code></pre>
 <p>Dataframes using <code>tidyfun</code> to store functional observations can be manipulated using tools from <code>dplyr</code>, including <code>select</code> and <code>filter</code>:</p>
 <pre class="r"><code>chf_df %&gt;% 
   select(id, day, activity) %&gt;% 
-  filter(day == &quot;Monday&quot;) %&gt;% 
+  filter(day == &quot;Mon&quot;) %&gt;% 
   ggplot(aes(y = activity)) + 
-  geom_spaghetti(alpha = .05)</code></pre>
+  geom_spaghetti(alpha = .05)
+## Warning: Unknown or uninitialised column: `flipped_aes`.
+
+## Warning: Unknown or uninitialised column: `flipped_aes`.</code></pre>
 <p><img src="tidyfun_files/figure-html/unnamed-chunk-12-1.png" width="90%" /></p>
 <p>Operations using <code>group_by</code> and <code>summarize</code> are allowed:</p>
 <pre class="r"><code>chf_df %&gt;% 
   group_by(day) %&gt;% 
   summarize(mean_act = mean(activity)) %&gt;% 
   ggplot(aes(y = mean_act, color = day)) + 
-  geom_spaghetti()</code></pre>
+  geom_spaghetti()
+## `summarise()` ungrouping output (override with `.groups` argument)
+## Warning: Unknown or uninitialised column: `flipped_aes`.
+
+## Warning: Unknown or uninitialised column: `flipped_aes`.</code></pre>
 <p><img src="tidyfun_files/figure-html/unnamed-chunk-13-1.png" width="90%" /></p>
 <p>One can <code>mutate</code> functional observations – here we exponentiate the log activity counts to obtain original recordings:</p>
 <pre class="r"><code>chf_df %&gt;% 
   mutate(exp_act = exp(activity)) %&gt;% 
   ggplot(aes(y = exp_act)) + 
-  geom_spaghetti(alpha = .05)</code></pre>
+  geom_spaghetti(alpha = .05)
+## Warning: Unknown or uninitialised column: `flipped_aes`.
+
+## Warning: Unknown or uninitialised column: `flipped_aes`.</code></pre>
 <p><img src="tidyfun_files/figure-html/unnamed-chunk-14-1.png" width="90%" /></p>
 <p>Some <code>dplyr</code> functions are most useful in conjunction with new functions in <code>tidyfun</code>. For example, one might use <code>filter</code> with <code>tf_anywhere</code> to filter based on the values of observed functions:</p>
 <pre class="r"><code>chf_df %&gt;% 
   filter(tf_anywhere(activity, value &gt; 9)) %&gt;% 
   ggplot(aes(y = activity)) + 
-  geom_spaghetti()</code></pre>
+  geom_spaghetti()
+## Warning: Unknown or uninitialised column: `flipped_aes`.
+
+## Warning: Unknown or uninitialised column: `flipped_aes`.</code></pre>
 <p><img src="tidyfun_files/figure-html/unnamed-chunk-15-1.png" width="90%" /></p>
 <p>One can add smoothed versions of existing observations using <code>mutate</code> and <code>tf_smooth</code>:</p>
 <pre class="r"><code>chf_df %&gt;% 
@@ -573,14 +605,20 @@ plot(cca_five_zoom)</code></pre>
   mutate(smooth_act = tf_smooth(activity)) %&gt;% 
   ggplot(aes(y = smooth_act)) + 
   geom_spaghetti()
-## using f = 0.15 as smoother span for lowess</code></pre>
+## using f = 0.15 as smoother span for lowess
+## Warning: Unknown or uninitialised column: `flipped_aes`.
+
+## Warning: Unknown or uninitialised column: `flipped_aes`.</code></pre>
 <p><img src="tidyfun_files/figure-html/unnamed-chunk-16-1.png" width="90%" /></p>
 <p>One can also extract observations over a subset of the full domain using <code>mutate</code> and <code>tf_zoom</code>:</p>
 <pre class="r"><code>chf_df %&gt;% 
   filter(id == 1) %&gt;% 
   mutate(daytime_act = tf_zoom(activity, 360, 1200)) %&gt;% 
   ggplot(aes(y = daytime_act)) + 
-  geom_spaghetti()</code></pre>
+  geom_spaghetti()
+## Warning: Unknown or uninitialised column: `flipped_aes`.
+
+## Warning: Unknown or uninitialised column: `flipped_aes`.</code></pre>
 <p><img src="tidyfun_files/figure-html/unnamed-chunk-17-1.png" width="90%" /></p>
 <p>In general, EDA for functional data using <code>tidyverse</code> tools is now possible, and is often most powerful when paired with new functions in <code>tidyfun</code>.</p>
 </div>
@@ -589,21 +627,25 @@ plot(cca_five_zoom)</code></pre>
 <p>We’ve seen both <code>plot</code> and <code>geom_spaghetti</code> to aid in understanding some content to this point – base R for <code>tf</code> vectors, <code>ggplot</code> for tidy data. You can use more advanced options and combine with data wrangling steps.</p>
 <p>You can use facetting:</p>
 <pre class="r"><code>chf_df %&gt;% 
-  filter(day %in% c(&quot;Monday&quot;, &quot;Sunday&quot;)) %&gt;% 
+  filter(day %in% c(&quot;Mon&quot;, &quot;Sun&quot;)) %&gt;% 
   ggplot(aes(y = activity, color = gender)) + 
   geom_spaghetti(alpha = .1) + 
-  facet_grid(~ day)</code></pre>
+  facet_grid(gender ~ day)
+## Warning: Unknown or uninitialised column: `flipped_aes`.
+
+## Warning: Unknown or uninitialised column: `flipped_aes`.</code></pre>
 <p><img src="tidyfun_files/figure-html/unnamed-chunk-18-1.png" width="90%" /></p>
 <p>Together with data manipulation tools, the integration with <code>ggplot</code> can produce useful exploratory analyses. Note that this plot also introduces <code>geom_meatballs()</code>:</p>
 <pre class="r"><code>chf_df %&gt;% 
   group_by(gender, day) %&gt;% 
   summarize(mean_act = mean(activity)) %&gt;% 
   mutate(smooth_mean = tfb(mean_act)) %&gt;% 
-  filter(day %in% c(&quot;Monday&quot;, &quot;Sunday&quot;)) %&gt;% 
+  filter(day %in% c(&quot;Mon&quot;, &quot;Sun&quot;)) %&gt;% 
   ggplot(aes(y = smooth_mean, color = gender)) + 
   geom_spaghetti(size = 1.25, alpha = 1) + 
   geom_meatballs(aes(y = mean_act), alpha = .1) + 
   facet_grid(~ day)
+## `summarise()` regrouping output by &#39;gender&#39; (override with `.groups` argument)
 ## Percentage of input data variability preserved in basis representation
 ## (per functional observation, approximate):
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
@@ -611,11 +653,26 @@ plot(cca_five_zoom)</code></pre>
 ## Percentage of input data variability preserved in basis representation
 ## (per functional observation, approximate):
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##   89.00   91.80   93.00   92.14   93.05   93.30</code></pre>
+##   89.00   91.80   93.00   92.14   93.05   93.30
+## Percentage of input data variability preserved in basis representation
+## (per functional observation, approximate):
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##     100     100     100     100     100     100
+## Percentage of input data variability preserved in basis representation
+## (per functional observation, approximate):
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##     100     100     100     100     100     100
+## Warning: Unknown or uninitialised column: `flipped_aes`.
+
+## Warning: Unknown or uninitialised column: `flipped_aes`.
+
+## Warning: Unknown or uninitialised column: `flipped_aes`.
+
+## Warning: Unknown or uninitialised column: `flipped_aes`.</code></pre>
 <p><img src="tidyfun_files/figure-html/unnamed-chunk-19-1.png" width="90%" /></p>
 <p>Lasagna plots are a variant on a heatmaps which show functional observations in rows and use color to illustrate values taken at different arguments. In <code>tidyfun</code>, lasagna plots are implemented through <code>gglasagna</code>. A first example, using the CHF data, is below.</p>
 <pre class="r"><code>chf_df %&gt;% 
-  filter(day %in% c(&quot;Monday&quot;, &quot;Sunday&quot;)) %&gt;% 
+  filter(day %in% c(&quot;Mon&quot;, &quot;Sun&quot;)) %&gt;% 
   gglasagna(activity)</code></pre>
 <p><img src="tidyfun_files/figure-html/unnamed-chunk-20-1.png" width="90%" /></p>
 <p>A somewhat more involved example, demonstrating the <code>order</code> argument and taking advantage of facetting, is next.</p>
@@ -666,21 +723,43 @@ pig.weights
 
 pig_df
 ## # A tibble: 48 x 2
-##    id.num weight                       
-##     &lt;int&gt; &lt;tfd_reg&gt;                    
-##  1      1 1: (1,24);(2,32);(3,39); ... 
-##  2      2 2: (1,22);(2,30);(3,40); ... 
-##  3      3 3: (1,22);(2,28);(3,36); ... 
-##  4      4 4: (1,24);(2,32);(3,40); ... 
-##  5      5 5: (1,24);(2,32);(3,37); ... 
-##  6      6 6: (1,23);(2,30);(3,36); ... 
-##  7      7 7: (1,22);(2,28);(3,36); ... 
-##  8      8 8: (1,24);(2,30);(3,38); ... 
-##  9      9 9: (1,20);(2,28);(3,33); ... 
+##    id.num                        weight
+##     &lt;int&gt;                     &lt;tfd_reg&gt;
+##  1      1  1: (1,24);(2,32);(3,39); ...
+##  2      2  2: (1,22);(2,30);(3,40); ...
+##  3      3  3: (1,22);(2,28);(3,36); ...
+##  4      4  4: (1,24);(2,32);(3,40); ...
+##  5      5  5: (1,24);(2,32);(3,37); ...
+##  6      6  6: (1,23);(2,30);(3,36); ...
+##  7      7  7: (1,22);(2,28);(3,36); ...
+##  8      8  8: (1,24);(2,30);(3,38); ...
+##  9      9  9: (1,20);(2,28);(3,33); ...
 ## 10     10 10: (1,26);(2,32);(3,40); ...
 ## # … with 38 more rows</code></pre>
 <p>Additional functions allow conversion from other data structures to <code>tf</code> vectors, and also implement conversions back to these data structures.</p>
 </div>
+</div>
+<div id="some-fpca" class="section level2">
+<h2>Some FPCA</h2>
+<pre class="r"><code># irregular data 
+data(dti_df)
+dti_fpca = rfr_fpca(Y = &quot;cca&quot;, data = dti_df)
+
+dti_df %&gt;% 
+  modelr::add_predictions(dti_fpca, var = &quot;cca_fits&quot;) %&gt;% 
+  filter(case == &quot;control&quot;) %&gt;% 
+  ggplot(aes(y = cca_fits)) + 
+  geom_spaghetti(alpha = .4) + 
+  geom_spaghetti(aes(y = cca), color = &quot;blue&quot;, alpha = .3) + 
+  facet_grid(~sex)
+## Warning: Unknown or uninitialised column: `flipped_aes`.
+
+## Warning: Unknown or uninitialised column: `flipped_aes`.
+
+## Warning: Unknown or uninitialised column: `flipped_aes`.
+
+## Warning: Unknown or uninitialised column: `flipped_aes`.</code></pre>
+<p><img src="tidyfun_files/figure-html/unnamed-chunk-24-1.png" width="90%" /></p>
 </div>
 <div id="next-steps" class="section level2">
 <h2>Next steps</h2>
@@ -751,7 +830,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0

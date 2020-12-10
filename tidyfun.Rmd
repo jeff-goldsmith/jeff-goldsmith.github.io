@@ -42,6 +42,7 @@ Next I'll load the package, as well as the `tidyverse`.
 
 ```{r}
 library(tidyfun)
+library(refundr)
 library(tidyverse)
 ```
 
@@ -171,7 +172,7 @@ Dataframes using `tidyfun` to store functional observations can be manipulated u
 ```{r}
 chf_df %>% 
   select(id, day, activity) %>% 
-  filter(day == "Monday") %>% 
+  filter(day == "Mon") %>% 
   ggplot(aes(y = activity)) + 
   geom_spaghetti(alpha = .05)
 ```
@@ -235,10 +236,10 @@ You can use facetting:
 
 ```{r}
 chf_df %>% 
-  filter(day %in% c("Monday", "Sunday")) %>% 
+  filter(day %in% c("Mon", "Sun")) %>% 
   ggplot(aes(y = activity, color = gender)) + 
   geom_spaghetti(alpha = .1) + 
-  facet_grid(~ day)
+  facet_grid(gender ~ day)
 ```
 
 Together with data manipulation tools, the integration with `ggplot` can produce useful exploratory analyses. Note that this plot also introduces `geom_meatballs()`:
@@ -248,7 +249,7 @@ chf_df %>%
   group_by(gender, day) %>% 
   summarize(mean_act = mean(activity)) %>% 
   mutate(smooth_mean = tfb(mean_act)) %>% 
-  filter(day %in% c("Monday", "Sunday")) %>% 
+  filter(day %in% c("Mon", "Sun")) %>% 
   ggplot(aes(y = smooth_mean, color = gender)) + 
   geom_spaghetti(size = 1.25, alpha = 1) + 
   geom_meatballs(aes(y = mean_act), alpha = .1) + 
@@ -259,7 +260,7 @@ Lasagna plots are a variant on a heatmaps which show functional observations in 
 
 ```{r}
 chf_df %>% 
-  filter(day %in% c("Monday", "Sunday")) %>% 
+  filter(day %in% c("Mon", "Sun")) %>% 
   gglasagna(activity)
 ```
 
@@ -312,6 +313,24 @@ pig_df
 ```
 
 Additional functions allow conversion from other data structures to `tf` vectors, and also implement conversions back to these data structures.
+
+
+## Some FPCA
+
+```{r}
+# irregular data 
+data(dti_df)
+dti_fpca = rfr_fpca(Y = "cca", data = dti_df)
+
+dti_df %>% 
+  modelr::add_predictions(dti_fpca, var = "cca_fits") %>% 
+  filter(case == "control") %>% 
+  ggplot(aes(y = cca_fits)) + 
+  geom_spaghetti(alpha = .4) + 
+  geom_spaghetti(aes(y = cca), color = "blue", alpha = .3) + 
+  facet_grid(~sex)
+```
+
 
 
 ## Next steps
