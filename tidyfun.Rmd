@@ -20,7 +20,7 @@ library(tidyverse)
 theme_set(theme_bw() + theme(legend.position = "bottom"))
 ```
 
-This page hosts a presentation / quick intro to [`tidyfun`](https://fabian-s.github.io/tidyfun/) -- enjoy!
+This page hosts a presentation / quick intro to [`tidyfun`](https://tidyfun.github.io/tidyfun/index.html) -- enjoy!
 
 ## Some slides
 
