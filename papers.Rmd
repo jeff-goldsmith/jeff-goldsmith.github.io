@@ -15,6 +15,77 @@ output:
 
 In the following, <sup>&#8224;</sup> denotes equal contribution and <sup>&#8225;</sup> indicates a student under my supervision.
 
+## 2021
+
+Yan, X., **Goldsmith, J.**, Mohan, S., Turnbull, Z.A., Freundlich, R.E., Billings, F.T., Kiran, R.P., Li, G. and Kim, M. (2021). 
+	Impact of Intraoperative Data on Risk Prediction for Mortality After Intra-Abdominal Surgery. 
+	_Anesthesia \& Analgesia_, **134** 102-113.
+	
+Saith, S.E., Gamino, D., Teruya, S., Guadalupe, S., Helmke, S., De Los Santos, J., **Goldsmith, J.**, Rosenblum, H.R., Griffin, J.M. and Maurer, M.S., (2021). 
+	Factors associated with changes in serum transthyretin after treatment with tafamidis and outcomes in transthyretin cardiac amyloidosis.
+	_Amyloid_, **28** 267-268.
+	
+Duran, A.T., Pascual, C.B., **Goldsmith, J.**, Howard, V.J., Hutto, B., Colabianchi, N., Vena, J.E., McDonnell, M.N., Blair, S.N., Hooker, S.P. and Diaz, K.M. (2021).
+	Objectively Measured Physical Activity and Sedentary Time Among Adults With and Without Stroke: A National Cohort Study.
+	_Stroke_, **52** e729-e732.
+	
+Navas-Acien, A., Domingo-Relloso, A., Subedi, P., Riffo-Campos, A.L., Xia, R., Gomez, L., Haack, K., **Goldsmith, J.**, Howard, B.V., Best, L.G. and Devereux, R., (2021). 
+	Blood DNA Methylation and Incident Coronary Heart Disease: Evidence From the Strong Heart Study. 
+	_JAMA Cardiology_, **6** 1237-1246.
+	
+Johnson, C.N., Ramphal, B., Koe, E., Raudales, A., **Goldsmith, J.** and Margolis, A.E., (2021). 
+	Cognitive correlates of autism spectrum disorder symptoms. 
+	_Autism Research_, **14** 2405-2411.
+
+Margolis, A.E., Ramphal, B., Pagliaccio, D., Banker, S., Selmanovic, E., Thomas, L.V., Factor-Litvak, P., Perera, F., Peterson, B.S., Rundle, A. Herbstman, J.B., **Goldsmith, J.**, and Rauh, V. (2021). 
+	Prenatal exposure to air pollution is associated with childhood inhibitory control and adolescent academic achievement. 
+	_Environmental Research_, **202** p 111570.
+
+Nunez, Y., Boehme, A.K., Li, M., **Goldsmith, J.**, Weisskopf, M.G., Re, D.B., Navas-Acien, A., van Donkelaar, A., Martin, R.V. and Kioumourtzoglou, M.A., (2021). 
+	Parkinson's disease aggravation in association with fine particle components in New York State. 
+	_Environmental Research_, **201**, p.111554.
+
+Cornelius, T., Denes, A., Webber, K.T., Guest, C., **Goldsmith, J.**, Schwartz, J.E., and Gorin, A.A. (2021).
+	Relationship quality and objectively measured physical activity before and after implementation of COVID-19 stay-home orders.
+	_Journal of Health Psychology_, DOI:13591053211042075.
+
+C P Friel, C B Pascual, A T Duran, **J Goldsmith**, K M Diaz (2021).
+	Joint associations of occupational standing and occupational exertion with musculoskeletal symptoms in a US national sample.
+	_Occupational and Environmental Medicine_, **78**, 494-499.
+
+Rowland, S.T., Parks, R.M., Boehme, A.K., **Goldsmith, J.**, Rush, J., Just, A.C. and Kioumourtzoglou, M.A., (2021). 
+	The association between ambient temperature variability and myocardial infarction in a New York-State-based case-crossover study: An examination of different variability metrics. 
+	_Environmental Research_, **197**, p.111207.
+
+McDonnell, E.I., Zipunnikov, V., Schrack, J.A., **Goldsmith, J.** and Wrobel, J., (2021). 
+	Registration of 24-hour accelerometric rest-activity profiles and its application to human chronotypes. 
+	_Biological Rhythm Research_, pp.1-21.
+
+Krakauer, J.W., Kitago, T., **Goldsmith, J.**, Ahmad, O., Roy, P., Stein, J., Bishop, L., Casey, K., Valladares, B., Harran, M.D. and Cortes, J.C. (2021). 
+	Comparing a Novel Neuroanimation Experience to Conventional Therapy for High-Dose Intensive Upper-Limb Training in Subacute Stroke: The SMARTS2 Randomized Trial. 
+	_Neurorehabilitation and Neural Repair_, **35**, pp.393-405.
+
+**J Goldsmith**, Y Sun, L Fried, J Wing, G W Miller, K Berhane (2021).
+	The Emergence and Future of Public Health Data Science.
+	_Public Health Reviews_, ** accepted.
+
+Nunez, Y., Gibson, E.A., Tanner, E.M., Gennings, C., Coull, B.A., **Goldsmith, J.**, and Kioumourtzoglou, M.A., (2021). 
+	Reflection on modern methods: good practices for applied statistical learning in epidemiology. 
+	_International journal of epidemiology_, **50**, 685-693.
+
+H Rosenblum, A Masri, D L Narotsky, **J Goldsmith**, N Hamid, R T Hahn, S Kodali, T Vahl, T Nazif, O K Khalique, S Bokhari, P Soman, J L Cavalcante, M S Maurer, A Castano
+	Unveiling outcomes in coexisting severe aortic stenosis and transthyretin cardiac amyloidosis (2021).
+	_European Journal of Heart Failure_, **23** 250-258.
+
+L R Mitrani, J De Los Santos, E Driggin, R Kogan, S Helmke, **J Goldsmith**, A B Biviano, M S Maurer (2021).
+	Anticoagulation with warfarin compared to novel oral anticoagulants for atrial fibrillation in adults with transthyretin cardiac amyloidosis: comparison of thromboembolic events and major bleeding
+	_Amyloid_, **28** 30-34.
+
+S Lovinsky-Desir, K H Jung, M Montilla, J Quinn, J Cahill, D Sheehan, F Perera, S N Chillrud, **J Goldsmith**, M Perzanowski, A Rundle, R Miller (2021).
+	Locations of Adolescent Physical Activity in an Urban Environment and their Associations with Air Pollution and Lung Function.
+	_Annals of the American Thoracic Society_, **18** 84-92.
+	
+
 ## 2020
 
 D. Backenroth$^\ddagger$, R. T. Shinohara, J. A. Schrack, and **J Goldsmith** (2020).
@@ -23,7 +94,7 @@ D. Backenroth$^\ddagger$, R. T. Shinohara, J. A. Schrack, and **J Goldsmith** (2
 	<b>76</b> 1273-1284.
 	[[Link](https://onlinelibrary.wiley.com/doi/abs/10.1111/biom.13220)]
 
-J Wrobel$^\ddagger$, ML Martin, R Bakshi, PA Calabresi, M Elliot, D Roalf, RC Gur, RE Gur, RG Henry, G Nair, J Oh, N Papinutto, D Pelletier, Daniel Salo Reich, WD Rooney, TD Satterthwaite, W Stern, K Prabhakaran, NL Sicotte, RT Shinohara, \bf J. Goldsmith \rm (2020).
+J Wrobel$^\ddagger$, ML Martin, R Bakshi, PA Calabresi, M Elliot, D Roalf, RC Gur, RE Gur, RG Henry, G Nair, J Oh, N Papinutto, D Pelletier, Daniel Salo Reich, WD Rooney, TD Satterthwaite, W Stern, K Prabhakaran, NL Sicotte, RT Shinohara, **J Goldsmith** (2020).
 	Intensity warping for multisite MRI harmonization.
 	<i> NeuroImage, </i> 
 	<b>223</b> 117284.
@@ -37,16 +108,6 @@ J M Griffin, L Chiu, K M Axsom, R Bijou, K J Clerkin, P Colombo, M O Cuomo, J De
 	United network for organ sharing outcomes after heart transplantation for al compared to ATTR cardiac amyloidosis	
 	<i> Annals of the American Thoracic Society, </i> 
 	<b>34</b> e14028.
-
-L R Mitrani, J De Los Santos, E Driggin, R Kogan, S Helmke, **J Goldsmith**, A B Biviano, M S Maurer (2020). 
-	Anticoagulation with warfarin compared to novel oral anticoagulants for atrial fibrillation in adults with transthyretin cardiac amyloidosis: comparison of thromboembolic events and major bleeding
-	<i> Amyloid, </i> 
-	<b>28</b> 30-34.
-
-H Rosenblum, A Masri, D L Narotsky, **J Goldsmith**, N Hamid, R T Hahn, S Kodali, T Vahl, T Nazif, O K Khalique, S Bokhari, P Soman, J L Cavalcante, M S Maurer, A Castano
-	Unveiling outcomes in coexisting severe aortic stenosis and transthyretin cardiac amyloidosis (2020).
-	<i> European Journal of Heart Failure, </i> 
-	<b>23</b> 250-258.
 
 M He, P Kinney, C Chen, Q Sun, J Ban, J Wang, S Liu,  **J Goldsmith**, M-A Kioumourtzoglou (2020).
 	Short- and intermediate- term exposure to NO2 and mortality: a multi-county analysis in China. 
@@ -313,7 +374,7 @@ Is Isolated Nocturnal Hypertension a Reproducible Phenotype?
 
 
 
-## 2015
+## 2015 and before
 
 T. Kitago<sup>&#8224;</sup>, **J. Goldsmith**<sup>&#8224;</sup>, M. Harran, L. Kane, J. Berard, S. Huang, S. Ryan, P. Mazzoni, J, Krakauer, and V. Huang (2015).
 Robotic therapy for chronic stroke: general recovery of impairment or improved task-specific skill?
@@ -365,9 +426,6 @@ Genetic Causal Attribution of Epilepsy and its Implications for Felt Stigma.
 [[Link](http://onlinelibrary.wiley.com/doi/10.1111/epi.13113/abstract)
 | [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/26290354)]
 
-
-
-## 2014
 
 **J. Goldsmith**, L. Huang, C. M. Crainiceanu (2014).
 Smooth Scalar-on-Image Regression via Spatial Bayesian Variable Selection.
@@ -458,9 +516,6 @@ Statistical Normalization Techniques for Magnetic Resonance Imaging.
 [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/25379412)]
 
 
-
-## 2013
-
 **J. Goldsmith**, S. Greven, C. M. Crainiceanu (2013).
 Corrected Confidence Bands for Functional Data Using Principal Components.
 <i> Biometrics, </i>
@@ -500,8 +555,6 @@ Iso-osmolar enemas demonstrate preferential gastrointestinal distribution, safet
 [[Link](http://online.liebertpub.com/doi/abs/10.1089/aid.2013.0189) |
 [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/23885722)]
 
-
-## 2012
 
 **J. Goldsmith**, C. M. Crainiceanu, B. S. Caffo, D. S. Reich (2012).
 Longitudinal Penalized Functional Regression for Cognitive Outcomes on Neuronal Tract Measurements.
@@ -546,9 +599,6 @@ Distribution of Cell-free and Cell-associated HIV Surrogates in the Colon follow
 [PubMed](http://www.ncbi.nlm.nih.gov/pubmed/21937920)]
 
 
-
-## 2011 and before
-	
 **J. Goldsmith**, J. Bobb, C. M. Crainiceanu, B. S. Caffo, D. S. Reich (2011).
 Penalized Functional Regression.
 <i> Journal of Computational and Graphical Statistics, </i>
