@@ -6,11 +6,11 @@ title: "Jeff Goldsmith"
 <link rel="stylesheet" href="academicons/css/academicons.min.css"/>
 <link rel="apple-touch-icon" href="/images/JG_transparent.png" >
 
-Associate Professor of Biostatistics <br>
-Columbia University Mailman School of Public Health
-
 <br><img src="images/jeff.jpg" alt="jeff" style="width:65%; border:10px solid"><br>
 
+Associate Dean for Data Science <br>
+Associate Professor of Biostatistics <br>
+Columbia University Mailman School of Public Health
 
 #### Research
 
