@@ -8,25 +8,17 @@ title: "Jeff Goldsmith"
 
 <br><img src="images/jeff.jpg" alt="jeff" style="width:65%; border:10px solid"><br>
 
-Associate Dean for Data Science <br>
-Associate Professor of Biostatistics <br>
-Columbia University Mailman School of Public Health
-
-#### Research
-
-For several years, I have worked to advance the state-of-the-art in functional data analysis by developing methods for understanding patterns in large, complex datasets in neuroscience, physical activity monitoring, and other areas. 
-
-Working closely with clinicians and neuroscientists around the world, my collaborators and I have focused on improving the understanding skilled movements. This work involves reaching movements made by stroke patients: in these experiments, a patient's fingertip position is recorded hundreds of time per second for the duration of the reach. I have developed new statistical methods to understand the impact of stroke on movement quality, and applied these to large, longitudinal datasets. In parallel, I have proposed methods for wearable device research, especially focusing on accelerometers. These devices can produce minute-by-minute (or even finer) resolution observations of activity for hundreds of participants over several days, weeks, or months. The methods developed include approaches for regression with activity trajectories as outcomes; for interpretable dimension reduction; and for aligning major patterns (like wake from sleep, mid-day dips in activity, and sleep onset) across subjects. 
-
-#### Data science
-
-Data science is a newly-formed and, as yet, loosely-defined discipline that has nonetheless emerged as a critical component of successful research in biostatistics and public health. I work to incorporate data science techniques for transparency and reproducibility into biostatistical analyses. Research projects are accompanied by robust, publicly available software and analytical pipelines that ensure the reproducibility of the results. This approach is informed by my work in developing a graduate course in [data science](https://p8105.com).
-
 #### About
 
-I received a BS in mathematics from [Dickinson College](http://www.dickinson.edu) in 2007 and a PhD in Biostatistics from [Johns Hopkins University](http://www.jhsph.edu/departments/biostatistics/) in 2012. My dissertation was advised by [Ciprian Crainiceanu](http://www.biostat.jhsph.edu/~ccrainic/) and [Brian Caffo](https://sites.google.com/view/bcaffo/home), and focused on statistical methods for high-dimensional structured data. I joined Columbia as an assistant professor in 2012.
+Dr. Jeff Goldsmith is Associate Professor of Biostatistics at the Columbia University Mailman School of Public Health. He serves as the Associate Dean for Data Science at MSPH, and as the Associate Director for Education at the Columbia University Data Science Institute. His statistical work focuses on functional data analysis specifically and high-dimensional, structured data more broadly. He has developed new statistical methods for regression, dimension reduction, and unsupervised learning. Dr. Goldsmith has a broad methodological and collaborative research portfolio, encompassing neuroscience and neuroimaging, physical activity behaviors, environmental health, and cardiovascular health. He has published in a range of outlets, including Biostatistics, Biometrics, Journal of the American Statistical Association, eLife, and Neurorehabilitation and Neural Repair; and he is coauthor of the book Functional Data Analysis with R.
 
-In 2013, I founded (with [Todd Ogden](https://www.mailman.columbia.edu/people/our-faculty/to166) and [Phil Reiss](https://works.bepress.com/phil_reiss/)) the Functional Data Analysis Working Group ([FDAWG](https://www.mailman.columbia.edu/research/functional-data-analysis-working-group)) at Columbia Biostat. 
+Dr. Goldsmith is a Fellow of the American Statistical Association and was selected as an inaugural recipient of the COPSS Emerging Leader Award. He received the Mailman School's Dean's Excellence in Leadership Award the Columbia University Presidential Award for Outstanding Teaching. 
+
+He works to incorporate data science techniques for transparency and reproducibility into biostatistical analyses. Research projects are accompanied by robust, publicly available software and analytical pipelines that ensure the reproducibility of the results. This approach is informed by his work in developing a graduate course in [data science](https://p8105.com).
+
+In 2013, Dr. Goldsmith founded (with [Dr. Todd Ogden](https://www.mailman.columbia.edu/people/our-faculty/to166) and [Dr. Phil Reiss](https://works.bepress.com/phil_reiss/)) the Functional Data Analysis Working Group ([FDAWG](https://www.mailman.columbia.edu/research/functional-data-analysis-working-group)) at Columbia Biostat. 
+
+Dr. Goldsmith received a BS in mathematics from [Dickinson College](http://www.dickinson.edu) in 2007 and a PhD in Biostatistics from [Johns Hopkins University](http://www.jhsph.edu/departments/biostatistics/) in 2012. 
 
 <br>
 
@@ -37,5 +29,3 @@ Jeff Goldsmith
 [Columbia Mailman School of Public Health](http://www.mailman.columbia.edu/)  
 722 West 168th Street, Room 617  
 New York, New York 10032  
-
-Email: [jeff.goldsmith@columbia.edu](mailto:jeff.goldsmith@columbia.edu)  

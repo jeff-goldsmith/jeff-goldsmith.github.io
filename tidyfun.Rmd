@@ -90,12 +90,6 @@ cca_five = dti_df$cca[1:5]
 cca_five
 ```
 
-For illustration, we plot the vector `cca_five` below. 
-
-```{r, ex-fig}
-plot(cca_five)
-```
-
 Converting "raw" to "basis" representation is possible, and introduces some smoothing by default.
 
 ```{r}
@@ -104,12 +98,6 @@ cca_five_b =
   tfb()
 ```
 
-A quick plot illustrates the difference visually; lots of things are different in the background!
-
-```{r}
-plot(cca_five)
-lines(cca_five_b, col = "red")
-```
 
 ### Operations on `tf` vectors
 
@@ -269,7 +257,7 @@ A somewhat more involved example, demonstrating the `order` argument and taking 
 ```{r, dti-fig2}  
 dti_df %>% 
   gglasagna(
-    y = cca, 
+    tf = cca, 
     order = tf_integrate(cca, definite = TRUE), 
     arg = seq(0,1, l = 101)) + 
   theme(axis.text.y = element_text(size = 6)) + 
@@ -313,23 +301,6 @@ pig_df
 ```
 
 Additional functions allow conversion from other data structures to `tf` vectors, and also implement conversions back to these data structures.
-
-
-## Some FPCA
-
-```{r}
-# irregular data 
-data(dti_df)
-dti_fpca = rfr_fpca(Y = "cca", data = dti_df)
-
-dti_df %>% 
-  modelr::add_predictions(dti_fpca, var = "cca_fits") %>% 
-  filter(case == "control") %>% 
-  ggplot(aes(y = cca_fits)) + 
-  geom_spaghetti(alpha = .4) + 
-  geom_spaghetti(aes(y = cca), color = "blue", alpha = .3) + 
-  facet_grid(~sex)
-```
 
 
 

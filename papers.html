@@ -13,7 +13,7 @@
 
 <title>papers.knit</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -29,14 +29,14 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -57,6 +57,7 @@ if (window.hljs) {
   }
 }
 </script>
+
 
 
 
@@ -86,6 +87,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -143,11 +147,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -176,8 +184,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -185,16 +193,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -311,7 +312,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -371,120 +372,587 @@ div.tocify {
 </div>
 
 
-<p><link rel="stylesheet" href="styles.css" type="text/css" /> <link rel="stylesheet" href="academicons/css/academicons.min.css"/></p>
-<p><br> <font size="5"><a href="https://scholar.google.com/citations?user=3wvmkE0AAAAJ">Google Scholar Page</a></font> <br></p>
-<p>In the following, <sup>†</sup> denotes equal contribution and <sup>‡</sup> indicates a student under my supervision.</p>
+<p><link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="stylesheet" href="academicons/css/academicons.min.css"/></p>
+<p><br> <font size="5"><a
+href="https://scholar.google.com/citations?user=3wvmkE0AAAAJ">Google
+Scholar Page</a></font> <br></p>
+<p>In the following, <sup>†</sup> denotes equal contribution and
+<sup>‡</sup> indicates a student under my supervision.</p>
 <div id="section" class="section level2">
 <h2>2021</h2>
-<p>Yan, X., <strong>Goldsmith, J.</strong>, Mohan, S., Turnbull, Z.A., Freundlich, R.E., Billings, F.T., Kiran, R.P., Li, G. and Kim, M. (2021). Impact of Intraoperative Data on Risk Prediction for Mortality After Intra-Abdominal Surgery. <em>Anesthesia &amp; Analgesia</em>, <strong>134</strong> 102-113.</p>
-<p>Saith, S.E., Gamino, D., Teruya, S., Guadalupe, S., Helmke, S., De Los Santos, J., <strong>Goldsmith, J.</strong>, Rosenblum, H.R., Griffin, J.M. and Maurer, M.S., (2021). Factors associated with changes in serum transthyretin after treatment with tafamidis and outcomes in transthyretin cardiac amyloidosis. <em>Amyloid</em>, <strong>28</strong> 267-268.</p>
-<p>Duran, A.T., Pascual, C.B., <strong>Goldsmith, J.</strong>, Howard, V.J., Hutto, B., Colabianchi, N., Vena, J.E., McDonnell, M.N., Blair, S.N., Hooker, S.P. and Diaz, K.M. (2021). Objectively Measured Physical Activity and Sedentary Time Among Adults With and Without Stroke: A National Cohort Study. <em>Stroke</em>, <strong>52</strong> e729-e732.</p>
-<p>Navas-Acien, A., Domingo-Relloso, A., Subedi, P., Riffo-Campos, A.L., Xia, R., Gomez, L., Haack, K., <strong>Goldsmith, J.</strong>, Howard, B.V., Best, L.G. and Devereux, R., (2021). Blood DNA Methylation and Incident Coronary Heart Disease: Evidence From the Strong Heart Study. <em>JAMA Cardiology</em>, <strong>6</strong> 1237-1246.</p>
-<p>Johnson, C.N., Ramphal, B., Koe, E., Raudales, A., <strong>Goldsmith, J.</strong> and Margolis, A.E., (2021). Cognitive correlates of autism spectrum disorder symptoms. <em>Autism Research</em>, <strong>14</strong> 2405-2411.</p>
-<p>Margolis, A.E., Ramphal, B., Pagliaccio, D., Banker, S., Selmanovic, E., Thomas, L.V., Factor-Litvak, P., Perera, F., Peterson, B.S., Rundle, A. Herbstman, J.B., <strong>Goldsmith, J.</strong>, and Rauh, V. (2021). Prenatal exposure to air pollution is associated with childhood inhibitory control and adolescent academic achievement. <em>Environmental Research</em>, <strong>202</strong> p 111570.</p>
-<p>Nunez, Y., Boehme, A.K., Li, M., <strong>Goldsmith, J.</strong>, Weisskopf, M.G., Re, D.B., Navas-Acien, A., van Donkelaar, A., Martin, R.V. and Kioumourtzoglou, M.A., (2021). Parkinson’s disease aggravation in association with fine particle components in New York State. <em>Environmental Research</em>, <strong>201</strong>, p.111554.</p>
-<p>Cornelius, T., Denes, A., Webber, K.T., Guest, C., <strong>Goldsmith, J.</strong>, Schwartz, J.E., and Gorin, A.A. (2021). Relationship quality and objectively measured physical activity before and after implementation of COVID-19 stay-home orders. <em>Journal of Health Psychology</em>, <a href="DOI:13591053211042075" class="uri">DOI:13591053211042075</a>.</p>
-<p>C P Friel, C B Pascual, A T Duran, <strong>J Goldsmith</strong>, K M Diaz (2021). Joint associations of occupational standing and occupational exertion with musculoskeletal symptoms in a US national sample. <em>Occupational and Environmental Medicine</em>, <strong>78</strong>, 494-499.</p>
-<p>Rowland, S.T., Parks, R.M., Boehme, A.K., <strong>Goldsmith, J.</strong>, Rush, J., Just, A.C. and Kioumourtzoglou, M.A., (2021). The association between ambient temperature variability and myocardial infarction in a New York-State-based case-crossover study: An examination of different variability metrics. <em>Environmental Research</em>, <strong>197</strong>, p.111207.</p>
-<p>McDonnell, E.I., Zipunnikov, V., Schrack, J.A., <strong>Goldsmith, J.</strong> and Wrobel, J., (2021). Registration of 24-hour accelerometric rest-activity profiles and its application to human chronotypes. <em>Biological Rhythm Research</em>, pp.1-21.</p>
-<p>Krakauer, J.W., Kitago, T., <strong>Goldsmith, J.</strong>, Ahmad, O., Roy, P., Stein, J., Bishop, L., Casey, K., Valladares, B., Harran, M.D. and Cortes, J.C. (2021). Comparing a Novel Neuroanimation Experience to Conventional Therapy for High-Dose Intensive Upper-Limb Training in Subacute Stroke: The SMARTS2 Randomized Trial. <em>Neurorehabilitation and Neural Repair</em>, <strong>35</strong>, pp.393-405.</p>
-<p><strong>J Goldsmith</strong>, Y Sun, L Fried, J Wing, G W Miller, K Berhane (2021). The Emergence and Future of Public Health Data Science. <em>Public Health Reviews</em>, ** accepted.</p>
-<p>Nunez, Y., Gibson, E.A., Tanner, E.M., Gennings, C., Coull, B.A., <strong>Goldsmith, J.</strong>, and Kioumourtzoglou, M.A., (2021). Reflection on modern methods: good practices for applied statistical learning in epidemiology. <em>International journal of epidemiology</em>, <strong>50</strong>, 685-693.</p>
-<p>H Rosenblum, A Masri, D L Narotsky, <strong>J Goldsmith</strong>, N Hamid, R T Hahn, S Kodali, T Vahl, T Nazif, O K Khalique, S Bokhari, P Soman, J L Cavalcante, M S Maurer, A Castano Unveiling outcomes in coexisting severe aortic stenosis and transthyretin cardiac amyloidosis (2021). <em>European Journal of Heart Failure</em>, <strong>23</strong> 250-258.</p>
-<p>L R Mitrani, J De Los Santos, E Driggin, R Kogan, S Helmke, <strong>J Goldsmith</strong>, A B Biviano, M S Maurer (2021). Anticoagulation with warfarin compared to novel oral anticoagulants for atrial fibrillation in adults with transthyretin cardiac amyloidosis: comparison of thromboembolic events and major bleeding <em>Amyloid</em>, <strong>28</strong> 30-34.</p>
-<p>S Lovinsky-Desir, K H Jung, M Montilla, J Quinn, J Cahill, D Sheehan, F Perera, S N Chillrud, <strong>J Goldsmith</strong>, M Perzanowski, A Rundle, R Miller (2021). Locations of Adolescent Physical Activity in an Urban Environment and their Associations with Air Pollution and Lung Function. <em>Annals of the American Thoracic Society</em>, <strong>18</strong> 84-92.</p>
+<p>Yan, X., <strong>Goldsmith, J.</strong>, Mohan, S., Turnbull, Z.A.,
+Freundlich, R.E., Billings, F.T., Kiran, R.P., Li, G. and Kim, M.
+(2021). Impact of Intraoperative Data on Risk Prediction for Mortality
+After Intra-Abdominal Surgery. <em>Anesthesia &amp; Analgesia</em>,
+<strong>134</strong> 102-113.</p>
+<p>Saith, S.E., Gamino, D., Teruya, S., Guadalupe, S., Helmke, S., De
+Los Santos, J., <strong>Goldsmith, J.</strong>, Rosenblum, H.R.,
+Griffin, J.M. and Maurer, M.S., (2021). Factors associated with changes
+in serum transthyretin after treatment with tafamidis and outcomes in
+transthyretin cardiac amyloidosis. <em>Amyloid</em>, <strong>28</strong>
+267-268.</p>
+<p>Duran, A.T., Pascual, C.B., <strong>Goldsmith, J.</strong>, Howard,
+V.J., Hutto, B., Colabianchi, N., Vena, J.E., McDonnell, M.N., Blair,
+S.N., Hooker, S.P. and Diaz, K.M. (2021). Objectively Measured Physical
+Activity and Sedentary Time Among Adults With and Without Stroke: A
+National Cohort Study. <em>Stroke</em>, <strong>52</strong>
+e729-e732.</p>
+<p>Navas-Acien, A., Domingo-Relloso, A., Subedi, P., Riffo-Campos, A.L.,
+Xia, R., Gomez, L., Haack, K., <strong>Goldsmith, J.</strong>, Howard,
+B.V., Best, L.G. and Devereux, R., (2021). Blood DNA Methylation and
+Incident Coronary Heart Disease: Evidence From the Strong Heart Study.
+<em>JAMA Cardiology</em>, <strong>6</strong> 1237-1246.</p>
+<p>Johnson, C.N., Ramphal, B., Koe, E., Raudales, A., <strong>Goldsmith,
+J.</strong> and Margolis, A.E., (2021). Cognitive correlates of autism
+spectrum disorder symptoms. <em>Autism Research</em>,
+<strong>14</strong> 2405-2411.</p>
+<p>Margolis, A.E., Ramphal, B., Pagliaccio, D., Banker, S., Selmanovic,
+E., Thomas, L.V., Factor-Litvak, P., Perera, F., Peterson, B.S., Rundle,
+A. Herbstman, J.B., <strong>Goldsmith, J.</strong>, and Rauh, V. (2021).
+Prenatal exposure to air pollution is associated with childhood
+inhibitory control and adolescent academic achievement.
+<em>Environmental Research</em>, <strong>202</strong> p 111570.</p>
+<p>Nunez, Y., Boehme, A.K., Li, M., <strong>Goldsmith, J.</strong>,
+Weisskopf, M.G., Re, D.B., Navas-Acien, A., van Donkelaar, A., Martin,
+R.V. and Kioumourtzoglou, M.A., (2021). Parkinson’s disease aggravation
+in association with fine particle components in New York State.
+<em>Environmental Research</em>, <strong>201</strong>, p.111554.</p>
+<p>Cornelius, T., Denes, A., Webber, K.T., Guest, C., <strong>Goldsmith,
+J.</strong>, Schwartz, J.E., and Gorin, A.A. (2021). Relationship
+quality and objectively measured physical activity before and after
+implementation of COVID-19 stay-home orders. <em>Journal of Health
+Psychology</em>, <a href="DOI:13591053211042075"
+class="uri">DOI:13591053211042075</a>.</p>
+<p>C P Friel, C B Pascual, A T Duran, <strong>J Goldsmith</strong>, K M
+Diaz (2021). Joint associations of occupational standing and
+occupational exertion with musculoskeletal symptoms in a US national
+sample. <em>Occupational and Environmental Medicine</em>,
+<strong>78</strong>, 494-499.</p>
+<p>Rowland, S.T., Parks, R.M., Boehme, A.K., <strong>Goldsmith,
+J.</strong>, Rush, J., Just, A.C. and Kioumourtzoglou, M.A., (2021). The
+association between ambient temperature variability and myocardial
+infarction in a New York-State-based case-crossover study: An
+examination of different variability metrics. <em>Environmental
+Research</em>, <strong>197</strong>, p.111207.</p>
+<p>McDonnell, E.I., Zipunnikov, V., Schrack, J.A., <strong>Goldsmith,
+J.</strong> and Wrobel, J., (2021). Registration of 24-hour
+accelerometric rest-activity profiles and its application to human
+chronotypes. <em>Biological Rhythm Research</em>, pp.1-21.</p>
+<p>Krakauer, J.W., Kitago, T., <strong>Goldsmith, J.</strong>, Ahmad,
+O., Roy, P., Stein, J., Bishop, L., Casey, K., Valladares, B., Harran,
+M.D. and Cortes, J.C. (2021). Comparing a Novel Neuroanimation
+Experience to Conventional Therapy for High-Dose Intensive Upper-Limb
+Training in Subacute Stroke: The SMARTS2 Randomized Trial.
+<em>Neurorehabilitation and Neural Repair</em>, <strong>35</strong>,
+pp.393-405.</p>
+<p><strong>J Goldsmith</strong>, Y Sun, L Fried, J Wing, G W Miller, K
+Berhane (2021). The Emergence and Future of Public Health Data Science.
+<em>Public Health Reviews</em>, ** accepted.</p>
+<p>Nunez, Y., Gibson, E.A., Tanner, E.M., Gennings, C., Coull, B.A.,
+<strong>Goldsmith, J.</strong>, and Kioumourtzoglou, M.A., (2021).
+Reflection on modern methods: good practices for applied statistical
+learning in epidemiology. <em>International journal of
+epidemiology</em>, <strong>50</strong>, 685-693.</p>
+<p>H Rosenblum, A Masri, D L Narotsky, <strong>J Goldsmith</strong>, N
+Hamid, R T Hahn, S Kodali, T Vahl, T Nazif, O K Khalique, S Bokhari, P
+Soman, J L Cavalcante, M S Maurer, A Castano Unveiling outcomes in
+coexisting severe aortic stenosis and transthyretin cardiac amyloidosis
+(2021). <em>European Journal of Heart Failure</em>, <strong>23</strong>
+250-258.</p>
+<p>L R Mitrani, J De Los Santos, E Driggin, R Kogan, S Helmke, <strong>J
+Goldsmith</strong>, A B Biviano, M S Maurer (2021). Anticoagulation with
+warfarin compared to novel oral anticoagulants for atrial fibrillation
+in adults with transthyretin cardiac amyloidosis: comparison of
+thromboembolic events and major bleeding <em>Amyloid</em>,
+<strong>28</strong> 30-34.</p>
+<p>S Lovinsky-Desir, K H Jung, M Montilla, J Quinn, J Cahill, D Sheehan,
+F Perera, S N Chillrud, <strong>J Goldsmith</strong>, M Perzanowski, A
+Rundle, R Miller (2021). Locations of Adolescent Physical Activity in an
+Urban Environment and their Associations with Air Pollution and Lung
+Function. <em>Annals of the American Thoracic Society</em>,
+<strong>18</strong> 84-92.</p>
 </div>
 <div id="section-1" class="section level2">
 <h2>2020</h2>
-<p>D. Backenroth<span class="math inline">\(^\ddagger\)</span>, R. T. Shinohara, J. A. Schrack, and <strong>J Goldsmith</strong> (2020). Non-negative decomposition of functional count data. <i> Biometrics, </i> <b>76</b> 1273-1284. [<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/biom.13220">Link</a>]</p>
-<p>J Wrobel<span class="math inline">\(^\ddagger\)</span>, ML Martin, R Bakshi, PA Calabresi, M Elliot, D Roalf, RC Gur, RE Gur, RG Henry, G Nair, J Oh, N Papinutto, D Pelletier, Daniel Salo Reich, WD Rooney, TD Satterthwaite, W Stern, K Prabhakaran, NL Sicotte, RT Shinohara, <strong>J Goldsmith</strong> (2020). Intensity warping for multisite MRI harmonization. <i> NeuroImage, </i> <b>223</b> 117284.</p>
-<p>D Pagliaccio, JB Herbstman, F Perera, D Tang, J Goldsmith, BS Peterson, V Rauh, AE and Margolis (2020). Prenatal exposure to polycyclic aromatic hydrocarbons modifies the effects of early life stress on attention and Thought Problems in late childhood. <i> Journal of Child Psychology and Psychiatry, </i> <b>61</b> 1253-1265.</p>
-<p>J M Griffin, L Chiu, K M Axsom, R Bijou, K J Clerkin, P Colombo, M O Cuomo, J De Los Santos, J A Fried, <strong>J Goldsmith</strong>, M Habal, J Haythe, S Helmke, E M Horn, F Latif, S H Lee, E F Lin, Y Naka, J Raikhelkar, S Restaino, G T Sayer, H Takayama, K Takeda, S Teruya, V Topkara, E J Tsai, N Uriel, M Yuzefpolskaya, M A Farr, M S Maurer (2020). United network for organ sharing outcomes after heart transplantation for al compared to ATTR cardiac amyloidosis<br />
+<p>D. Backenroth<span class="math inline">\(^\ddagger\)</span>, R. T.
+Shinohara, J. A. Schrack, and <strong>J Goldsmith</strong> (2020).
+Non-negative decomposition of functional count data. <i> Biometrics,
+</i> <b>76</b> 1273-1284. [<a
+href="https://onlinelibrary.wiley.com/doi/abs/10.1111/biom.13220">Link</a>]</p>
+<p>J Wrobel<span class="math inline">\(^\ddagger\)</span>, ML Martin, R
+Bakshi, PA Calabresi, M Elliot, D Roalf, RC Gur, RE Gur, RG Henry, G
+Nair, J Oh, N Papinutto, D Pelletier, Daniel Salo Reich, WD Rooney, TD
+Satterthwaite, W Stern, K Prabhakaran, NL Sicotte, RT Shinohara,
+<strong>J Goldsmith</strong> (2020). Intensity warping for multisite MRI
+harmonization. <i> NeuroImage, </i> <b>223</b> 117284.</p>
+<p>D Pagliaccio, JB Herbstman, F Perera, D Tang, J Goldsmith, BS
+Peterson, V Rauh, AE and Margolis (2020). Prenatal exposure to
+polycyclic aromatic hydrocarbons modifies the effects of early life
+stress on attention and Thought Problems in late childhood. <i> Journal
+of Child Psychology and Psychiatry, </i> <b>61</b> 1253-1265.</p>
+<p>J M Griffin, L Chiu, K M Axsom, R Bijou, K J Clerkin, P Colombo, M O
+Cuomo, J De Los Santos, J A Fried, <strong>J Goldsmith</strong>, M
+Habal, J Haythe, S Helmke, E M Horn, F Latif, S H Lee, E F Lin, Y Naka,
+J Raikhelkar, S Restaino, G T Sayer, H Takayama, K Takeda, S Teruya, V
+Topkara, E J Tsai, N Uriel, M Yuzefpolskaya, M A Farr, M S Maurer
+(2020). United network for organ sharing outcomes after heart
+transplantation for al compared to ATTR cardiac amyloidosis<br />
 <i> Annals of the American Thoracic Society, </i> <b>34</b> e14028.</p>
-<p>M He, P Kinney, C Chen, Q Sun, J Ban, J Wang, S Liu, <strong>J Goldsmith</strong>, M-A Kioumourtzoglou (2020). Short- and intermediate- term exposure to NO2 and mortality: a multi-county analysis in China. <i> Environmental Pollution, </i> <b>261</b> 114165.</p>
-<p>E Driggin, S Helmke, J De Los Santos, S Teruya, S Guadalupe, <strong>J Goldsmith</strong>, M S Maurer (2020). Markers of nutritional status and inflammation in transthyretin cardiac amyloidosis: association with outcomes and the clinical phenotype. <i> Amyloid, </i> <b>27</b> 73-80.</p>
-<p>A. E. Margolis, J. Broitman, J. M. Davis, L. Alexander, A. Hamilton, Z. Liao, S. Banker, L. Thomas, G. A. Salum, K. Merikangis, <strong>J. Goldsmith</strong>, T. Paus, K. Keyes, M. P. Milham (2020). Prevalence Of Nonverbal Learning Disability In Three Community Samples <i> JAMA Network Open, </i> <b>3</b> e202551-e202551</p>
+<p>M He, P Kinney, C Chen, Q Sun, J Ban, J Wang, S Liu, <strong>J
+Goldsmith</strong>, M-A Kioumourtzoglou (2020). Short- and intermediate-
+term exposure to NO2 and mortality: a multi-county analysis in China.
+<i> Environmental Pollution, </i> <b>261</b> 114165.</p>
+<p>E Driggin, S Helmke, J De Los Santos, S Teruya, S Guadalupe,
+<strong>J Goldsmith</strong>, M S Maurer (2020). Markers of nutritional
+status and inflammation in transthyretin cardiac amyloidosis:
+association with outcomes and the clinical phenotype. <i> Amyloid, </i>
+<b>27</b> 73-80.</p>
+<p>A. E. Margolis, J. Broitman, J. M. Davis, L. Alexander, A. Hamilton,
+Z. Liao, S. Banker, L. Thomas, G. A. Salum, K. Merikangis, <strong>J.
+Goldsmith</strong>, T. Paus, K. Keyes, M. P. Milham (2020). Prevalence
+Of Nonverbal Learning Disability In Three Community Samples <i> JAMA
+Network Open, </i> <b>3</b> e202551-e202551</p>
 </div>
 <div id="section-2" class="section level2">
 <h2>2019</h2>
-<p>E. A. Gibson, Y. Nunez, A. Abuawad, A. R. Zota, S. Renzetti, K. L. Devick, C. Gennings, <strong>J. Goldsmith</strong>, B. A. Coull, and M.-A. Kioumourtzoglou. (2019) An overview of methods to address distinct research questions on environmental mixtures: an application to persistent organic pollutants and leukocyte telomere length. <i> Environmental Health, </i> <b>18</b> 76. [<a href="https://ehjournal.biomedcentral.com/articles/10.1186/s12940-019-0515-1">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/31462251">PubMed</a> | Article selected as NIEHS <a href="https://factor.niehs.nih.gov/2019/11/papers/dert/index.htm">Extramural Paper of the Month</a>]</p>
-<p>R. Kundert, <strong>J. Goldsmith</strong>, J. Veerbeek, J. W. Krakauer, and A. R. Luft (2019). What the proportional recovery rule is (and is not): methodological and statistical considerations. <i>Neurorehabilitation and Neural Repair, </i> <b>33</b> 876-887. [<a href="https://journals.sagepub.com/doi/full/10.1177/1545968319872996">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/31524062">PubMed</a>]</p>
-<p>A.G. Rundle, D. Gallagher, J. B. Herbstman, <strong>J. Goldsmith</strong>, D. Holmes, A. Hassoun, S. Oberfield, R. L. Miller, H. Andrews, E. M. Widen, L. A. Hoepner, and F. Perera (2019). Prenatal Exposure to Airborne Polycyclic Aromatic Hydrocarbons and Childhood Growth Trajectories from Age 5 to 14 Years. <i>Environmental Research, </i> <b>177</b> 108595. [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0013935119303925">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/31352299">PubMed</a>]</p>
-<p>J. Lee<sup>‡</sup>, G. Li, W. F. Christensen, G. Collins, M. Seeley, A. E. Bowden, D. T. Fullwood, and <strong>J. Goldsmith</strong> (2019). Functional Data Analyses of Gait Data Measured Using In-Shoe Sensors. <i> Statistics in Biosciences, </i> <b>11</b> 288-313. [<a href="https://link.springer.com/article/10.1007/s12561-018-9226-3">Link</a>]</p>
-<p>E. A. Gibson, <strong>J. Goldsmith</strong>, and M.-A. Kioumourtzoglou (2019+). Complex Mixtures, Complex Analyses: an Emphasis on Interpretable Results. <i> Current Environmental Health Reports, </i> accepted. [<a href="https://link.springer.com/article/10.1007%2Fs40572-019-00229-5">Link</a>] | <a href="https://www.ncbi.nlm.nih.gov/pubmed/31069725">PubMed</a>]</p>
-<p>Y. Chen<sup>‡</sup>, <strong>J. Goldsmith</strong>, and R. T. Ogden (2019). Functional data analysis of dynamic PET data. <i> Journal of the American Statistical Association, </i> <b>114</b> 595-609. [<a href="https://www.tandfonline.com/doi/abs/10.1080/01621459.2018.1497495">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/31447493">PubMed</a>]</p>
-<p>J. Xu, M. Branscheidt, H. Schambra, L. Steiner, M. Widmer, J. Diedrichsen, <strong>J. Goldsmith</strong>, M. Lindquist, T. Kitago, A. R. Luft, J. W. Krakauer, P. A. Celnik, SMARTS Study Group (2019) Rethinking interhemispheric imbalance as a target for stroke neurorehabilitation. <i> Annals of neurology, </i> <b>85</b> 502-513. [<a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/ana.25452">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/30805956">PubMed</a>]</p>
-<p>J. Wrobel<sup>‡</sup>, V. Zipunnikov, J. Schrack, and <strong>J. Goldsmith</strong> (2019). Registration for exponential family functional data. <i> Biometrics, </i> <b>75</b> 48-57. [<a href="https://onlinelibrary.wiley.com/doi/full/10.1111/biom.12963">Link</a>]</p>
-<p>R. Liu, R. C. Shelton, N. Eldred-Skemp, <strong>J. Goldsmith</strong>, and S. F. Suglia (2019) Early Exposure to Cumulative Social Risk and Trajectories of Body Mass Index in Childhood. <i> Childhood Obesity, </i> <b>15</b> 48-55. [<a href="https://www.liebertpub.com/doi/pdf/10.1089/chi.2018.0116">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/30362818">PubMed</a>]</p>
-<p>Y. Chen<sup>‡</sup>, <strong>J. Goldsmith</strong>, and R. T. Ogden (2019). Nonlinear mixed-effects models for PET data. <i> Transactions on Biomedical Engineering, </i> <b>66</b> 881-891. [<a href="https://ieeexplore.ieee.org/document/8424003/">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/30072311">PubMed</a>]</p>
+<p>E. A. Gibson, Y. Nunez, A. Abuawad, A. R. Zota, S. Renzetti, K. L.
+Devick, C. Gennings, <strong>J. Goldsmith</strong>, B. A. Coull, and
+M.-A. Kioumourtzoglou. (2019) An overview of methods to address distinct
+research questions on environmental mixtures: an application to
+persistent organic pollutants and leukocyte telomere length. <i>
+Environmental Health, </i> <b>18</b> 76. [<a
+href="https://ehjournal.biomedcentral.com/articles/10.1186/s12940-019-0515-1">Link</a>
+| <a href="https://www.ncbi.nlm.nih.gov/pubmed/31462251">PubMed</a> |
+Article selected as NIEHS <a
+href="https://factor.niehs.nih.gov/2019/11/papers/dert/index.htm">Extramural
+Paper of the Month</a>]</p>
+<p>R. Kundert, <strong>J. Goldsmith</strong>, J. Veerbeek, J. W.
+Krakauer, and A. R. Luft (2019). What the proportional recovery rule is
+(and is not): methodological and statistical considerations.
+<i>Neurorehabilitation and Neural Repair, </i> <b>33</b> 876-887. [<a
+href="https://journals.sagepub.com/doi/full/10.1177/1545968319872996">Link</a>
+| <a href="https://www.ncbi.nlm.nih.gov/pubmed/31524062">PubMed</a>]</p>
+<p>A.G. Rundle, D. Gallagher, J. B. Herbstman, <strong>J.
+Goldsmith</strong>, D. Holmes, A. Hassoun, S. Oberfield, R. L. Miller,
+H. Andrews, E. M. Widen, L. A. Hoepner, and F. Perera (2019). Prenatal
+Exposure to Airborne Polycyclic Aromatic Hydrocarbons and Childhood
+Growth Trajectories from Age 5 to 14 Years. <i>Environmental Research,
+</i> <b>177</b> 108595. [<a
+href="https://www.sciencedirect.com/science/article/abs/pii/S0013935119303925">Link</a>
+| <a href="https://www.ncbi.nlm.nih.gov/pubmed/31352299">PubMed</a>]</p>
+<p>J. Lee<sup>‡</sup>, G. Li, W. F. Christensen, G. Collins, M. Seeley,
+A. E. Bowden, D. T. Fullwood, and <strong>J. Goldsmith</strong> (2019).
+Functional Data Analyses of Gait Data Measured Using In-Shoe Sensors.
+<i> Statistics in Biosciences, </i> <b>11</b> 288-313. [<a
+href="https://link.springer.com/article/10.1007/s12561-018-9226-3">Link</a>]</p>
+<p>E. A. Gibson, <strong>J. Goldsmith</strong>, and M.-A.
+Kioumourtzoglou (2019+). Complex Mixtures, Complex Analyses: an Emphasis
+on Interpretable Results. <i> Current Environmental Health Reports, </i>
+accepted. [<a
+href="https://link.springer.com/article/10.1007%2Fs40572-019-00229-5">Link</a>]
+| <a href="https://www.ncbi.nlm.nih.gov/pubmed/31069725">PubMed</a>]</p>
+<p>Y. Chen<sup>‡</sup>, <strong>J. Goldsmith</strong>, and R. T. Ogden
+(2019). Functional data analysis of dynamic PET data. <i> Journal of the
+American Statistical Association, </i> <b>114</b> 595-609. [<a
+href="https://www.tandfonline.com/doi/abs/10.1080/01621459.2018.1497495">Link</a>
+| <a href="https://www.ncbi.nlm.nih.gov/pubmed/31447493">PubMed</a>]</p>
+<p>J. Xu, M. Branscheidt, H. Schambra, L. Steiner, M. Widmer, J.
+Diedrichsen, <strong>J. Goldsmith</strong>, M. Lindquist, T. Kitago, A.
+R. Luft, J. W. Krakauer, P. A. Celnik, SMARTS Study Group (2019)
+Rethinking interhemispheric imbalance as a target for stroke
+neurorehabilitation. <i> Annals of neurology, </i> <b>85</b> 502-513.
+[<a
+href="https://onlinelibrary.wiley.com/doi/abs/10.1002/ana.25452">Link</a>
+| <a href="https://www.ncbi.nlm.nih.gov/pubmed/30805956">PubMed</a>]</p>
+<p>J. Wrobel<sup>‡</sup>, V. Zipunnikov, J. Schrack, and <strong>J.
+Goldsmith</strong> (2019). Registration for exponential family
+functional data. <i> Biometrics, </i> <b>75</b> 48-57. [<a
+href="https://onlinelibrary.wiley.com/doi/full/10.1111/biom.12963">Link</a>]</p>
+<p>R. Liu, R. C. Shelton, N. Eldred-Skemp, <strong>J.
+Goldsmith</strong>, and S. F. Suglia (2019) Early Exposure to Cumulative
+Social Risk and Trajectories of Body Mass Index in Childhood. <i>
+Childhood Obesity, </i> <b>15</b> 48-55. [<a
+href="https://www.liebertpub.com/doi/pdf/10.1089/chi.2018.0116">Link</a>
+| <a href="https://www.ncbi.nlm.nih.gov/pubmed/30362818">PubMed</a>]</p>
+<p>Y. Chen<sup>‡</sup>, <strong>J. Goldsmith</strong>, and R. T. Ogden
+(2019). Nonlinear mixed-effects models for PET data. <i> Transactions on
+Biomedical Engineering, </i> <b>66</b> 881-891. [<a
+href="https://ieeexplore.ieee.org/document/8424003/">Link</a> | <a
+href="https://www.ncbi.nlm.nih.gov/pubmed/30072311">PubMed</a>]</p>
 </div>
 <div id="section-3" class="section level2">
 <h2>2018</h2>
-<p>D. Backenroth<sup>‡</sup>, <strong>J. Goldsmith</strong>, M. D. Harran, J. C. Cortes, J. W. Krakauer, and T. Kitago (2018). Modeling motor learning using heteroskedastic functional principal components analysis. <i> Journal of the American Statistical Association, </i> <b>113</b> 1003-1015. [<a href="https://www.tandfonline.com/doi/abs/10.1080/01621459.2017.1379403">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/30416231">PubMed</a>]</p>
-<p>J. A. Woo Baidal, K. Morel, K. Nichols, E. Elbel, N. Charles, <strong>J. Goldsmith</strong>, L. Chen, and E. M. Taveras (2018+). Sugar-sweetened beverage attitudes and consumption during the first 1,000 days of life. <i> American Journal of Public Health, </i> <b>108</b> 1659-1665. [<a href="https://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2018.304691">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/30359102">PubMed</a>]</p>
-<p>H. Rosenblum, A. Castano, J. Alvarez, <strong>J. Goldsmith</strong>, S. Helmke, M.S. Maurer (2018). TTR (Transthyretin) Stabilizers Are Associated With Improved Survival in Patients With TTR Cardiac Amyloidosis. <i> Circulation: Heart Failure, </i> <b>11</b> e004769. [<a href="http://circheartfailure.ahajournals.org/content/11/4/e004769">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/29615436">PubMed</a>]</p>
-<p>K. M. Diaz, D. J. Krupka, M. J. Chang, I. M. Kronish, N. Moise, <strong>J. Goldsmith</strong>, and J. E. Schwartz (2018). Wrist-based cut-points for moderate- and vigorous-intensity physical activity for the Actical accelerometer in adults. <i> Journal of Sports Sciences, </i> <b>36</b> 206-212. [<a href="https://shapeamerica.tandfonline.com/doi/abs/10.1080/02640414.2017.1293279">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/28282744">PubMed</a>]</p>
+<p>D. Backenroth<sup>‡</sup>, <strong>J. Goldsmith</strong>, M. D.
+Harran, J. C. Cortes, J. W. Krakauer, and T. Kitago (2018). Modeling
+motor learning using heteroskedastic functional principal components
+analysis. <i> Journal of the American Statistical Association, </i>
+<b>113</b> 1003-1015. [<a
+href="https://www.tandfonline.com/doi/abs/10.1080/01621459.2017.1379403">Link</a>
+| <a href="https://www.ncbi.nlm.nih.gov/pubmed/30416231">PubMed</a>]</p>
+<p>J. A. Woo Baidal, K. Morel, K. Nichols, E. Elbel, N. Charles,
+<strong>J. Goldsmith</strong>, L. Chen, and E. M. Taveras (2018+).
+Sugar-sweetened beverage attitudes and consumption during the first
+1,000 days of life. <i> American Journal of Public Health, </i>
+<b>108</b> 1659-1665. [<a
+href="https://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2018.304691">Link</a>
+| <a href="https://www.ncbi.nlm.nih.gov/pubmed/30359102">PubMed</a>]</p>
+<p>H. Rosenblum, A. Castano, J. Alvarez, <strong>J. Goldsmith</strong>,
+S. Helmke, M.S. Maurer (2018). TTR (Transthyretin) Stabilizers Are
+Associated With Improved Survival in Patients With TTR Cardiac
+Amyloidosis. <i> Circulation: Heart Failure, </i> <b>11</b> e004769. [<a
+href="http://circheartfailure.ahajournals.org/content/11/4/e004769">Link</a>
+| <a href="https://www.ncbi.nlm.nih.gov/pubmed/29615436">PubMed</a>]</p>
+<p>K. M. Diaz, D. J. Krupka, M. J. Chang, I. M. Kronish, N. Moise,
+<strong>J. Goldsmith</strong>, and J. E. Schwartz (2018). Wrist-based
+cut-points for moderate- and vigorous-intensity physical activity for
+the Actical accelerometer in adults. <i> Journal of Sports Sciences,
+</i> <b>36</b> 206-212. [<a
+href="https://shapeamerica.tandfonline.com/doi/abs/10.1080/02640414.2017.1293279">Link</a>
+| <a href="https://www.ncbi.nlm.nih.gov/pubmed/28282744">PubMed</a>]</p>
 </div>
 <div id="section-4" class="section level2">
 <h2>2017</h2>
-<p>K. M. Diaz, <strong>J. Goldsmith</strong>, H. Greenlee, G. Strizich, Q. Qi, Y. Mossavar-Rahmani, D. C. Vidot, C. Buelna, C. E. Brintz, T. Elfassy, L. C. Gallo, M. L. Daviglus, D. Sotres-Alvarez, R. C. Kaplan (2017). Prolonged, Uninterrupted Sedentary Behavior and Glycemic Biomarkers Among US Hispanic/Latino Adults <i> Circulation, </i> <b>136</b> 1362-1373. [<a href="http://circ.ahajournals.org/content/136/15/1362">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/28835368">PubMed</a>]</p>
-<p>M. S. Maurer, E. Horn, A. Reyentovich, V. V. Dickson, S. Pinney, D. Goldwater, N. E. Goldstein, O. Jimenez, S. Teruya, <strong>J. Goldsmith</strong>, S. Helmke, M. Yuzefpolskaya, and G. R Reeves (2017). Can a Left Ventricular Assist Devices in Advanced Systolic Heart Failure Improve or Reverse the Frailty Phenotype? <i> Journal of the American Geriatrics Society, </i> <b>65</b> 2383-2390. [<a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jgs.15124">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/28940248">PubMed</a>]</p>
-<p>J. C. Cortes<sup>†</sup>, <strong>J. Goldsmith</strong><sup>†</sup>, M. Harran, J. Xu, N. Kim, A. R. Luft, P. Celnik, J. W. Krakauer, and T. Kitago (2017). A short and distinct time window for recovery of arm motor control after stroke revealed with a global measure of trajectory kinematics. <i> Neurorehabilitation and Neural Repair, </i> <b>31</b> 552-560. [<a href="http://journals.sagepub.com/doi/abs/10.1177/1545968317697034">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/28506149">PubMed</a>]</p>
-<p>M. Kronish, K. M. Diaz, <strong>J. Goldsmith</strong>, N. Moise, and J. E. Schwartz. Objectively measured adherence to physical activity guidelines after acute coronary syndrome (2017). <i> Journal of the American College of Cardiology, </i> <b>69</b> 1205. [<a href="https://www.sciencedirect.com/science/article/pii/S0735109717300372?via%3Dihub">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/28254185">PubMed</a>]</p>
-<p><strong>J. Goldsmith</strong> and J. E. Schwartz. Variable Selection in the Functional Linear Concurrent Model (2017). <i> Statistics in Medicine, </i> <b>36</b> 2237-2250. [<a href="http://onlinelibrary.wiley.com/doi/10.1002/sim.7254/full">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/28211085">PubMed</a> | <a href="https://github.com/jeff-goldsmith/vbvs.concurrent">GitHub</a>]</p>
-<p>A. L. Wong, <strong>J. Goldsmith</strong>, A. D. Forrence, A. M. Haith, and J. W. Krakauer (2017). Habitual selection of reaction times. <i> eLife, </i> <b>6</b> e28075. [<a href="https://elifesciences.org/articles/28075">Link</a>]</p>
-<p>P. T. Reiss, <strong>J. Goldsmith</strong>, H. L. Shang, and R. T. Ogden. Methods for Scalar-on-Function Regression (2017). <i> International Statistical Review, </i> <b>85</b> 228-249. [<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/insr.12163">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/28919663">PubMed</a>]</p>
-<p>J. Gertheiss, <strong>J. Goldsmith</strong>, and A.-M. Staicu (2017). A note on modeling sparse exponential-family functional response curves. <i> Computational Statistics and Data Analysis, </i> <b>105</b> 46-52. [<a href="http://www.sciencedirect.com/science/article/pii/S0167947316301748">Link</a> | <a href="https://github.com/jeff-goldsmith/vbvs.concurrent">GitHub</a>]</p>
+<p>K. M. Diaz, <strong>J. Goldsmith</strong>, H. Greenlee, G. Strizich,
+Q. Qi, Y. Mossavar-Rahmani, D. C. Vidot, C. Buelna, C. E. Brintz, T.
+Elfassy, L. C. Gallo, M. L. Daviglus, D. Sotres-Alvarez, R. C. Kaplan
+(2017). Prolonged, Uninterrupted Sedentary Behavior and Glycemic
+Biomarkers Among US Hispanic/Latino Adults <i> Circulation, </i>
+<b>136</b> 1362-1373. [<a
+href="http://circ.ahajournals.org/content/136/15/1362">Link</a> | <a
+href="https://www.ncbi.nlm.nih.gov/pubmed/28835368">PubMed</a>]</p>
+<p>M. S. Maurer, E. Horn, A. Reyentovich, V. V. Dickson, S. Pinney, D.
+Goldwater, N. E. Goldstein, O. Jimenez, S. Teruya, <strong>J.
+Goldsmith</strong>, S. Helmke, M. Yuzefpolskaya, and G. R Reeves (2017).
+Can a Left Ventricular Assist Devices in Advanced Systolic Heart Failure
+Improve or Reverse the Frailty Phenotype? <i> Journal of the American
+Geriatrics Society, </i> <b>65</b> 2383-2390. [<a
+href="https://onlinelibrary.wiley.com/doi/full/10.1111/jgs.15124">Link</a>
+| <a href="https://www.ncbi.nlm.nih.gov/pubmed/28940248">PubMed</a>]</p>
+<p>J. C. Cortes<sup>†</sup>, <strong>J. Goldsmith</strong><sup>†</sup>,
+M. Harran, J. Xu, N. Kim, A. R. Luft, P. Celnik, J. W. Krakauer, and T.
+Kitago (2017). A short and distinct time window for recovery of arm
+motor control after stroke revealed with a global measure of trajectory
+kinematics. <i> Neurorehabilitation and Neural Repair, </i> <b>31</b>
+552-560. [<a
+href="http://journals.sagepub.com/doi/abs/10.1177/1545968317697034">Link</a>
+| <a href="https://www.ncbi.nlm.nih.gov/pubmed/28506149">PubMed</a>]</p>
+<p>M. Kronish, K. M. Diaz, <strong>J. Goldsmith</strong>, N. Moise, and
+J. E. Schwartz. Objectively measured adherence to physical activity
+guidelines after acute coronary syndrome (2017). <i> Journal of the
+American College of Cardiology, </i> <b>69</b> 1205. [<a
+href="https://www.sciencedirect.com/science/article/pii/S0735109717300372?via%3Dihub">Link</a>
+| <a href="https://www.ncbi.nlm.nih.gov/pubmed/28254185">PubMed</a>]</p>
+<p><strong>J. Goldsmith</strong> and J. E. Schwartz. Variable Selection
+in the Functional Linear Concurrent Model (2017). <i> Statistics in
+Medicine, </i> <b>36</b> 2237-2250. [<a
+href="http://onlinelibrary.wiley.com/doi/10.1002/sim.7254/full">Link</a>
+| <a href="https://www.ncbi.nlm.nih.gov/pubmed/28211085">PubMed</a> | <a
+href="https://github.com/jeff-goldsmith/vbvs.concurrent">GitHub</a>]</p>
+<p>A. L. Wong, <strong>J. Goldsmith</strong>, A. D. Forrence, A. M.
+Haith, and J. W. Krakauer (2017). Habitual selection of reaction times.
+<i> eLife, </i> <b>6</b> e28075. [<a
+href="https://elifesciences.org/articles/28075">Link</a>]</p>
+<p>P. T. Reiss, <strong>J. Goldsmith</strong>, H. L. Shang, and R. T.
+Ogden. Methods for Scalar-on-Function Regression (2017). <i>
+International Statistical Review, </i> <b>85</b> 228-249. [<a
+href="https://onlinelibrary.wiley.com/doi/abs/10.1111/insr.12163">Link</a>
+| <a href="https://www.ncbi.nlm.nih.gov/pubmed/28919663">PubMed</a>]</p>
+<p>J. Gertheiss, <strong>J. Goldsmith</strong>, and A.-M. Staicu (2017).
+A note on modeling sparse exponential-family functional response curves.
+<i> Computational Statistics and Data Analysis, </i> <b>105</b> 46-52.
+[<a
+href="http://www.sciencedirect.com/science/article/pii/S0167947316301748">Link</a>
+| <a
+href="https://github.com/jeff-goldsmith/vbvs.concurrent">GitHub</a>]</p>
 </div>
 <div id="section-5" class="section level2">
 <h2>2016</h2>
-<p>A. Castano, M. Haq, D. Narotsky, <strong>J. Goldsmith</strong>, R. L. Weinberg, R. Morgenstern, T. Pozniakoff, F. L. Ruberg, E. J. Miller, J. L. Berk, A. Dispenzieri, M. Grogan, G. Johnson, S. Bokhari, and M. S. Maurer (2016). Multicenter Experience of Planar Technetium Pyrophosphate Cardiac Imaging: Does Preferential Cardiac Uptake Predict Survival in Patients with ATTR Cardiac Amyloidosis? <i> JAMA Cardiology, </i> <b>1</b> 880-889.</p>
-<p><strong>J. Goldsmith</strong>. vbvs.concurrent: Fitting Methods for the Functional Linear Concurrent Model (2016). <i> The Journal of Open Source Software, </i> <b>1</b>. [<a href="http://joss.theoj.org/papers/a3884174f17dbb9a695f7b8658887eff">Link</a> | <a href="https://github.com/jeff-goldsmith/vbvs.concurrent">GitHub</a>]</p>
-<p>S. T. Sorge, D. C. Hesdorffer, J. C. Phelan, M. R. Winawer, S. Shostak, <strong>J. Goldsmith</strong>, W. K. Chung, R. Ottman (2016). Genetic causal attribution and depression in multiplex epilepsy families. <i> Epilepsia, </i> <b>57</b> 1643-1650. [<a href="http://onlinelibrary.wiley.com/doi/10.1111/epi.13500/full">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/27558297">PubMed</a>]</p>
-<p>A. L. Wong, <strong>J. Goldsmith</strong>, J Krakauer (2016). A motor planning stage represents the shape of upcoming movement trajectories. <i> Journal of Neurophysiology, </i> <b>116</b> 296-305. [<a href="http://jn.physiology.org/content/116/2/296">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/27098032">PubMed</a>]</p>
-<p><strong>J. Goldsmith</strong>, X. Liu<sup>‡</sup>, J. S. Jacobson, A. Rundle (2016). New insights into activity patterns in children, found using functional data analyses. <i> Medicine and Science in Sports and Exercise, </i> <b>48</b> 1723-1729. [<a href="http://journals.lww.com/acsm-msse/Abstract/2016/09000/New_Insights_into_Activity_Patterns_in_Children,.11.aspx">Link</a> | <a href="resources/HeadStart.pdf">PDF</a> | <a href="resources/HeadStartCode.zip">Code</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/27183122">PubMed</a>]</p>
-<p>J. Wrobel<sup>‡</sup>, S.Y. Park, A.M. Staicu, <strong>J. Goldsmith</strong> (2016). Interactive graphics for functional data analyses. <i> Stat, </i> <b>5</b> 108-118. [<a href="http://arxiv.org/abs/1602.04091">arXiv</a> | <a href="http://onlinelibrary.wiley.com/doi/10.1002/sta4.109/abstract">Link</a> | <a href="https://github.com/refunders/refund.shiny">GitHub</a> | <a href="https://cran.r-project.org/web/packages/refund.shiny/index.html">CRAN</a>]</p>
-<p>Y. Chen<sup>‡</sup>, <strong>J. Goldsmith</strong>, T. Ogden (2016). Variable Selection in Function-on-Scalar Regression. <i> Stat, </i> <b>5</b> 88-101. [<a href="http://onlinelibrary.wiley.com/doi/10.1002/sta4.106/abstract">Link</a> | <a href="resources/FoS_VarSelect.pdf">PDF</a> | Implemented in <a href="https://github.com/refunders/refund">refund</a> as fosr.vs()]</p>
-<p><strong>J. Goldsmith</strong>, T. Kitago (2016). Assessing Systematic Effects of Stroke on Motor Control using Hierarchical Function-on-Scalar Regression. <i> Journal of the Royal Statistical Society: Series C, </i> <b>65</b> 215-236. [<a href="resources/BayesPFSR_Paper.pdf">PDF</a> | <a href="http://onlinelibrary.wiley.com/doi/10.1111/rssc.12115/abstract">Link</a> | <a href="resources/BayesPFSR_Code.zip">Code</a> | <a href="https://jeff-goldsmith.shinyapps.io/MotorControl_Interactive">Shiny App</a>]</p>
-<p>C. B. Caminiti, D. C. Hesdorffer, S. Shostak, <strong>J. Goldsmith</strong>, S. T. Sorge, M. R. Winawer, J. C. Phelan, W. K. Chung, and R. Ottman (2016). Parents’ interest in genetic testing of their offspring in multiplex epilepsy families. <i> Epilepsia, </i> <b>57</b> 279-287. [<a href="http://onlinelibrary.wiley.com/doi/10.1111/epi.13287/abstract">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/26693851">PubMed</a>]</p>
-<p>K. M. Diaz, D. J Krupka, M. J. Chang, J. A. Schaffer, Y. Ma, <strong>J. Goldsmith</strong>, J. E. Schwartz, K. W. Davidson (2016). Validation of the Fitbit One for physical activity measurement at an upper torso attachment site. <i> BMC Research Notes, </i> <b>9</b> 213. [<a href="http://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-016-2020-8">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/27068022">PubMed</a>]</p>
-<p>M. Abdalla, <strong>J. Goldsmith</strong>, P. Muntner, K. M. Diaz, K. Reynolds, J. E. Schwartz, D. Shimbo (2016). Is Isolated Nocturnal Hypertension a Reproducible Phenotype? <i> American Journal of Hypertension, </i> <b>29</b> 33-38. [<a href="http://ajh.oxfordjournals.org/content/29/1/33.full.pdf+html">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/25904648">PubMed</a>]</p>
+<p>A. Castano, M. Haq, D. Narotsky, <strong>J. Goldsmith</strong>, R. L.
+Weinberg, R. Morgenstern, T. Pozniakoff, F. L. Ruberg, E. J. Miller, J.
+L. Berk, A. Dispenzieri, M. Grogan, G. Johnson, S. Bokhari, and M. S.
+Maurer (2016). Multicenter Experience of Planar Technetium Pyrophosphate
+Cardiac Imaging: Does Preferential Cardiac Uptake Predict Survival in
+Patients with ATTR Cardiac Amyloidosis? <i> JAMA Cardiology, </i>
+<b>1</b> 880-889.</p>
+<p><strong>J. Goldsmith</strong>. vbvs.concurrent: Fitting Methods for
+the Functional Linear Concurrent Model (2016). <i> The Journal of Open
+Source Software, </i> <b>1</b>. [<a
+href="http://joss.theoj.org/papers/a3884174f17dbb9a695f7b8658887eff">Link</a>
+| <a
+href="https://github.com/jeff-goldsmith/vbvs.concurrent">GitHub</a>]</p>
+<p>S. T. Sorge, D. C. Hesdorffer, J. C. Phelan, M. R. Winawer, S.
+Shostak, <strong>J. Goldsmith</strong>, W. K. Chung, R. Ottman (2016).
+Genetic causal attribution and depression in multiplex epilepsy
+families. <i> Epilepsia, </i> <b>57</b> 1643-1650. [<a
+href="http://onlinelibrary.wiley.com/doi/10.1111/epi.13500/full">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/27558297">PubMed</a>]</p>
+<p>A. L. Wong, <strong>J. Goldsmith</strong>, J Krakauer (2016). A motor
+planning stage represents the shape of upcoming movement trajectories.
+<i> Journal of Neurophysiology, </i> <b>116</b> 296-305. [<a
+href="http://jn.physiology.org/content/116/2/296">Link</a> | <a
+href="http://www.ncbi.nlm.nih.gov/pubmed/27098032">PubMed</a>]</p>
+<p><strong>J. Goldsmith</strong>, X. Liu<sup>‡</sup>, J. S. Jacobson, A.
+Rundle (2016). New insights into activity patterns in children, found
+using functional data analyses. <i> Medicine and Science in Sports and
+Exercise, </i> <b>48</b> 1723-1729. [<a
+href="http://journals.lww.com/acsm-msse/Abstract/2016/09000/New_Insights_into_Activity_Patterns_in_Children,.11.aspx">Link</a>
+| <a href="resources/HeadStart.pdf">PDF</a> | <a
+href="resources/HeadStartCode.zip">Code</a> | <a
+href="http://www.ncbi.nlm.nih.gov/pubmed/27183122">PubMed</a>]</p>
+<p>J. Wrobel<sup>‡</sup>, S.Y. Park, A.M. Staicu, <strong>J.
+Goldsmith</strong> (2016). Interactive graphics for functional data
+analyses. <i> Stat, </i> <b>5</b> 108-118. [<a
+href="http://arxiv.org/abs/1602.04091">arXiv</a> | <a
+href="http://onlinelibrary.wiley.com/doi/10.1002/sta4.109/abstract">Link</a>
+| <a href="https://github.com/refunders/refund.shiny">GitHub</a> | <a
+href="https://cran.r-project.org/web/packages/refund.shiny/index.html">CRAN</a>]</p>
+<p>Y. Chen<sup>‡</sup>, <strong>J. Goldsmith</strong>, T. Ogden (2016).
+Variable Selection in Function-on-Scalar Regression. <i> Stat, </i>
+<b>5</b> 88-101. [<a
+href="http://onlinelibrary.wiley.com/doi/10.1002/sta4.106/abstract">Link</a>
+| <a href="resources/FoS_VarSelect.pdf">PDF</a> | Implemented in <a
+href="https://github.com/refunders/refund">refund</a> as fosr.vs()]</p>
+<p><strong>J. Goldsmith</strong>, T. Kitago (2016). Assessing Systematic
+Effects of Stroke on Motor Control using Hierarchical Function-on-Scalar
+Regression. <i> Journal of the Royal Statistical Society: Series C, </i>
+<b>65</b> 215-236. [<a href="resources/BayesPFSR_Paper.pdf">PDF</a> | <a
+href="http://onlinelibrary.wiley.com/doi/10.1111/rssc.12115/abstract">Link</a>
+| <a href="resources/BayesPFSR_Code.zip">Code</a> | <a
+href="https://jeff-goldsmith.shinyapps.io/MotorControl_Interactive">Shiny
+App</a>]</p>
+<p>C. B. Caminiti, D. C. Hesdorffer, S. Shostak, <strong>J.
+Goldsmith</strong>, S. T. Sorge, M. R. Winawer, J. C. Phelan, W. K.
+Chung, and R. Ottman (2016). Parents’ interest in genetic testing of
+their offspring in multiplex epilepsy families. <i> Epilepsia, </i>
+<b>57</b> 279-287. [<a
+href="http://onlinelibrary.wiley.com/doi/10.1111/epi.13287/abstract">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/26693851">PubMed</a>]</p>
+<p>K. M. Diaz, D. J Krupka, M. J. Chang, J. A. Schaffer, Y. Ma,
+<strong>J. Goldsmith</strong>, J. E. Schwartz, K. W. Davidson (2016).
+Validation of the Fitbit One for physical activity measurement at an
+upper torso attachment site. <i> BMC Research Notes, </i> <b>9</b> 213.
+[<a
+href="http://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-016-2020-8">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/27068022">PubMed</a>]</p>
+<p>M. Abdalla, <strong>J. Goldsmith</strong>, P. Muntner, K. M. Diaz, K.
+Reynolds, J. E. Schwartz, D. Shimbo (2016). Is Isolated Nocturnal
+Hypertension a Reproducible Phenotype? <i> American Journal of
+Hypertension, </i> <b>29</b> 33-38. [<a
+href="http://ajh.oxfordjournals.org/content/29/1/33.full.pdf+html">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/25904648">PubMed</a>]</p>
 </div>
 <div id="and-before" class="section level2">
 <h2>2015 and before</h2>
-<p>T. Kitago<sup>†</sup>, <strong>J. Goldsmith</strong><sup>†</sup>, M. Harran, L. Kane, J. Berard, S. Huang, S. Ryan, P. Mazzoni, J, Krakauer, and V. Huang (2015). Robotic therapy for chronic stroke: general recovery of impairment or improved task-specific skill? <i> Journal of Neurophysiology, </i> <b>114</b> 1885-1894. [<a href="http://jn.physiology.org/content/early/2015/07/10/jn.00336.2015.abstract">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/26180120">PubMed</a>] († denotes equal contribution)</p>
-<p><strong>J. Goldsmith</strong>, V. Zipunnikov, J. Schrack (2015). Generalized Multilevel Functional-on-Scalar Regression and Principal Component Analysis. <i> Biometrics, </i> <b>71</b> 344-353. [<a href="http://onlinelibrary.wiley.com/doi/10.1111/biom.12278/abstract">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/25620473">PubMed</a> | <a href="resources/GenMFPCA_Code.zip">Code</a> | <a href="https://jeff-goldsmith.shinyapps.io/GFPCA_interactive">Shiny App</a>]</p>
-<p>U. M. Schambra, <strong>J. Goldsmith</strong>, H. M. Schambra, K. Nunleya, S. Harirforoosh, Y. Liu , and S. S. Moy (2015). Low and moderate prenatal ethanol exposure of mice during gastrulation or neurulation delays neurobehavioral development. <i> Neurotoxicology and Teratology, </i> <b>51</b> 1-11. [<a href="http://www.sciencedirect.com/science/article/pii/S089203621530012X">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/26171567">PubMed</a>]</p>
-<p>K. M. Diaz, D. J Krupka, M. J. Chang, J. Peacock, Y. Ma, <strong>J. Goldsmith</strong>, J. E. Schwartz, K. W. Davidson (2015). Fitbit: An accurate and reliable device for wireless physical activity tracking. <i> International Journal of Cardiology, </i> <b>185</b> 138-140. [<a href="http://www.internationaljournalofcardiology.com/article/S0167-5273(15)00276-4/abstract">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/25795203">PubMed</a>]</p>
-<p>C. Wang, S. Vine, A. Hsiao, A. Rundle, and <strong>J. Goldsmith</strong> (2015). Weight-Related Behaviors When Children are in School Versus on Summer Breaks: Does Income Matter? <i> Journal of School Health, </i> <b>85</b> 458-466. [<a href="http://onlinelibrary.wiley.com/doi/10.1111/josh.12274/abstract">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/26032276">PubMed</a>]</p>
-<p>M. Sabatello, J. Phelan, D. C. Hesdorffer, S. Shostak, <strong>J. Goldsmith</strong>, S. Sorge, M. Winawer, W. Chung, R. Ottman (2015). Genetic Causal Attribution of Epilepsy and its Implications for Felt Stigma. <i> Epilepsia, </i> <b>56</b> 1542-1550. [<a href="http://onlinelibrary.wiley.com/doi/10.1111/epi.13113/abstract">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/26290354">PubMed</a>]</p>
-<p><strong>J. Goldsmith</strong>, L. Huang, C. M. Crainiceanu (2014). Smooth Scalar-on-Image Regression via Spatial Bayesian Variable Selection. <i> Journal of Computational and Graphical Statistics, </i> <b>23</b> 46-64. [<a href="http://amstat.tandfonline.com/doi/abs/10.1080/10618600.2012.743437#.U2pt-17A7d4">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/24729670">PubMed</a>]</p>
-<p><strong>J. Goldsmith</strong>, F. Scheipl (2014). Estimator Selection and Combination in Scalar-on-Function Regression. <i> Computational Statistics and Data Analysis, </i> <b>70</b> 362-372. [<a href="http://www.sciencedirect.com/science/article/pii/S0167947313003629">Link</a> | <a href="resources/Ensembling_Paper.pdf">PDF</a> | <a href="resources/Ensembling_Code.zip">Code</a>]</p>
-<p>J. A. Schrack, V. Zipunnikov, <strong>J. Goldsmith</strong>, K. Bandeen-Roche, C. M. Crainiceanu, L. Ferrucci (2014). Estimating Energy Expenditure from Heart Rate in Older Adults: a Case for Calibration. <i> PLoS One, </i> <b>9</b> 1-9. [<a href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0093520">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/24787146">PubMed</a>]</p>
-<p>J. A. Schrack, V. Zipunnikov, <strong>J. Goldsmith</strong>, J. Bai, E. M. Simonsick, C. M. Crainiceanu, L. Ferrucci (2014). Assessing the “Physical Cliff”: Detailed Quantification of Aging and Physical Activity. <i> Journal of Gerontology: Medical Sciences. </i> <b>69</b> 973-979. [<a href="http://biomedgerontology.oxfordjournals.org/content/69/8/973.full.pdf">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/24336819">PubMed</a> | Article selected as “Editor’s Choice”]</p>
-<p>S. Vullaganti, <strong>J. Goldsmith</strong>, S. Teruya, J. Alvarez, S. Helmke, M. Maurer (2014). Cardiovascular effects of hemoglobin response in patients receiving epoetin alfa and oral iron in heart failure with a preserved ejection fraction. <i> Journal of Geriatric Cardiology, </i> <b>11</b> 100-105. [<a href="http://www.jgc301.com/ch/reader/view_abstract.aspx?file_no=20140227001&amp;flag=1">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/25009558">PubMed</a>]</p>
-<p>B. Swihart, <strong>J. Goldsmith</strong>, C. M. Crainiceanu. (2014). Restricted Likelihood Ratio Tests for Functional Effects in the Functional Linear Model. <i> Technometrics, </i> <b>56</b> 483-493. [<a href="http://www.tandfonline.com/doi/full/10.1080/00401706.2013.863163">Link</a>]</p>
-<p>A. Hauschild, S. C. Chen, M. Weichenthal, A. Blum, H. C. King, <strong>J. Goldsmith</strong>, D. O. Scharfstein, D. Gutkowicz-Krusin (2014). To excise or not: impact of MelaFind on German dermatologists’ decisions to biopsy atypical lesions. <i>JDDG: Journal der Deutschen Dermatologischen Gesellschaft, </i> <b>12</b> 606-614. [<a href="http://onlinelibrary.wiley.com/doi/10.1111/ddg.12362/abstract">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/24944011">PubMed</a>]</p>
-<p>J. O. Okeke, V. E. Tangel, S. T. Sorge, D. C. Hesdorffer, M. R. Winawer, <strong>J. Goldsmith</strong>, J. Phelan, W. Chung, S. Shostak, R. Ottman (2014). Genetic Testing Preferences in Families Containing Multiple Individuals with Epilepsy. <i>Epilepsia, </i> <b>55</b> 1705-1713. [<a href="http://onlinelibrary.wiley.com/doi/10.1111/epi.12810/full">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/25266816">PubMed</a>]</p>
-<p>G. S. Lovasi, <strong>J. Goldsmith</strong> (2014). Invited commentary: Taking advantage of time-varying neighborhood environments. <i>American Journal of Epidemiology, </i> <b>DOI:</b> 10.1093/aje/kwu170. [<a href="http://aje.oxfordjournals.org/content/180/5/462.full">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/25117659">PubMed</a>]</p>
-<p>N. Cyrille, <strong>J. Goldsmith</strong>, J. Alvarez, M. S. Maurer (2014). Prevalence and Prognostic Significance of Low QRS Voltage Among the Three Main Types of Cardiac Amyloid. <i> American Journal of Cardiology, </i> <b>114</b> 1089-1093. [<a href="http://www.sciencedirect.com/science/article/pii/S0002914914014544#">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/25212550">PubMed</a>]</p>
-<p>R. T. Shinohara, E. M. Sweeny, <strong>J. Goldsmith</strong>, N. Shiee, F. J. Mateen, P. A. Calabresi, S. Jarso, D. L. Pham, D. S. Reich, C. M. Crainiceanu (2014). Statistical Normalization Techniques for Magnetic Resonance Imaging. <i> NeuroImage: Clinical, </i> <b>6</b> 9-19 [<a href="http://www.sciencedirect.com/science/article/pii/S221315821400117X#">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/25379412">PubMed</a>]</p>
-<p><strong>J. Goldsmith</strong>, S. Greven, C. M. Crainiceanu (2013). Corrected Confidence Bands for Functional Data Using Principal Components. <i> Biometrics, </i> <b>69</b> 41-51. [<a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1541-0420.2012.01808.x/abstract">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/23003003">PubMed</a>]</p>
-<p>J. Gertheiss, <strong>J. Goldsmith</strong>, C. M. Crainiceanu, S. Greven. (2013). Longitudinal Scalar-on-Functions Regression with Application to Tractography Data. <i> Biostatistics. </i> <b>14</b> 447-461. [<a href="http://biostatistics.oxfordjournals.org/content/14/3/447.long">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/23292804">PubMed</a>]</p>
-<p>H. Sorensen, <strong>J. Goldsmith</strong>, L. Sangalli. (2013). An Introduction with Medical Applications to Functional Data Analysis. <i> Statistics in Medicine. </i> <b>32</b> 5222-5240. [<a href="http://onlinelibrary.wiley.com/doi/10.1002/sim.5989/abstract">Link</a> | <a href="https://www.ncbi.nlm.nih.gov/pubmed/24114808">PubMed</a>]</p>
-<p>L. Huang, <strong>J. Goldsmith</strong>, P. T. Reiss, D. S. Reich, C. M. Crainiceanu. (2013). Bayesian Scalar-on-Image Regression with Application to Association Between Intracranial DTI and Cognitive Outcomes. <i> NeuroImage. </i> <b>83</b> 210-223. [<a href="http://www.sciencedirect.com/science/article/pii/S1053811913006575">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/23792220">PubMed</a>]</p>
-<p>F. J. Leyva, R. P. Bakshi, E. J. Fuchs, L. Li, B. S. Caffo, <strong>J. Goldsmith</strong>, Y. Du, J. P. Leal, L. A. Lee, M. S. Torbenson, C. W. Hendrix (2013). Iso-osmolar enemas demonstrate preferential gastrointestinal distribution, safety, and acceptability compared with hyper- and hypo-osmolar enemas as a potential delive <i> AIDS Research and Human Retroviruses. </i> <b>29</b> 1487-1495. [<a href="http://online.liebertpub.com/doi/abs/10.1089/aid.2013.0189">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/23885722">PubMed</a>]</p>
-<p><strong>J. Goldsmith</strong>, C. M. Crainiceanu, B. S. Caffo, D. S. Reich (2012). Longitudinal Penalized Functional Regression for Cognitive Outcomes on Neuronal Tract Measurements. <i> Journal of the Royal Statistical Society: Series C, </i> <b>61</b> 453-469. [<a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1467-9876.2011.01031.x/abstract">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/22679339">PubMed</a> | <a href="resources/LPFR_Code.zip">Simulation Code</a>]</p>
-<p>T. Shinohara, <strong>J. Goldsmith</strong>, F. Mateen, D. S. Reich, C. M. Crainiceanu (2012). Predicting Breakdown of the Blood-Brain Barrier in Multiple Sclerosis Without Contrast Agents. <i> American Journal of Neuroradiology, </i> <b>33</b> 1586-1590. [<a href="http://www.ajnr.org/content/33/8/1586.long">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/22442041">PubMed</a>]</p>
-<p>J. Bai, <strong>J. Goldsmith</strong>, B. S. Caffo, T. Glass, C. M. Crainiceanu (2012). Movelets: A Dictionary of Movement. <i> Electronic Journal of Statistics, </i> <b>6</b> 559-578. [<a href="https://projecteuclid.org/euclid.ejs/1334065322">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/23293708">PubMed</a>]</p>
-<p>N. Louissant, S. Nimmagadda, R. Bakshi, Y. Du, K. Macura, K. King, R. Wahl, <strong>J. Goldsmith</strong>, B. S. Caffo, Y.-J. Cao, J. Anderson, E. Fuchs, C. W. Hendrix (2012). Distribution of Cell-free and Cell-associated HIV Surrogates in the Female Genital Tract following Simulated Vaginal Intercourse. <i> Journal of Infectious Diseases, </i> <b>205</b> 725-732. [<a href="http://jid.oxfordjournals.org/content/205/5/725">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/22279121">PubMed</a>]</p>
-<p>N. Louissant, S. Nimmagadda, E. Fuchs, R. Bakshi, Y. Cao, L. Lee, <strong>J. Goldsmith</strong>, B. S. Caffo, Y. Du, K. King, F. Menendez, M. Torbenson, C. W. Hendrix (2012). Distribution of Cell-free and Cell-associated HIV Surrogates in the Colon following Simulated Receptive Anal Intercourse. <i> Journal of Acquired Immune Deficiency Syndromes, Basic and Translational Science, </i> <b>59</b> 10-17. [<a href="http://ovidsp.tx.ovid.com/sp-3.12.0b/ovidweb.cgi?&amp;S=KOLDFPPIPMDDFJDMNCMKNBLBBJIDAA00&amp;Link+Set=S.sh.27.28.32.42%7c2%7csl_10">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/21937920">PubMed</a>]</p>
-<p><strong>J. Goldsmith</strong>, J. Bobb, C. M. Crainiceanu, B. S. Caffo, D. S. Reich (2011). Penalized Functional Regression. <i> Journal of Computational and Graphical Statistics, </i> <b>20</b> 830-851. [<a href="http://www.tandfonline.com/doi/abs/10.1198/jcgs.2010.10007#.U1BzC16ft94">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/22368438">PubMed</a> | <a href="resources/PFR_Code.zip">Simulation Code</a>]</p>
-<p><strong>J. Goldsmith</strong>, C. M. Crainiceanu, B. S. Caffo, D. S. Reich (2011). Penalized Functional Regression Analysis of White-Matter Tract Profiles in Multiple Sclerosis. <i> NeuroImage, </i> <b>57</b> 431-439. [<a href="http://www.sciencedirect.com/science/article/pii/S1053811911004435">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/21554962">PubMed</a>]</p>
-<p><strong>J. Goldsmith</strong>, B. S. Caffo, C. M. Crainiceanu, D. Reich, Y. Du, C. W. Hendrix (2011). Nonlinear Tube-Fitting for the Analysis of Anatomical and Functional Structures. <i> Annals of Applied Statistics, </i> <b>5</b> 337-363. [<a href="http://projecteuclid.org/euclid.aoas/1300715193">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/21709824">PubMed</a>]</p>
-<p><strong>J. Goldsmith</strong>, M. P. Wand, and C. M. Crainiceanu (2011). Functional Regression via Variational Bayes. <i> Electronic Journal of Statistics, </i> <b>5</b> 572-602. [<a href="http://projecteuclid.org/euclid.ejs/1308143123">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/22163061">PubMed</a> | <a href="resources/VB_Code.zip">Simulation Code</a>]</p>
-<p>C. M. Crainiceanu, <strong>J. Goldsmith</strong> (2010). Bayesian Functional Data Analysis using WinBUGS. <i> Journal of Statistical Software, </i> <b>32</b> 1-33. [<a href="http://www.jstatsoft.org/v32/i11/">Link</a> | <a href="http://www.ncbi.nlm.nih.gov/pubmed/21743798">PubMed</a>]</p>
-<p><strong>J. Goldsmith</strong>, L. Koss (2009). Dynamical Properties of the Derivative of the Weierstrass Elliptic Function. <i> Involve, </i> <b>2</b> 267-288. [<a href="http://msp.org/involve/2009/2-3/p02.xhtml">Link</a> | <a href="resources/Weierstrass.pdf">pdf</a>]</p>
+<p>T. Kitago<sup>†</sup>, <strong>J. Goldsmith</strong><sup>†</sup>, M.
+Harran, L. Kane, J. Berard, S. Huang, S. Ryan, P. Mazzoni, J, Krakauer,
+and V. Huang (2015). Robotic therapy for chronic stroke: general
+recovery of impairment or improved task-specific skill? <i> Journal of
+Neurophysiology, </i> <b>114</b> 1885-1894. [<a
+href="http://jn.physiology.org/content/early/2015/07/10/jn.00336.2015.abstract">Link</a>
+| <a href="https://www.ncbi.nlm.nih.gov/pubmed/26180120">PubMed</a>] (†
+denotes equal contribution)</p>
+<p><strong>J. Goldsmith</strong>, V. Zipunnikov, J. Schrack (2015).
+Generalized Multilevel Functional-on-Scalar Regression and Principal
+Component Analysis. <i> Biometrics, </i> <b>71</b> 344-353. [<a
+href="http://onlinelibrary.wiley.com/doi/10.1111/biom.12278/abstract">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/25620473">PubMed</a> | <a
+href="resources/GenMFPCA_Code.zip">Code</a> | <a
+href="https://jeff-goldsmith.shinyapps.io/GFPCA_interactive">Shiny
+App</a>]</p>
+<p>U. M. Schambra, <strong>J. Goldsmith</strong>, H. M. Schambra, K.
+Nunleya, S. Harirforoosh, Y. Liu , and S. S. Moy (2015). Low and
+moderate prenatal ethanol exposure of mice during gastrulation or
+neurulation delays neurobehavioral development. <i> Neurotoxicology and
+Teratology, </i> <b>51</b> 1-11. [<a
+href="http://www.sciencedirect.com/science/article/pii/S089203621530012X">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/26171567">PubMed</a>]</p>
+<p>K. M. Diaz, D. J Krupka, M. J. Chang, J. Peacock, Y. Ma, <strong>J.
+Goldsmith</strong>, J. E. Schwartz, K. W. Davidson (2015). Fitbit: An
+accurate and reliable device for wireless physical activity tracking.
+<i> International Journal of Cardiology, </i> <b>185</b> 138-140. [<a
+href="http://www.internationaljournalofcardiology.com/article/S0167-5273(15)00276-4/abstract">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/25795203">PubMed</a>]</p>
+<p>C. Wang, S. Vine, A. Hsiao, A. Rundle, and <strong>J.
+Goldsmith</strong> (2015). Weight-Related Behaviors When Children are in
+School Versus on Summer Breaks: Does Income Matter? <i> Journal of
+School Health, </i> <b>85</b> 458-466. [<a
+href="http://onlinelibrary.wiley.com/doi/10.1111/josh.12274/abstract">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/26032276">PubMed</a>]</p>
+<p>M. Sabatello, J. Phelan, D. C. Hesdorffer, S. Shostak, <strong>J.
+Goldsmith</strong>, S. Sorge, M. Winawer, W. Chung, R. Ottman (2015).
+Genetic Causal Attribution of Epilepsy and its Implications for Felt
+Stigma. <i> Epilepsia, </i> <b>56</b> 1542-1550. [<a
+href="http://onlinelibrary.wiley.com/doi/10.1111/epi.13113/abstract">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/26290354">PubMed</a>]</p>
+<p><strong>J. Goldsmith</strong>, L. Huang, C. M. Crainiceanu (2014).
+Smooth Scalar-on-Image Regression via Spatial Bayesian Variable
+Selection. <i> Journal of Computational and Graphical Statistics, </i>
+<b>23</b> 46-64. [<a
+href="http://amstat.tandfonline.com/doi/abs/10.1080/10618600.2012.743437#.U2pt-17A7d4">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/24729670">PubMed</a>]</p>
+<p><strong>J. Goldsmith</strong>, F. Scheipl (2014). Estimator Selection
+and Combination in Scalar-on-Function Regression. <i> Computational
+Statistics and Data Analysis, </i> <b>70</b> 362-372. [<a
+href="http://www.sciencedirect.com/science/article/pii/S0167947313003629">Link</a>
+| <a href="resources/Ensembling_Paper.pdf">PDF</a> | <a
+href="resources/Ensembling_Code.zip">Code</a>]</p>
+<p>J. A. Schrack, V. Zipunnikov, <strong>J. Goldsmith</strong>, K.
+Bandeen-Roche, C. M. Crainiceanu, L. Ferrucci (2014). Estimating Energy
+Expenditure from Heart Rate in Older Adults: a Case for Calibration. <i>
+PLoS One, </i> <b>9</b> 1-9. [<a
+href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0093520">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/24787146">PubMed</a>]</p>
+<p>J. A. Schrack, V. Zipunnikov, <strong>J. Goldsmith</strong>, J. Bai,
+E. M. Simonsick, C. M. Crainiceanu, L. Ferrucci (2014). Assessing the
+“Physical Cliff”: Detailed Quantification of Aging and Physical
+Activity. <i> Journal of Gerontology: Medical Sciences. </i> <b>69</b>
+973-979. [<a
+href="http://biomedgerontology.oxfordjournals.org/content/69/8/973.full.pdf">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/24336819">PubMed</a> |
+Article selected as “Editor’s Choice”]</p>
+<p>S. Vullaganti, <strong>J. Goldsmith</strong>, S. Teruya, J. Alvarez,
+S. Helmke, M. Maurer (2014). Cardiovascular effects of hemoglobin
+response in patients receiving epoetin alfa and oral iron in heart
+failure with a preserved ejection fraction. <i> Journal of Geriatric
+Cardiology, </i> <b>11</b> 100-105. [<a
+href="http://www.jgc301.com/ch/reader/view_abstract.aspx?file_no=20140227001&amp;flag=1">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/25009558">PubMed</a>]</p>
+<p>B. Swihart, <strong>J. Goldsmith</strong>, C. M. Crainiceanu. (2014).
+Restricted Likelihood Ratio Tests for Functional Effects in the
+Functional Linear Model. <i> Technometrics, </i> <b>56</b> 483-493. [<a
+href="http://www.tandfonline.com/doi/full/10.1080/00401706.2013.863163">Link</a>]</p>
+<p>A. Hauschild, S. C. Chen, M. Weichenthal, A. Blum, H. C. King,
+<strong>J. Goldsmith</strong>, D. O. Scharfstein, D. Gutkowicz-Krusin
+(2014). To excise or not: impact of MelaFind on German dermatologists’
+decisions to biopsy atypical lesions. <i>JDDG: Journal der Deutschen
+Dermatologischen Gesellschaft, </i> <b>12</b> 606-614. [<a
+href="http://onlinelibrary.wiley.com/doi/10.1111/ddg.12362/abstract">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/24944011">PubMed</a>]</p>
+<p>J. O. Okeke, V. E. Tangel, S. T. Sorge, D. C. Hesdorffer, M. R.
+Winawer, <strong>J. Goldsmith</strong>, J. Phelan, W. Chung, S. Shostak,
+R. Ottman (2014). Genetic Testing Preferences in Families Containing
+Multiple Individuals with Epilepsy. <i>Epilepsia, </i> <b>55</b>
+1705-1713. [<a
+href="http://onlinelibrary.wiley.com/doi/10.1111/epi.12810/full">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/25266816">PubMed</a>]</p>
+<p>G. S. Lovasi, <strong>J. Goldsmith</strong> (2014). Invited
+commentary: Taking advantage of time-varying neighborhood environments.
+<i>American Journal of Epidemiology, </i> <b>DOI:</b>
+10.1093/aje/kwu170. [<a
+href="http://aje.oxfordjournals.org/content/180/5/462.full">Link</a> |
+<a href="http://www.ncbi.nlm.nih.gov/pubmed/25117659">PubMed</a>]</p>
+<p>N. Cyrille, <strong>J. Goldsmith</strong>, J. Alvarez, M. S. Maurer
+(2014). Prevalence and Prognostic Significance of Low QRS Voltage Among
+the Three Main Types of Cardiac Amyloid. <i> American Journal of
+Cardiology, </i> <b>114</b> 1089-1093. [<a
+href="http://www.sciencedirect.com/science/article/pii/S0002914914014544#">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/25212550">PubMed</a>]</p>
+<p>R. T. Shinohara, E. M. Sweeny, <strong>J. Goldsmith</strong>, N.
+Shiee, F. J. Mateen, P. A. Calabresi, S. Jarso, D. L. Pham, D. S. Reich,
+C. M. Crainiceanu (2014). Statistical Normalization Techniques for
+Magnetic Resonance Imaging. <i> NeuroImage: Clinical, </i> <b>6</b> 9-19
+[<a
+href="http://www.sciencedirect.com/science/article/pii/S221315821400117X#">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/25379412">PubMed</a>]</p>
+<p><strong>J. Goldsmith</strong>, S. Greven, C. M. Crainiceanu (2013).
+Corrected Confidence Bands for Functional Data Using Principal
+Components. <i> Biometrics, </i> <b>69</b> 41-51. [<a
+href="http://onlinelibrary.wiley.com/doi/10.1111/j.1541-0420.2012.01808.x/abstract">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/23003003">PubMed</a>]</p>
+<p>J. Gertheiss, <strong>J. Goldsmith</strong>, C. M. Crainiceanu, S.
+Greven. (2013). Longitudinal Scalar-on-Functions Regression with
+Application to Tractography Data. <i> Biostatistics. </i> <b>14</b>
+447-461. [<a
+href="http://biostatistics.oxfordjournals.org/content/14/3/447.long">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/23292804">PubMed</a>]</p>
+<p>H. Sorensen, <strong>J. Goldsmith</strong>, L. Sangalli. (2013). An
+Introduction with Medical Applications to Functional Data Analysis. <i>
+Statistics in Medicine. </i> <b>32</b> 5222-5240. [<a
+href="http://onlinelibrary.wiley.com/doi/10.1002/sim.5989/abstract">Link</a>
+| <a href="https://www.ncbi.nlm.nih.gov/pubmed/24114808">PubMed</a>]</p>
+<p>L. Huang, <strong>J. Goldsmith</strong>, P. T. Reiss, D. S. Reich, C.
+M. Crainiceanu. (2013). Bayesian Scalar-on-Image Regression with
+Application to Association Between Intracranial DTI and Cognitive
+Outcomes. <i> NeuroImage. </i> <b>83</b> 210-223. [<a
+href="http://www.sciencedirect.com/science/article/pii/S1053811913006575">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/23792220">PubMed</a>]</p>
+<p>F. J. Leyva, R. P. Bakshi, E. J. Fuchs, L. Li, B. S. Caffo,
+<strong>J. Goldsmith</strong>, Y. Du, J. P. Leal, L. A. Lee, M. S.
+Torbenson, C. W. Hendrix (2013). Iso-osmolar enemas demonstrate
+preferential gastrointestinal distribution, safety, and acceptability
+compared with hyper- and hypo-osmolar enemas as a potential delive <i>
+AIDS Research and Human Retroviruses. </i> <b>29</b> 1487-1495. [<a
+href="http://online.liebertpub.com/doi/abs/10.1089/aid.2013.0189">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/23885722">PubMed</a>]</p>
+<p><strong>J. Goldsmith</strong>, C. M. Crainiceanu, B. S. Caffo, D. S.
+Reich (2012). Longitudinal Penalized Functional Regression for Cognitive
+Outcomes on Neuronal Tract Measurements. <i> Journal of the Royal
+Statistical Society: Series C, </i> <b>61</b> 453-469. [<a
+href="http://onlinelibrary.wiley.com/doi/10.1111/j.1467-9876.2011.01031.x/abstract">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/22679339">PubMed</a> | <a
+href="resources/LPFR_Code.zip">Simulation Code</a>]</p>
+<p>T. Shinohara, <strong>J. Goldsmith</strong>, F. Mateen, D. S. Reich,
+C. M. Crainiceanu (2012). Predicting Breakdown of the Blood-Brain
+Barrier in Multiple Sclerosis Without Contrast Agents. <i> American
+Journal of Neuroradiology, </i> <b>33</b> 1586-1590. [<a
+href="http://www.ajnr.org/content/33/8/1586.long">Link</a> | <a
+href="http://www.ncbi.nlm.nih.gov/pubmed/22442041">PubMed</a>]</p>
+<p>J. Bai, <strong>J. Goldsmith</strong>, B. S. Caffo, T. Glass, C. M.
+Crainiceanu (2012). Movelets: A Dictionary of Movement. <i> Electronic
+Journal of Statistics, </i> <b>6</b> 559-578. [<a
+href="https://projecteuclid.org/euclid.ejs/1334065322">Link</a> | <a
+href="http://www.ncbi.nlm.nih.gov/pubmed/23293708">PubMed</a>]</p>
+<p>N. Louissant, S. Nimmagadda, R. Bakshi, Y. Du, K. Macura, K. King, R.
+Wahl, <strong>J. Goldsmith</strong>, B. S. Caffo, Y.-J. Cao, J.
+Anderson, E. Fuchs, C. W. Hendrix (2012). Distribution of Cell-free and
+Cell-associated HIV Surrogates in the Female Genital Tract following
+Simulated Vaginal Intercourse. <i> Journal of Infectious Diseases, </i>
+<b>205</b> 725-732. [<a
+href="http://jid.oxfordjournals.org/content/205/5/725">Link</a> | <a
+href="http://www.ncbi.nlm.nih.gov/pubmed/22279121">PubMed</a>]</p>
+<p>N. Louissant, S. Nimmagadda, E. Fuchs, R. Bakshi, Y. Cao, L. Lee,
+<strong>J. Goldsmith</strong>, B. S. Caffo, Y. Du, K. King, F. Menendez,
+M. Torbenson, C. W. Hendrix (2012). Distribution of Cell-free and
+Cell-associated HIV Surrogates in the Colon following Simulated
+Receptive Anal Intercourse. <i> Journal of Acquired Immune Deficiency
+Syndromes, Basic and Translational Science, </i> <b>59</b> 10-17. [<a
+href="http://ovidsp.tx.ovid.com/sp-3.12.0b/ovidweb.cgi?&amp;S=KOLDFPPIPMDDFJDMNCMKNBLBBJIDAA00&amp;Link+Set=S.sh.27.28.32.42%7c2%7csl_10">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/21937920">PubMed</a>]</p>
+<p><strong>J. Goldsmith</strong>, J. Bobb, C. M. Crainiceanu, B. S.
+Caffo, D. S. Reich (2011). Penalized Functional Regression. <i> Journal
+of Computational and Graphical Statistics, </i> <b>20</b> 830-851. [<a
+href="http://www.tandfonline.com/doi/abs/10.1198/jcgs.2010.10007#.U1BzC16ft94">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/22368438">PubMed</a> | <a
+href="resources/PFR_Code.zip">Simulation Code</a>]</p>
+<p><strong>J. Goldsmith</strong>, C. M. Crainiceanu, B. S. Caffo, D. S.
+Reich (2011). Penalized Functional Regression Analysis of White-Matter
+Tract Profiles in Multiple Sclerosis. <i> NeuroImage, </i> <b>57</b>
+431-439. [<a
+href="http://www.sciencedirect.com/science/article/pii/S1053811911004435">Link</a>
+| <a href="http://www.ncbi.nlm.nih.gov/pubmed/21554962">PubMed</a>]</p>
+<p><strong>J. Goldsmith</strong>, B. S. Caffo, C. M. Crainiceanu, D.
+Reich, Y. Du, C. W. Hendrix (2011). Nonlinear Tube-Fitting for the
+Analysis of Anatomical and Functional Structures. <i> Annals of Applied
+Statistics, </i> <b>5</b> 337-363. [<a
+href="http://projecteuclid.org/euclid.aoas/1300715193">Link</a> | <a
+href="http://www.ncbi.nlm.nih.gov/pubmed/21709824">PubMed</a>]</p>
+<p><strong>J. Goldsmith</strong>, M. P. Wand, and C. M. Crainiceanu
+(2011). Functional Regression via Variational Bayes. <i> Electronic
+Journal of Statistics, </i> <b>5</b> 572-602. [<a
+href="http://projecteuclid.org/euclid.ejs/1308143123">Link</a> | <a
+href="http://www.ncbi.nlm.nih.gov/pubmed/22163061">PubMed</a> | <a
+href="resources/VB_Code.zip">Simulation Code</a>]</p>
+<p>C. M. Crainiceanu, <strong>J. Goldsmith</strong> (2010). Bayesian
+Functional Data Analysis using WinBUGS. <i> Journal of Statistical
+Software, </i> <b>32</b> 1-33. [<a
+href="http://www.jstatsoft.org/v32/i11/">Link</a> | <a
+href="http://www.ncbi.nlm.nih.gov/pubmed/21743798">PubMed</a>]</p>
+<p><strong>J. Goldsmith</strong>, L. Koss (2009). Dynamical Properties
+of the Derivative of the Weierstrass Elliptic Function. <i> Involve,
+</i> <b>2</b> 267-288. [<a
+href="http://msp.org/involve/2009/2-3/p02.xhtml">Link</a> | <a
+href="resources/Weierstrass.pdf">pdf</a>]</p>
 </div>
 
 <br><br>
